@@ -1,0 +1,33 @@
+# CiteGuard Phase 7 Evaluation Experiment Configuration
+
+experiment:
+  name: "citeguard_phase7_benchmark"
+  run_id_prefix: "eval_run"
+  seed: 42
+  output_dir: "results/experiments"
+
+data:
+  dataset: "scifact"
+  split: "test"
+  data_dir: "data/processed"
+  raw_dir: "data/raw"
+
+evaluation:
+  top_k: 5
+  k_eval_list: [1, 3, 5, 10]
+  score_threshold: 0.30
+
+system:
+  default_baseline: "citeguard_hybrid_multiagent"
+  provider_type: "mock"
+  retrieval_mode: "hybrid"
+
+multiagent:
+  confidence_threshold: 0.70
+  agreement_threshold: 0.75
+  evidence_quality_threshold: 0.30
+  max_reasoning_rounds: 3
+  fallback_behavior: "NEI"
+
+ledger:
+  ledger_path: "results/hallucination_ledger/hallucination_ledger.jsonl"

@@ -1,0 +1,111 @@
+{
+  "run_id": "run_citeguard_hybrid_multiagent_scifact_1788622218",
+  "system_name": "citeguard_hybrid_multiagent",
+  "dataset": "scifact",
+  "split": "test",
+  "total_examples": 5,
+  "retrieval_metrics": {
+    "recall_at_k": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    },
+    "precision_at_k": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    },
+    "mrr": 0.0,
+    "hit_at_k": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    },
+    "ndcg_at_k": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    }
+  },
+  "classification_metrics": {
+    "accuracy": 0.4,
+    "precision": 0.1333,
+    "recall": 0.3333,
+    "macro_f1": 0.1905,
+    "micro_f1": 0.4,
+    "weighted_f1": 0.2286,
+    "confusion_matrix": {
+      "SUPPORT": {
+        "SUPPORT": 2,
+        "REFUTE": 0,
+        "NEI": 0
+      },
+      "REFUTE": {
+        "SUPPORT": 2,
+        "REFUTE": 0,
+        "NEI": 0
+      },
+      "NEI": {
+        "SUPPORT": 1,
+        "REFUTE": 0,
+        "NEI": 0
+      }
+    },
+    "class_report": {
+      "SUPPORT": {
+        "precision": 0.4,
+        "recall": 1.0,
+        "f1": 0.5714,
+        "support": 2
+      },
+      "REFUTE": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 2
+      },
+      "NEI": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 1
+      }
+    }
+  },
+  "multi_agent_metrics": {
+    "total_examples": 5,
+    "agents_invoked": 20,
+    "reasoning_rounds": 1.0,
+    "agreement_rate": 1.0,
+    "disagreement_rate": 0.0,
+    "debate_activation_rate": 0.0,
+    "average_execution_time_sec": 0.0009,
+    "token_usage": {
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_tokens": 0
+    }
+  },
+  "rhr_metrics": {
+    "repeated_hallucination_rate": 1.0,
+    "stateless_rhr": 0.5,
+    "rhr_reduction_percent": 0.0,
+    "total_failures": 3,
+    "repeated_failures_count": 3
+  },
+  "failure_breakdown": {
+    "RETRIEVAL_FAILURE": 2,
+    "UNKNOWN_FAILURE": 1
+  },
+  "timestamp": "2026-09-05T15:30:18.422593+00:00",
+  "metadata": {
+    "dataset_complete": false,
+    "limit": 10,
+    "ece_calibration_error": 0.45,
+    "development_run": true
+  }
+}

@@ -1,0 +1,314 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-10-11T08:51:15.915779+00:00",
+  "total_patterns": 11,
+  "patterns": [
+    {
+      "pattern_id": "FP_DOM_001",
+      "failure_type": "DOMAIN_MISMATCH",
+      "failure_signature": "FS-DOMAIN-MISMATCH",
+      "pattern_name": "OFF_DOMAIN_EVIDENCE_ACCEPTED_AS_SUPPORT",
+      "severity": "HIGH",
+      "frequency": 1,
+      "trigger_conditions": {
+        "evidence_topic_mismatch": true,
+        "target_domains_conflict": true,
+        "min_domain_compatibility": 0.5
+      },
+      "observed_failure": "Candidate papers from unrelated domains (e.g. smart grids, power systems, or drug discovery) were retrieved for specialized quantum/cryptography or computer science claims.",
+      "incorrect_behavior": "Candidate passages from unrelated domain accepted into evidence mapping and assigned positive relevance scores leading to spurious SUPPORT verdicts.",
+      "correct_behavior": "Apply strict compound topic gating, reject off-domain passages before claim verification, and require explicit domain compatibility.",
+      "prevention_rule": "If claim topic belongs to domain A but retrieved passage belongs to excluded domain B, set passage score to 0.0 and reject as evidence.",
+      "adaptive_actions": [
+        "REQUIRE_STRICT_DOMAIN_VALIDATION",
+        "EXCLUDE_OFF_DOMAIN_PASSAGES",
+        "CLAIM_RECHECK_DOMAIN_SCOPE"
+      ],
+      "canonical_failure_code": "F6",
+      "canonical_failure_name": "Population/Context Mismatch",
+      "first_seen": "2026-09-11T00:00:00Z",
+      "last_seen": "2026-09-14T00:00:00Z",
+      "source_examples": [],
+      "canonical_category": "F6: Population/Context Mismatch"
+    },
+    {
+      "pattern_id": "FP_IRR_002",
+      "failure_type": "IRRELEVANT_EVIDENCE",
+      "failure_signature": "FS-IRRELEVANT-EVIDENCE",
+      "pattern_name": "WEAK_OVERLAP_PASSAGE_INCLUDED",
+      "severity": "MEDIUM",
+      "frequency": 3,
+      "trigger_conditions": {
+        "relevance_score": "< 0.50",
+        "concept_overlap": "< 2"
+      },
+      "observed_failure": "Passages with low semantic alignment (< 0.50) or peripheral terminology overlap were included as candidate evidence.",
+      "incorrect_behavior": "Weakly related contextual sentences dilute evidence pool and mislead multi-agent verification into ungrounded consensus.",
+      "correct_behavior": "Filter out any passage failing the strict 0.50 relevance floor prior to multi-agent debate.",
+      "prevention_rule": "Exclude all passages with relevance score < 0.50 from the active verification context.",
+      "adaptive_actions": [
+        "ENFORCE_RELEVANCE_FLOOR_050",
+        "EXCLUDE_SUBTHRESHOLD_PASSAGES",
+        "RECALCULATE_CONFIDENCE"
+      ],
+      "canonical_failure_code": "F1",
+      "canonical_failure_name": "Unsupported Claim",
+      "first_seen": "2026-09-05T15:10:14Z",
+      "last_seen": "2026-09-14T00:00:00Z",
+      "source_examples": [],
+      "canonical_category": "F1: Unsupported Claim"
+    },
+    {
+      "pattern_id": "FP_RET_003",
+      "failure_type": "RETRIEVAL_FAILURE",
+      "failure_signature": "FS-RETRIEVAL-MISSED",
+      "pattern_name": "GROUND_TRUTH_EVIDENCE_MISSED_IN_TOP_K",
+      "severity": "HIGH",
+      "frequency": 7,
+      "trigger_conditions": {
+        "sparse_dense_disagreement": true,
+        "top_k_exhausted_without_rationale": true
+      },
+      "observed_failure": "Ground truth evidence documents existed in corpus but were ranked below top-K by standard sparse or dense retrieval alone.",
+      "incorrect_behavior": "Verifier prematurely concludes claim is unsupported because relevant documents were unranked in top-5.",
+      "correct_behavior": "Employ Reciprocal Rank Fusion (RRF) across sparse BM25 and dense FAISS with k=60 to elevate multi-modal recall.",
+      "prevention_rule": "Fuse sparse BM25 and dense vector rankings with RRF and expand retrieval candidate pool when top scores are marginal.",
+      "adaptive_actions": [
+        "EXPAND_RETRIEVAL_TOP_K",
+        "ACTIVATE_HYBRID_RRF",
+        "QUERY_REFORMULATION"
+      ],
+      "canonical_failure_code": "F1",
+      "canonical_failure_name": "Unsupported Claim",
+      "first_seen": "2026-09-05T15:10:14Z",
+      "last_seen": "2026-09-05T15:30:18Z",
+      "source_examples": [],
+      "canonical_category": "F1: Unsupported Claim"
+    },
+    {
+      "pattern_id": "FP_UNG_004",
+      "failure_type": "UNGROUNDED_SUPPORT",
+      "failure_signature": "FS-UNGROUNDED-SUPPORT",
+      "pattern_name": "SUPPORT_VERDICT_WITH_SUBTHRESHOLD_EVIDENCE",
+      "severity": "HIGH",
+      "frequency": 1,
+      "trigger_conditions": {
+        "predicted_label": "SUPPORT",
+        "best_evidence_score": "< 0.70"
+      },
+      "observed_failure": "A claim was assigned SUPPORT verdict despite the highest available evidence score being strictly below the 0.70 support threshold.",
+      "incorrect_behavior": "Assigning claim confirmation without qualifying evidence passages meeting the minimum evidentiary contract.",
+      "correct_behavior": "Subject the claim to Claim Re-Check: downgrade verdict to INSUFFICIENT_EVIDENCE or PARTIALLY_SUPPORTED and cap confidence.",
+      "prevention_rule": "A SUPPORT verdict strictly requires at least one verified evidence passage with score >= 0.70.",
+      "adaptive_actions": [
+        "CLAIM_RECHECK_SUFFICIENCY",
+        "FORCE_INSUFFICIENT_EVIDENCE",
+        "RECALCULATE_CONFIDENCE"
+      ],
+      "canonical_failure_code": "F1",
+      "canonical_failure_name": "Unsupported Claim",
+      "first_seen": "2026-09-11T09:38:02Z",
+      "last_seen": "2026-09-11T09:38:27Z",
+      "source_examples": [],
+      "canonical_category": "F1: Unsupported Claim"
+    },
+    {
+      "pattern_id": "FP_CNF_005",
+      "failure_type": "UNGROUNDED_CONFIDENCE",
+      "failure_signature": "FS-UNGROUNDED-CONF",
+      "pattern_name": "HIGH_CONFIDENCE_ON_SPARSE_EVIDENCE",
+      "severity": "MEDIUM",
+      "frequency": 1,
+      "trigger_conditions": {
+        "confidence": ">= 0.85",
+        "evidence_count": "< 2",
+        "best_score": "< 0.60"
+      },
+      "observed_failure": "Confidence score exceeded 0.85 despite sparse evidence coverage (< 2 passages) or marginal relevance scores.",
+      "incorrect_behavior": "Outputting artificial high certainty when evidence is scarce or preliminary.",
+      "correct_behavior": "Dynamically ground confidence in best score, average score, passage volume, and agent consensus.",
+      "prevention_rule": "When evidence is empty or below threshold, confidence must be dynamically calibrated and strictly capped at <= 0.35.",
+      "adaptive_actions": [
+        "DYNAMIC_CONFIDENCE_RECALIBRATION",
+        "CAP_CONFIDENCE_ON_SPARSE_EVIDENCE"
+      ],
+      "canonical_failure_code": "F3",
+      "canonical_failure_name": "Overgeneralization",
+      "first_seen": "2026-09-11T09:38:00Z",
+      "last_seen": "2026-09-14T00:00:00Z",
+      "source_examples": [],
+      "canonical_category": "F3: Overgeneralization"
+    },
+    {
+      "pattern_id": "FP_CON_006",
+      "failure_type": "CONTRADICTORY_EVIDENCE",
+      "failure_signature": "FS-CONTRADICTION",
+      "pattern_name": "UNRESOLVED_CONTRADICTORY_EVIDENCE_OVERLOOKED",
+      "severity": "CRITICAL",
+      "frequency": 1,
+      "trigger_conditions": {
+        "contradiction_passages": "> 0",
+        "predicted_label": "SUPPORT"
+      },
+      "observed_failure": "Contradictory evidence signals were present in retrieved passages, but the verifier overlooked them and declared SUPPORT.",
+      "incorrect_behavior": "Single-agent confirmation bias ignoring refuting findings in scientific literature.",
+      "correct_behavior": "Escalate to multi-agent debate (Trust, Skeptic, Leader) and trigger Claim Re-Check to reconcile conflicting findings.",
+      "prevention_rule": "Any detected contradiction signal must trigger debate resolution and block unilateral SUPPORT verdicts.",
+      "adaptive_actions": [
+        "ESCALATE_TO_MULTI_AGENT_DEBATE",
+        "CLAIM_RECHECK_CONTRADICTION",
+        "REVISE_OR_REJECT_CLAIM"
+      ],
+      "canonical_failure_code": "F7",
+      "canonical_failure_name": "Contradictory Evidence",
+      "first_seen": "2026-09-05T15:10:14Z",
+      "last_seen": "2026-09-14T00:00:00Z",
+      "source_examples": [],
+      "canonical_category": "F7: Contradictory Evidence"
+    },
+    {
+      "pattern_id": "FP_NEI_007",
+      "failure_type": "INSUFFICIENT_EVIDENCE",
+      "failure_signature": "FS-NO-EVIDENCE",
+      "pattern_name": "FALSE_SUPPORT_ATTEMPT_ON_EMPTY_EVIDENCE",
+      "severity": "MEDIUM",
+      "frequency": 19,
+      "trigger_conditions": {
+        "eligible_evidence_count": 0,
+        "max_relevance_score": 0.0
+      },
+      "observed_failure": "Verification engine attempted multi-agent verification or local fallback when zero eligible domain evidence was found.",
+      "incorrect_behavior": "Local fallback fills results with unrelated domain papers when pre-retrieval legitimately returned empty results.",
+      "correct_behavior": "Sufficiency gate checks if eligible evidence is empty; if so, immediately assigns INSUFFICIENT_EVIDENCE with calibrated confidence <= 0.35.",
+      "prevention_rule": "If pre-retrieved eligible evidence is empty ([]), do not fall back to local corpus; assign INSUFFICIENT_EVIDENCE directly.",
+      "adaptive_actions": [
+        "ENFORCE_SUFFICIENCY_GATE",
+        "PREVENT_LOCAL_FALLBACK_LEAK",
+        "OUTPUT_CALIBRATED_NEI"
+      ],
+      "canonical_failure_code": "F1",
+      "canonical_failure_name": "Unsupported Claim",
+      "first_seen": "2026-09-12T19:21:20Z",
+      "last_seen": "2026-09-14T00:00:00Z",
+      "source_examples": [],
+      "canonical_category": "F1: Unsupported Claim"
+    },
+    {
+      "pattern_id": "FP_MET_008",
+      "failure_type": "METADATA_MISMATCH",
+      "failure_signature": "FS-METADATA-MISMATCH",
+      "pattern_name": "UNVERIFIED_BIBLIOGRAPHIC_METADATA",
+      "severity": "MEDIUM",
+      "frequency": 1,
+      "trigger_conditions": {
+        "question_type": "BIBLIOGRAPHIC_SEARCH",
+        "requested_fields": [
+          "doi",
+          "citation_count",
+          "experimental_results"
+        ]
+      },
+      "observed_failure": "Fabrication of DOIs or experimental outcome claims when literature API returns missing or incomplete metadata fields.",
+      "incorrect_behavior": "Synthesizing mock DOI strings or extrapolating empirical laboratory metrics not found in retrieved abstracts.",
+      "correct_behavior": "Enforce exact metadata extraction: if DOI is absent, output null; mark experimental_results_status as 'NOT_VERIFIED'.",
+      "prevention_rule": "Never fabricate DOIs or numerical experimental results; explicitly declare unverified fields as null or NOT_VERIFIED.",
+      "adaptive_actions": [
+        "VERIFY_EXACT_DOI_SOURCE",
+        "FLAG_UNVERIFIED_EXPERIMENTAL_STATUS",
+        "STRICT_CITATION_TRANSPARENCY"
+      ],
+      "canonical_failure_code": "F2",
+      "canonical_failure_name": "Citation Mismatch",
+      "first_seen": "2026-09-12T19:00:00Z",
+      "last_seen": "2026-09-14T00:00:00Z",
+      "source_examples": [],
+      "canonical_category": "F2: Citation Mismatch"
+    },
+    {
+      "pattern_id": "FP_CLM_009",
+      "failure_type": "CLAIM_MALFORMATION",
+      "failure_signature": "FS-CLAIM-MALFORMATION",
+      "pattern_name": "AWKWARD_GERUND_OR_NONSENSICAL_CLAIM",
+      "severity": "LOW",
+      "frequency": 2,
+      "trigger_conditions": {
+        "has_awkward_gerund": true,
+        "syntactic_validity": false
+      },
+      "observed_failure": "Decomposition templates generated awkward phrasing such as 'Altering increasing model size directly impacts...'.",
+      "incorrect_behavior": "Evaluating syntactically malformed claims that distort the scientific proposition.",
+      "correct_behavior": "Clean variable phrases, strip redundant gerund prefixes, and regenerate clear, natural scientific assertions.",
+      "prevention_rule": "Clean extracted phrases to eliminate awkward compound prefixes before generating atomic claims.",
+      "adaptive_actions": [
+        "REGENERATE_ATOMIC_CLAIM",
+        "CLEAN_SYNTACTIC_PREFIXES"
+      ],
+      "canonical_failure_code": "F8",
+      "canonical_failure_name": "Evidence Misinterpretation",
+      "first_seen": "2026-09-11T09:37:00Z",
+      "last_seen": "2026-09-12T18:00:00Z",
+      "source_examples": [],
+      "canonical_category": "F8: Evidence Misinterpretation"
+    },
+    {
+      "pattern_id": "FP_PCM_010",
+      "failure_type": "POPULATION_CONTEXT_MISMATCH",
+      "failure_signature": "FS-POPULATION_CONTEXT_MISMATCH",
+      "pattern_name": "DYNAMIC_PATTERN_POPULATION_CONTEXT_MISMATCH",
+      "severity": "HIGH",
+      "frequency": 1,
+      "trigger_conditions": {
+        "failure_type_match": "POPULATION_CONTEXT_MISMATCH"
+      },
+      "observed_failure": "Independently adjudicated failure recorded under category POPULATION_CONTEXT_MISMATCH.",
+      "incorrect_behavior": "System failed verification contract under category POPULATION_CONTEXT_MISMATCH.",
+      "correct_behavior": "Apply adaptive action NONE to prevent recurring failure.",
+      "prevention_rule": "Enforce strict contract verification for category POPULATION_CONTEXT_MISMATCH.",
+      "adaptive_actions": [
+        "NONE"
+      ],
+      "canonical_failure_code": "F6",
+      "canonical_failure_name": "Population/Context Mismatch",
+      "first_seen": "2026-10-11T08:48:43.918999+00:00",
+      "last_seen": "2026-10-11T08:48:43.918999+00:00",
+      "source_examples": [
+        {
+          "claim_text": "Curcumin cures aggressive glioblastoma in human clinical cancer patients.",
+          "question": "Can curcumin cure glioblastoma in clinical patients?",
+          "claim_id": "learn_f6_001"
+        }
+      ],
+      "canonical_category": "F6: Population/Context Mismatch"
+    },
+    {
+      "pattern_id": "FP_PCM_011",
+      "failure_type": "POPULATION_CONTEXT_MISMATCH",
+      "failure_signature": "FS-POPULATION_CONTEXT_MISMATCH",
+      "pattern_name": "DYNAMIC_PATTERN_POPULATION_CONTEXT_MISMATCH",
+      "severity": "HIGH",
+      "frequency": 1,
+      "trigger_conditions": {
+        "failure_type_match": "POPULATION_CONTEXT_MISMATCH"
+      },
+      "observed_failure": "Independently adjudicated failure recorded under category POPULATION_CONTEXT_MISMATCH.",
+      "incorrect_behavior": "System failed verification contract under category POPULATION_CONTEXT_MISMATCH.",
+      "correct_behavior": "Apply adaptive action NONE to prevent recurring failure.",
+      "prevention_rule": "Enforce strict contract verification for category POPULATION_CONTEXT_MISMATCH.",
+      "adaptive_actions": [
+        "NONE"
+      ],
+      "canonical_failure_code": "F6",
+      "canonical_failure_name": "Population/Context Mismatch",
+      "first_seen": "2026-10-11T08:51:15.912870+00:00",
+      "last_seen": "2026-10-11T08:51:15.912870+00:00",
+      "source_examples": [
+        {
+          "claim_text": "Curcumin cures aggressive glioblastoma in human clinical cancer patients.",
+          "question": "Can curcumin cure glioblastoma in clinical patients?",
+          "claim_id": "learn_f6_001"
+        }
+      ],
+      "canonical_category": "F6: Population/Context Mismatch"
+    }
+  ]
+}

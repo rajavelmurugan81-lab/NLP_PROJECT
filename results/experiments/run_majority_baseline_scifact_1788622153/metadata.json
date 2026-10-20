@@ -1,0 +1,9 @@
+{
+  "run_id": "run_majority_baseline_scifact_1788622153",
+  "timestamp": "2026-09-05T15:29:13.734145+00:00",
+  "system_name": "majority_baseline",
+  "dataset": "scifact",
+  "split": "test",
+  "total_examples": 5,
+  "development_run": true
+}

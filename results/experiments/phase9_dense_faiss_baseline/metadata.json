@@ -1,0 +1,9 @@
+{
+  "run_id": "phase9_dense_faiss_baseline",
+  "timestamp": "2026-09-05T16:08:25.312872+00:00",
+  "system_name": "dense_faiss_baseline",
+  "dataset": "scifact",
+  "split": "test",
+  "total_examples": 50,
+  "development_run": true
+}

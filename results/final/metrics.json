@@ -1,0 +1,112 @@
+{
+  "system": "CiteGuard",
+  "version": "1.0.0-final",
+  "baseline_test_status": "84/84 passed",
+  "real_llm_status": "NOT RUN (API credentials unavailable)",
+  "datasets_audited": [
+    "scifact",
+    "covert",
+    "sciclaimhunt"
+  ],
+  "verification_summary": {
+    "majority_baseline": {
+      "accuracy": 0.4,
+      "macro_f1": 0.1904761904761905,
+      "precision": 0.13333333333333333,
+      "recall": 0.3333333333333333,
+      "mrr": 0.0,
+      "recall_at_5": 0.0
+    },
+    "bm25_sparse_baseline": {
+      "accuracy": 0.42,
+      "macro_f1": 0.22498274672187715,
+      "precision": 0.4694,
+      "recall": 0.35000000000000003,
+      "mrr": 0.0,
+      "recall_at_5": 0.0
+    },
+    "dense_faiss_baseline": {
+      "accuracy": 0.42,
+      "macro_f1": 0.22638146167557935,
+      "precision": 0.3055666666666667,
+      "recall": 0.35000000000000003,
+      "mrr": 0.0,
+      "recall_at_5": 0.0
+    },
+    "hybrid_rrf_baseline": {
+      "accuracy": 0.4,
+      "macro_f1": 0.1904761904761905,
+      "precision": 0.13333333333333333,
+      "recall": 0.3333333333333333,
+      "mrr": 0.0,
+      "recall_at_5": 0.0
+    },
+    "citeguard_hybrid_multiagent": {
+      "accuracy": 0.4,
+      "macro_f1": 0.1904761904761905,
+      "precision": 0.13333333333333333,
+      "recall": 0.3333333333333333,
+      "mrr": 0.0,
+      "recall_at_5": 0.0
+    }
+  },
+  "rhr_summary": {
+    "stateless_baseline": {
+      "repeated_hallucination_rate": 0.0,
+      "stateless_rhr": 0.5,
+      "rhr_reduction_percent": 100.0,
+      "total_failures": 3,
+      "repeated_failures_count": 0
+    },
+    "citeguard_framework": {
+      "repeated_hallucination_rate": 0.0,
+      "stateless_rhr": 0.5,
+      "rhr_reduction_percent": 100.0,
+      "total_failures": 3,
+      "repeated_failures_count": 0
+    },
+    "rhr_reduction_percent": 0.0
+  },
+  "ablation_summary": [
+    {
+      "system_name": "majority_baseline",
+      "description": "Baseline",
+      "accuracy": 0.4,
+      "macro_f1": 0.1905,
+      "mrr": 0.0,
+      "recall_at_5": 0.0
+    },
+    {
+      "system_name": "bm25_sparse_baseline",
+      "description": "Sparse BM25 Only",
+      "accuracy": 0.42,
+      "macro_f1": 0.225,
+      "mrr": 0.0,
+      "recall_at_5": 0.0
+    },
+    {
+      "system_name": "dense_faiss_baseline",
+      "description": "Dense FAISS Only",
+      "accuracy": 0.42,
+      "macro_f1": 0.2264,
+      "mrr": 0.0,
+      "recall_at_5": 0.0
+    },
+    {
+      "system_name": "hybrid_rrf_baseline",
+      "description": "Hybrid (BM25 + Dense RRF)",
+      "accuracy": 0.4,
+      "macro_f1": 0.1905,
+      "mrr": 0.0,
+      "recall_at_5": 0.0
+    },
+    {
+      "system_name": "citeguard_hybrid_multiagent",
+      "description": "Full System (Hybrid RRF + Multi-Agent Consensus)",
+      "accuracy": 0.4,
+      "macro_f1": 0.1905,
+      "mrr": 0.0,
+      "recall_at_5": 0.0
+    }
+  ]
+}

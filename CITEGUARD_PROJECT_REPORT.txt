@@ -1,0 +1,146 @@
+================================================================================
+CITEGUARD: EVIDENCE-GROUNDED SCIENTIFIC RESEARCH & CLAIM VERIFICATION SYSTEM
+================================================================================
+COMPREHENSIVE END-TO-END TECHNICAL, OPERATIONAL & ARCHITECTURAL PROJECT REPORT
+================================================================================
+Document Date: September 14, 2026
+System Name: CiteGuard
+Repository Path: c:\Users\rajav\OneDrive\Desktop\nlp\nlp
+Backend Status: Active & Online (http://127.0.0.1:8000)
+Test Suite Status: 198 Passing Tests (198 passed, 0 failures, 2 warnings)
+Architecture: Closed-Loop Failure-Pattern Memory & Adaptive Verification
+
+
+================================================================================
+CORE RESEARCH CONTRIBUTION: CLOSED-LOOP FAILURE-PATTERN MEMORY
+================================================================================
+CiteGuard implements the complete closed-loop architecture:
+
+USER RESEARCH QUESTION
+  ↓
+PLANNER AGENT
+  ↓
+PAPER RETRIEVAL (OpenAlex + Local BM25/FAISS/RRF)
+  ↓
+CLAIM EXTRACTION (Semantic Entity Decomposition)
+  ↓
+CLAIM + EXACT EVIDENCE (Passage Extraction & Mapping)
+  ↓
+CLAIM-EVIDENCE VERIFICATION
+  ├─► [PASS] ──► MEMORY GATE ──► TRUSTED MEMORY (trusted_memory.json)
+  │
+  └─► [FAIL] ──► FAILURE CLASSIFIER
+                  ↓
+                FAILURE SIGNATURE
+                  ↓
+                HALLUCINATION LEDGER (hallucination_ledger.jsonl)
+                  ↓
+                HISTORICAL FAILURE MATCHING (failure_patterns.json)
+                  ↓
+                SIMILARITY / RISK ASSESSMENT (LOW, MEDIUM, HIGH, VERY_HIGH)
+                  ↓
+                ADAPTIVE VERIFICATION (Depth, Scope, Contradiction, Debate Escalation)
+                  ↓
+                CLAIM RE-CHECK (ACCEPT / REVISE / REJECT)
+                  ↓
+                FINAL ANSWER
+
+
+================================================================================
+1. FAILURE PATTERN EXTRACTION & MINING
+================================================================================
+CiteGuard separates specific Failure Signatures (individual observed error instances)
+from generalized, reusable Failure Patterns derived from benchmark and runtime ledgers.
+
+Stored in: results/hallucination_ledger/failure_patterns.json
+
+All 9 Canonical Patterns:
+1. FP_DOM_001: OFF_DOMAIN_EVIDENCE_ACCEPTED_AS_SUPPORT (DOMAIN_MISMATCH)
+2. FP_IRR_002: WEAK_OVERLAP_PASSAGE_INCLUDED (IRRELEVANT_EVIDENCE)
+3. FP_RET_003: GROUND_TRUTH_EVIDENCE_MISSED_IN_TOP_K (RETRIEVAL_FAILURE)
+4. FP_UNG_004: SUPPORT_VERDICT_WITH_SUBTHRESHOLD_EVIDENCE (UNGROUNDED_SUPPORT)
+5. FP_CNF_005: HIGH_CONFIDENCE_ON_SPARSE_EVIDENCE (UNGROUNDED_CONFIDENCE)
+6. FP_CON_006: UNRESOLVED_CONTRADICTORY_EVIDENCE_OVERLOOKED (CONTRADICTORY_EVIDENCE)
+7. FP_NEI_007: FALSE_SUPPORT_ATTEMPT_ON_EMPTY_EVIDENCE (INSUFFICIENT_EVIDENCE)
+8. FP_MET_008: UNVERIFIED_BIBLIOGRAPHIC_METADATA (METADATA_MISMATCH)
+9. FP_CLM_009: AWKWARD_GERUND_OR_NONSENSICAL_CLAIM (CLAIM_MALFORMATION)
+
+
+================================================================================
+2. HISTORICAL FAILURE MATCHING & RISK ASSESSMENT
+================================================================================
+When a claim and candidate evidence are evaluated:
+1. FailureMemory checks structural conditions against all 9 learned patterns.
+2. Quantifies a Similarity/Risk Score (0.0 to 1.0) and assigns a Risk Level:
+   - LOW: Standard multi-agent verification.
+   - MEDIUM: Expanded passage relevance filtering, floor enforcement.
+   - HIGH: Strict domain topic validation, sufficiency verification.
+   - VERY_HIGH: Debate escalation, cross-checking, and Claim Re-Check.
+
+
+================================================================================
+3. ADAPTIVE VERIFICATION & CLAIM RE-CHECK
+================================================================================
+Matching a failure pattern does NOT trigger an automatic or unilateral failure rejection.
+Instead, it triggers Claim Re-Check under heightened adaptive scrutiny:
+- Checks if candidate passages belong to an excluded or off-domain topic.
+- Disqualifies sub-threshold passages (< 0.50 relevance floor).
+- Checks for unaddressed contradiction signals.
+- Dynamically recalculates confidence (capped at <= 0.35 on missing or off-domain evidence).
+
+Resolves into one of three canonical actions:
+- ACCEPT: Evidence withstands deeper scrutiny; verdict confirmed.
+- REVISE: Claim qualified or downgraded from SUPPORT to PARTIAL/CONTRADICTED.
+- REJECT: Spurious off-domain or ungrounded evidence rejected; verdict revised
+  from false SUPPORT to INSUFFICIENT_EVIDENCE.
+
+
+================================================================================
+4. REPRODUCIBLE EXPERIMENT: RUN 1 FAILURE CHANGES RUN 2 DECISION
+================================================================================
+Script: scripts/run_failure_memory_experiment.py
+Output: results/hallucination_ledger/failure_prevention_evaluation.json
+
+Phase A (Run 1 without Memory):
+- Claim: 'Quantum-resistant federated learning improves privacy.'
+- Evidence: Unrelated Smart Grid paper.
+- Outcome: Naive verifier outputs preliminary SUPPORT (Confidence: 0.7928).
+- Audit: Catches DOMAIN_MISMATCH failure signature.
+
+Phase B (Pattern Mining):
+- Mines failure into pattern FP_DOM_001 (OFF_DOMAIN_EVIDENCE_ACCEPTED_AS_SUPPORT).
+
+Phase C (Run 2 with Failure-Pattern Memory):
+- Claim: 'Quantum-resistant federated learning minimizes network latency.'
+- Evidence: Similar unrelated power grid paper.
+- Historical Match: TRUE (Pattern FP_DOM_001, Risk: VERY_HIGH, Score: 0.92).
+- Adaptive Verification: Heightened domain scope check.
+- Claim Re-Check: REJECT off-domain evidence (0 eligible passages remain).
+- Verdict Change: Preliminary SUPPORT -> Final INSUFFICIENT_EVIDENCE (Confidence: 0.35).
+
+Experiment Metrics:
+- Patterns Discovered: 9
+- Prevention Rate: 1.0 (100%)
+- Recurrence Rate: 0.0 (0%)
+- Domain Mismatch Rate Before: 1.0 -> After: 0.0
+
+
+================================================================================
+5. TESTING BASELINE & API ROUTES
+================================================================================
+- Pytest Suite: 198 Passing Tests (0 failures, 2 warnings)
+  * tests/test_failure_pattern_memory.py (11 tests covering all requirements)
+  * Existing test suite (187 tests covering retrieval, verification, UI, and ledgers)
+- Active Web Server: http://127.0.0.1:8000
+- New API Endpoints:
+  * GET /api/ledger/patterns
+  * GET /api/ledger/trusted
+  * GET /api/ledger/prevention-evaluation
+- Web UI Tabs:
+  * Tab 1: Current Query Runtime Audit
+  * Tab 2: Historical Benchmark Failure Analysis
+  * Tab 3: Failure-Pattern Memory & Prevention Rules
+
+================================================================================
+END OF REPORT
+================================================================================

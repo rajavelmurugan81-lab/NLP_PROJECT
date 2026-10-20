@@ -1,0 +1,6 @@
+System Name,Component Description,Accuracy,Macro F1,MRR,Recall@5
+majority_baseline,Baseline,0.4,0.1905,0.0,0.0
+bm25_sparse_baseline,Sparse BM25 Only,0.42,0.225,0.0,0.0
+dense_faiss_baseline,Dense FAISS Only,0.42,0.2264,0.0,0.0
+hybrid_rrf_baseline,Hybrid (BM25 + Dense RRF),0.4,0.1905,0.0,0.0
+citeguard_hybrid_multiagent,Full System (Hybrid RRF + Multi-Agent Consensus),0.4,0.1905,0.0,0.0

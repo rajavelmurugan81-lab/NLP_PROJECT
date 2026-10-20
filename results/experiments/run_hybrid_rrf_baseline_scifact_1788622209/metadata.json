@@ -1,0 +1,9 @@
+{
+  "run_id": "run_hybrid_rrf_baseline_scifact_1788622209",
+  "timestamp": "2026-09-05T15:30:18.303785+00:00",
+  "system_name": "hybrid_rrf_baseline",
+  "dataset": "scifact",
+  "split": "test",
+  "total_examples": 5,
+  "development_run": true
+}

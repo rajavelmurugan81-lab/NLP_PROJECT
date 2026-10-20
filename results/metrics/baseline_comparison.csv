@@ -1,0 +1,6 @@
+run_id,system_name,dataset,split,total_examples,accuracy,precision,recall,macro_f1,mrr,recall_at_5,rhr_percent,debate_activation_rate,avg_exec_time_sec
+run_majority_baseline_scifact_1788622153,majority_baseline,scifact,test,5,0.4,0.1333,0.3333,0.1905,0.0,0.0,0.0,0.0,0.0
+run_bm25_sparse_baseline_scifact_1788622153,bm25_sparse_baseline,scifact,test,5,0.4,0.1333,0.3333,0.1905,0.0,0.0,0.0,0.0,0.0835
+run_dense_faiss_baseline_scifact_1788622154,dense_faiss_baseline,scifact,test,5,0.4,0.1333,0.3333,0.1905,0.0,0.0,0.0,0.0,10.9284
+run_hybrid_rrf_baseline_scifact_1788622209,hybrid_rrf_baseline,scifact,test,5,0.2,0.0667,0.3333,0.1111,0.0,0.0,0.0,0.0,1.5661
+run_citeguard_hybrid_multiagent_scifact_1788622218,citeguard_hybrid_multiagent,scifact,test,5,0.4,0.1333,0.3333,0.1905,0.0,0.0,1.0,0.0,0.0009

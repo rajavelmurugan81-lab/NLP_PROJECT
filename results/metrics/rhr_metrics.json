@@ -1,0 +1,17 @@
+{
+  "stateless_baseline": {
+    "repeated_hallucination_rate": 0.0,
+    "stateless_rhr": 0.5,
+    "rhr_reduction_percent": 100.0,
+    "total_failures": 3,
+    "repeated_failures_count": 0
+  },
+  "citeguard_framework": {
+    "repeated_hallucination_rate": 0.0,
+    "stateless_rhr": 0.5,
+    "rhr_reduction_percent": 100.0,
+    "total_failures": 3,
+    "repeated_failures_count": 0
+  },
+  "rhr_reduction_percent": 0.0
+}

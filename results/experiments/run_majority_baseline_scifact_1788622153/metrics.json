@@ -1,0 +1,110 @@
+{
+  "run_id": "run_majority_baseline_scifact_1788622153",
+  "system_name": "majority_baseline",
+  "dataset": "scifact",
+  "split": "test",
+  "total_examples": 5,
+  "retrieval_metrics": {
+    "recall_at_k": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    },
+    "precision_at_k": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    },
+    "mrr": 0.0,
+    "hit_at_k": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    },
+    "ndcg_at_k": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    }
+  },
+  "classification_metrics": {
+    "accuracy": 0.4,
+    "precision": 0.1333,
+    "recall": 0.3333,
+    "macro_f1": 0.1905,
+    "micro_f1": 0.4,
+    "weighted_f1": 0.2286,
+    "confusion_matrix": {
+      "SUPPORT": {
+        "SUPPORT": 2,
+        "REFUTE": 0,
+        "NEI": 0
+      },
+      "REFUTE": {
+        "SUPPORT": 2,
+        "REFUTE": 0,
+        "NEI": 0
+      },
+      "NEI": {
+        "SUPPORT": 1,
+        "REFUTE": 0,
+        "NEI": 0
+      }
+    },
+    "class_report": {
+      "SUPPORT": {
+        "precision": 0.4,
+        "recall": 1.0,
+        "f1": 0.5714,
+        "support": 2
+      },
+      "REFUTE": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 2
+      },
+      "NEI": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 1
+      }
+    }
+  },
+  "multi_agent_metrics": {
+    "total_examples": 5,
+    "agents_invoked": 0,
+    "reasoning_rounds": 1.0,
+    "agreement_rate": 1.0,
+    "disagreement_rate": 0.0,
+    "debate_activation_rate": 0.0,
+    "average_execution_time_sec": 0.0,
+    "token_usage": {
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_tokens": 0
+    }
+  },
+  "rhr_metrics": {
+    "repeated_hallucination_rate": 0.0,
+    "stateless_rhr": 0.5,
+    "rhr_reduction_percent": 100.0,
+    "total_failures": 3,
+    "repeated_failures_count": 0
+  },
+  "failure_breakdown": {
+    "NO_EVIDENCE": 3
+  },
+  "timestamp": "2026-09-05T15:29:13.734145+00:00",
+  "metadata": {
+    "dataset_complete": false,
+    "limit": 10,
+    "ece_calibration_error": 0.1,
+    "development_run": true
+  }
+}

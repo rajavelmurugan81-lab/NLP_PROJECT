@@ -1,0 +1,356 @@
+Literature Review — All 14 Papers
+No.
+Year
+Paper
+Method / Algorithm
+Main Contribution
+Limitation / Research Gap
+1
+2024
+Zero-shot Scientific Claim Verification Using LLMs and Citation Text – Alvarez et al.
+GPT-3.5/GPT-4, zero-shot & few-shot prompting, SCitance dataset
+Shows that LLMs can perform scientific claim verification without expensive supervised fine-tuning. GPT-4 achieved competitive performance with supervised approaches. 
+Depends on citation-text/abstract evidence and prompting. It does not provide persistent memory of verification failures or adaptive verification for repeated errors.
+2
+2024
+Retrieval Augmented Scientific Claim Verification – Liu et al.
+RAG + BM25/Lucene + ColBERT/FAISS + T5 reranking + BERT ensemble + PICO
+CliVER retrieves clinical-trial evidence and classifies claims as Support, Refute, Neutral. It achieved F1 = 0.92 on CoVERt. 
+Mainly biomedical/clinical. Retrieval and sentence-selection errors can affect final verification. It does not learn structured patterns from previous failures.
+3
+2024/2025
+A Survey of Retrieval-Augmented Generation (RAG) for Large Language Models
+Naive RAG, Advanced RAG, Modular RAG; sparse, dense and hybrid retrieval
+Provides a systematic view of RAG evolution, including query rewriting, query expansion, decomposition, reranking and agentic RAG. 
+RAG can still suffer from irrelevant retrieval, poor retriever-generator alignment and context conflicts. Adaptive learning based on previous interactions/failures remains an important direction.
+4
+2025
+A Survey on Hallucination in Large Language Models: Principles, Taxonomy, Challenges, and Open Questions – Huang et al.
+Hallucination taxonomy + detection + mitigation + RAG analysis
+Gives a comprehensive taxonomy and identifies retrieval failure and generation bottlenecks as important causes of RAG hallucinations. 
+Survey identifies the need for adaptive RAG and better handling of irrelevant retrieval, but does not implement a persistent failure-learning mechanism.
+5
+2025
+Hallucination Detection in LLMs via Beam Search Sampling and Semantic Consistency Analysis – Bouchekir et al.
+Beam Search Sampling + semantic clustering + NLI + CoVe
+Generates multiple candidate answers and checks semantic consistency. Reports precision 0.87 and AUROC 0.81 for multi-answer generation. 
+Multiple generations increase computation/latency. It focuses on consistency of current outputs rather than remembering and learning from historical failure patterns.
+6
+2025
+Towards Detecting LLMs Hallucination via Markov Chain-based Multi-agent Debate Framework – Sun et al.
+Claim detection + evidence retrieval + Trust/Skeptic/Leader agents + Markov Chain
+Introduces multi-agent debate for hallucination detection and improves verification compared with baselines. 
+Agents debate the current evidence but do not maintain a structured failure history that changes future verification.
+7
+2025
+Retrieval Augmented Generation based Explainable Fact-Checking using Knowledge Graphs
+RAG + Knowledge Graph + TransE, TransH, ConvE, RotatE, DistMult
+Uses structured graph evidence for explainable fact checking and reports 14% accuracy and 8% macro-F1 improvement over the Llama-2 7B baseline. 
+KG-based reasoning is promising but the work does not integrate historical failure patterns, adaptive verification or failure-aware memory into the RAG pipeline.
+8
+2025
+SciClaimHunt: A Large Dataset for Evidence-based Scientific Claim Verification
+LLM-based claim generation + positive/negative claims + section-wise evidence + multi-head attention
+Introduces large-scale scientific claim datasets, including SciClaimHunt Num for numerical/cardinal claims. The CEM method retrieves evidence from different paper sections and uses multi-head attention for claim-evidence matching. 
+Existing scientific claim datasets have limited size and often rely on abstracts. Dataset-based approaches do not themselves provide an adaptive verification/memory mechanism.
+9
+2025
+Valsci: An Open-source, Self-hostable Literature Review Utility for Automated Large-batch Scientific Claim Verification using LLMs – Edelman & Skolnick
+RAG + Semantic Scholar + query expansion + bibliometric scoring + CoT + asynchronous processing
+Provides scalable, open-source, end-to-end scientific claim verification. It reduces citation hallucination and can process claims at high throughput. 
+Semantic Scholar coverage can be incomplete and paywalled papers may be missing. Bibliometric scoring can introduce bias. It does not maintain structured failure signatures for future adaptive verification. 
+10
+2025
+Mitigation of Hallucinations in Language Models in Education: A New Approach of Comparative and Cross-Verification
+Comparative verification + cross-verification
+Investigates hallucination mitigation by comparing/cross-checking outputs from language models in an educational context. 
+Cross-verification can identify inconsistencies, but the approach does not establish a persistent failure-learning loop that recognizes the same reasoning error in future tasks.
+11
+2026
+Empirical Evaluation of Self and Cross-Model Verification for LLM Hallucination Detection in Cybersecurity
+Self-verification + cross-model verification + human ground truth
+Evaluates five LLMs on cybersecurity tasks. Cross-verification detected hallucinations at 56%, compared with 36.4% for self-verification. It also found that verification was poorly calibrated. 
+Cross-verification performs better but produces more false alarms and remains poorly calibrated. It does not use historical failures to determine when stronger verification is needed.
+12
+2026
+SciTrue: Evidence-Grounded Claim Verification in Science – Tan et al.
+Claim refinement + literature retrieval + evidence extraction + subclaim decomposition + source-level attribution
+Provides fine-grained attribution by linking claim components to explicit scientific evidence and emphasizes transparent auditability. 
+Depends on Semantic Scholar coverage and metadata. It improves provenance and attribution but does not provide a Hallucination Ledger + Failure Signature + historical failure matching mechanism. 
+13
+2026
+VISTA: Verification in Sequential Turn-based Assessment
+Atomic claim decomposition + source verification + dialogue-history verification + sequential memory
+Models factuality as a dynamic property across conversations. Verified claims are stored in a dynamic knowledge store for subsequent turns. 
+Its memory is mainly for maintaining dialogue factual consistency. It does not specifically store classified hallucination/failure signatures and use them to trigger different verification strategies.
+14
+2026
+Hallucinations in Generative Artificial Intelligence and Large Language Models: Tests, Datasets, Detection and Correction Methods – Naser
+Hallucination taxonomy + detection + correction + RAG + uncertainty + external verification
+Provides a broad review of hallucination causes, detection methods, datasets, correction techniques and evaluation metrics. It highlights retrieval failures, outdated knowledge and contextual problems. 
+Mainly a comprehensive review rather than an adaptive implementation. It highlights the need for better detection/correction but does not provide a closed-loop mechanism where detected failures are stored and reused to improve future verification. 
+
+2. Comparison of the 14 Papers
+This makes the research gap much easier to explain to your faculty.
+Capability
+Existing Papers
+Your CiteGuard
+Scientific claim verification
+✓
+✓
+RAG-based evidence retrieval
+✓
+✓
+Hybrid/dense retrieval
+✓
+✓
+Claim-evidence matching
+✓
+✓
+Citation/source attribution
+✓
+✓
+Hallucination detection
+✓
+✓
+Multi-agent verification
+✓
+✓
+Cross-model verification
+✓
+✓
+Knowledge graph reasoning
+✓
+Optional
+Claim decomposition
+✓
+✓
+Sequential memory
+VISTA ✓
+✓
+Failure classification
+Limited
+✓
+Failure Signature
+Not established in these papers
+✓
+Hallucination Ledger
+Not established in these papers
+✓
+Historical failure matching
+Not established in these papers
+✓
+Failure-aware adaptive verification
+Not established as the combined mechanism
+✓
+Verification strategy changes based on previous failures
+Limited / future direction
+✓
+Closed-loop Verify → Remember → Evolve
+Not demonstrated as your proposed mechanism
+✓
+Your project documents explicitly define this mechanism as:
+Failure detection → Failure classification → Failure Signature → Hallucination Ledger → Historical Failure Matching → Adaptive Verification → Claim Re-evaluation. 
+
+3. Research Gaps Found From All 14 Papers
+Gap 1 — No structured failure memory
+Most existing approaches detect whether a current claim is wrong.
+They answer:
+"Is this claim hallucinated?"
+But they generally don't answer:
+"Have I made this type of mistake before?"
+Your CiteGuard stores the failure and its structural characteristics in a Hallucination Ledger. 
+
+Gap 2 — No Failure Signature
+A normal memory system might store:
+"Treatment X works for all patients" → Wrong.
+Your system stores why it was wrong:
+Failure Type: Overgeneralization
+Claim Scope: Broad
+Evidence Scope: Narrow
+Population: Mismatch
+Evidence Type: Clinical Study
+This is the Failure Signature.
+The project design specifically defines failure types such as unsupported claim, citation mismatch, overgeneralization, causal leap, outdated evidence, population/context mismatch, contradictory evidence and evidence misinterpretation. 
+
+4. Gap 3 — Existing Systems Don't Reuse Failures to Change Verification
+This is your main research gap.
+Existing systems:
+Claim
+ ↓
+Evidence
+ ↓
+Verification
+ ↓
+Result
+Your system:
+Claim
+ ↓
+Evidence
+ ↓
+Verification
+ ↓
+Failure?
+ ↓
+Failure Signature
+ ↓
+Store in Ledger
+ ↓
+Future Claim
+ ↓
+Historical Failure Matching
+ ↓
+Similar Failure?
+ ↓
+Stronger Verification
+ ↓
+Re-evaluate Claim
+This closed-loop mechanism is the central proposed contribution in your project documents. 
+
+5. Gap 4 — Verification Is Not Fully Adaptive
+The RAG survey itself identifies adaptive retrieval and learning from previous interactions as an important future direction. 
+Similarly, the 2026 cybersecurity study shows that verification is not properly calibrated: actual hallucination rates can vary substantially while verifier flag rates remain relatively similar. 
+Your solution
+Use a risk-based approach:
+Low Risk
+   ↓
+Normal verification
+
+Medium Risk
+   ↓
+More evidence
+
+High Risk
+   ↓
+Multi-agent verification
+
+Very High Risk
+   ↓
+Cross-model + contradiction + scope checking
+The risk can depend on:
+claim complexity 
+evidence quality 
+verifier disagreement 
+historical failure similarity 
+evidence scope 
+population/context 
+temporal relevance 
+
+6. Gap 5 — Citation Does Not Always Mean Evidence Supports the Claim
+SciTrue specifically demonstrates the importance of mapping claims to explicit source evidence because normal LLM/RAG systems can provide citations that do not actually support the generated statement. 
+Your project takes this further:
+Claim
+ ↓
+Exact source
+ ↓
+Exact sentence/span
+ ↓
+Evidence relationship
+ ↓
+Support / Refute / Partial / Uncertain
+This gives you claim-level provenance, not just a list of references.
+
+7. Gap 6 — Retrieval Itself Can Cause Hallucination
+The Huang survey identifies retrieval failure and generation bottleneck as major sources of hallucination in RAG systems. 
+Examples include:
+wrong document retrieved 
+irrelevant evidence 
+ambiguous query 
+incomplete evidence 
+outdated evidence 
+poor embedding 
+noisy context 
+Therefore, simply adding RAG does not guarantee factuality.
+CiteGuard improvement
+The Skeptic/Verifier should check:
+Did we retrieve the right paper?
+Does the exact evidence support the claim?
+Is the evidence current?
+Is the claim broader than the evidence?
+
+8. Gap 7 — Multi-Agent Debate Is Still Mostly Stateless
+The Markov Chain paper is important because it already has:
+Trust → Skeptic → Leader
+for current claim verification. 
+But your project can distinguish itself:
+Existing
+Claim
+ ↓
+Trust
+ ↓
+Skeptic
+ ↓
+Leader
+ ↓
+Answer
+CiteGuard
+Claim
+ ↓
+Previous Failure Search
+ ↓
+Risk Assessment
+ ↓
+Trust/Prosecutor
+ ↓
+Skeptic
+ ↓
+Additional Verification if needed
+ ↓
+Failure Classification
+ ↓
+Failure Memory
+ ↓
+Future adaptation
+So multi-agent verification itself is not your novelty.
+The novelty direction is the failure-aware feedback loop.
+Your own project documentation explicitly warns that the novelty should not simply be claimed as "multi-agent AI + hallucination detection + memory." 
+
+9. Gap 8 — Existing Scientific Datasets Are Not Enough for Repeated-Failure Learning
+SciClaimHunt identifies several limitations in existing scientific claim datasets:
+limited dataset size 
+heavy dependence on abstracts 
+insufficient evidence detail 
+missing claims from results/discussion/conclusion 
+lack of numeral-aware claims in earlier datasets. 
+Your project can add another experimental layer:
+A benchmark for repeated hallucination/failure patterns.
+For example:
+Round 1:
+Small study → broad conclusion
+        ↓
+F3 Overgeneralization
+
+Round 2:
+Different wording
+        ↓
+Small study → broad conclusion
+        ↓
+System recognizes F3
+        ↓
+Additional verification
+The important metric becomes:
+Repeated Hallucination Rate
+Your project documentation already proposes comparing this metric before and after the evolution loop. 
+
+10. Final Research Gap — Strongest Version
+You can use this directly in your PPT / Review document:
+Although existing research has made significant progress in RAG-based scientific claim verification, hallucination detection, source attribution, multi-agent verification, and cross-model verification, most systems focus on detecting errors in the current interaction. Existing approaches do not sufficiently address how detected failures can be structurally represented, remembered, matched with future claim-evidence situations, and used to dynamically strengthen verification. Recent studies also identify retrieval failures, irrelevant evidence, poor attribution, and verification calibration as continuing challenges. Therefore, there is a need for a failure-aware adaptive verification framework that combines claim-level provenance, hallucination classification, structured failure signatures, historical failure matching, and adaptive verification in a closed feedback loop.
+This is strongly aligned with your CiteGuard design. 
+
+11. One-Slide Version for Your Review
+Research Gap Identified
+Existing Work:
+RAG → retrieves external evidence. 
+Scientific verification → checks Support/Refute/Neutral. 
+Hallucination detectors → detect incorrect outputs. 
+Multi-agent systems → debate current claims. 
+Cross-model verification → improves detection. 
+SciTrue → improves claim-to-source traceability. 
+VISTA → maintains sequential factual memory. 
+Still Missing:
+❌ Structured memory of why verification failed❌ Failure Signature representation❌ Historical failure matching❌ Failure-aware risk scoring❌ Automatic escalation of verification❌ Closed-loop learning from repeated failures
+Proposed CiteGuard:
+VERIFY → REMEMBER → MATCH → ADAPT → RE-VERIFY → EVOLVE
+Your project specification describes exactly this closed-loop mechanism and the associated eight failure categories. 
+Most important sentence to tell your faculty:
+“Existing systems can detect hallucinations, but CiteGuard focuses on remembering the structural pattern of a detected failure and using that historical pattern to make future claim verification more careful.”

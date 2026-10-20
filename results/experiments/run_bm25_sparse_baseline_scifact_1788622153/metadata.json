@@ -1,0 +1,9 @@
+{
+  "run_id": "run_bm25_sparse_baseline_scifact_1788622153",
+  "timestamp": "2026-09-05T15:29:14.866439+00:00",
+  "system_name": "bm25_sparse_baseline",
+  "dataset": "scifact",
+  "split": "test",
+  "total_examples": 5,
+  "development_run": true
+}

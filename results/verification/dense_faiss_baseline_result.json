@@ -1,0 +1,91 @@
+{
+  "run_id": "phase9_dense_faiss_baseline",
+  "system_name": "dense_faiss_baseline",
+  "dataset": "scifact",
+  "split": "test",
+  "total_examples": 50,
+  "retrieval_metrics": {
+    "recall_at_k": {},
+    "precision_at_k": {},
+    "mrr": 0.0,
+    "hit_at_k": {},
+    "ndcg_at_k": {}
+  },
+  "classification_metrics": {
+    "accuracy": 0.42,
+    "precision": 0.3056,
+    "recall": 0.35,
+    "macro_f1": 0.2264,
+    "micro_f1": 0.42,
+    "weighted_f1": 0.2717,
+    "confusion_matrix": {
+      "SUPPORT": {
+        "SUPPORT": 20,
+        "REFUTE": 0,
+        "NEI": 0
+      },
+      "REFUTE": {
+        "SUPPORT": 9,
+        "REFUTE": 0,
+        "NEI": 1
+      },
+      "NEI": {
+        "SUPPORT": 19,
+        "REFUTE": 0,
+        "NEI": 1
+      }
+    },
+    "class_report": {
+      "SUPPORT": {
+        "precision": 0.4167,
+        "recall": 1.0,
+        "f1": 0.5882,
+        "support": 20
+      },
+      "REFUTE": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 10
+      },
+      "NEI": {
+        "precision": 0.5,
+        "recall": 0.05,
+        "f1": 0.0909,
+        "support": 20
+      }
+    }
+  },
+  "multi_agent_metrics": {
+    "total_examples": 50,
+    "agents_invoked": 0,
+    "reasoning_rounds": 1.0,
+    "agreement_rate": 1.0,
+    "disagreement_rate": 0.0,
+    "debate_activation_rate": 0.0,
+    "average_execution_time_sec": 0.2385,
+    "token_usage": {
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_tokens": 0
+    }
+  },
+  "rhr_metrics": {
+    "repeated_hallucination_rate": 0.0,
+    "stateless_rhr": 0.5,
+    "rhr_reduction_percent": 100.0,
+    "total_failures": 30,
+    "repeated_failures_count": 0
+  },
+  "failure_breakdown": {
+    "UNKNOWN_FAILURE": 21,
+    "CONTRADICTORY_EVIDENCE": 9
+  },
+  "timestamp": "2026-09-05T16:08:25.312872+00:00",
+  "metadata": {
+    "dataset_complete": true,
+    "limit": 50,
+    "ece_calibration_error": 0.2285,
+    "development_run": true
+  }
+}

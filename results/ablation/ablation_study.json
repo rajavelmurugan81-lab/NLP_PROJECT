@@ -1,0 +1,42 @@
+[
+  {
+    "system_name": "majority_baseline",
+    "description": "Baseline",
+    "accuracy": 0.4,
+    "macro_f1": 0.1905,
+    "mrr": 0.0,
+    "recall_at_5": 0.0
+  },
+  {
+    "system_name": "bm25_sparse_baseline",
+    "description": "Sparse BM25 Only",
+    "accuracy": 0.42,
+    "macro_f1": 0.225,
+    "mrr": 0.0,
+    "recall_at_5": 0.0
+  },
+  {
+    "system_name": "dense_faiss_baseline",
+    "description": "Dense FAISS Only",
+    "accuracy": 0.42,
+    "macro_f1": 0.2264,
+    "mrr": 0.0,
+    "recall_at_5": 0.0
+  },
+  {
+    "system_name": "hybrid_rrf_baseline",
+    "description": "Hybrid (BM25 + Dense RRF)",
+    "accuracy": 0.4,
+    "macro_f1": 0.1905,
+    "mrr": 0.0,
+    "recall_at_5": 0.0
+  },
+  {
+    "system_name": "citeguard_hybrid_multiagent",
+    "description": "Full System (Hybrid RRF + Multi-Agent Consensus)",
+    "accuracy": 0.4,
+    "macro_f1": 0.1905,
+    "mrr": 0.0,
+    "recall_at_5": 0.0
+  }
+]

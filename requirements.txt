@@ -1,0 +1,13 @@
+# Core NLP & Data Science Foundation
+numpy
+pandas
+scikit-learn
+torch
+transformers
+datasets
+
+# Utilities, Testing & Validation
+python-dotenv
+tqdm
+pytest
+pydantic

@@ -1,0 +1,10 @@
+{"claim_id": "seed_bench_000", "failure_type": "DOMAIN_MISMATCH", "dataset": "scifact_seed", "predicted_label": "SUPPORT", "ground_truth_label": "REFUTE"}
+{"claim_id": "seed_bench_001", "failure_type": "UNGROUNDED_SUPPORT", "dataset": "scifact_seed", "predicted_label": "SUPPORT", "ground_truth_label": "REFUTE"}
+{"claim_id": "seed_bench_002", "failure_type": "DOMAIN_MISMATCH", "dataset": "scifact_seed", "predicted_label": "SUPPORT", "ground_truth_label": "REFUTE"}
+{"claim_id": "seed_bench_003", "failure_type": "UNGROUNDED_SUPPORT", "dataset": "scifact_seed", "predicted_label": "SUPPORT", "ground_truth_label": "REFUTE"}
+{"claim_id": "seed_bench_004", "failure_type": "DOMAIN_MISMATCH", "dataset": "scifact_seed", "predicted_label": "SUPPORT", "ground_truth_label": "REFUTE"}
+{"claim_id": "seed_bench_005", "failure_type": "UNGROUNDED_SUPPORT", "dataset": "scifact_seed", "predicted_label": "SUPPORT", "ground_truth_label": "REFUTE"}
+{"claim_id": "seed_bench_006", "failure_type": "DOMAIN_MISMATCH", "dataset": "scifact_seed", "predicted_label": "SUPPORT", "ground_truth_label": "REFUTE"}
+{"claim_id": "seed_bench_007", "failure_type": "UNGROUNDED_SUPPORT", "dataset": "scifact_seed", "predicted_label": "SUPPORT", "ground_truth_label": "REFUTE"}
+{"claim_id": "seed_bench_008", "failure_type": "DOMAIN_MISMATCH", "dataset": "scifact_seed", "predicted_label": "SUPPORT", "ground_truth_label": "REFUTE"}
+{"claim_id": "seed_bench_009", "failure_type": "UNGROUNDED_SUPPORT", "dataset": "scifact_seed", "predicted_label": "SUPPORT", "ground_truth_label": "REFUTE"}

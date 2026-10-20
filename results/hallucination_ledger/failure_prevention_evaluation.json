@@ -1,0 +1,46 @@
+{
+  "experiment_name": "CiteGuard Failure-Pattern Memory Verification",
+  "timestamp": "2026-10-10T17:40:30Z",
+  "patterns_discovered": 9,
+  "patterns_reused": 1,
+  "pattern_matches": [
+    {
+      "claim_id": "exp_run2_c002",
+      "matched_pattern_id": "FP_DOM_001",
+      "pattern_name": "OFF_DOMAIN_EVIDENCE_ACCEPTED_AS_SUPPORT",
+      "match_score": 0.92,
+      "risk_level": "VERY_HIGH",
+      "adaptive_actions": [
+        "REQUIRE_STRICT_DOMAIN_VALIDATION",
+        "EXCLUDE_OFF_DOMAIN_PASSAGES",
+        "CLAIM_RECHECK_DOMAIN_SCOPE"
+      ],
+      "claim_recheck_status": "REJECT",
+      "prevention_triggered": true
+    }
+  ],
+  "prevention_actions": [
+    "REQUIRE_STRICT_DOMAIN_VALIDATION",
+    "EXCLUDE_OFF_DOMAIN_PASSAGES",
+    "CLAIM_RECHECK_DOMAIN_SCOPE",
+    "FORCE_INSUFFICIENT_EVIDENCE",
+    "DYNAMIC_CONFIDENCE_RECALIBRATION"
+  ],
+  "failures_before_memory": 1,
+  "failures_after_memory": 0,
+  "prevention_rate": 1.0,
+  "recurrence_rate": 0.0,
+  "unsupported_support_rate_before": 1.0,
+  "unsupported_support_rate_after": 0.0,
+  "domain_mismatch_rate_before": 1.0,
+  "domain_mismatch_rate_after": 0.0,
+  "demonstrated_feedback_loop": {
+    "run_1_failure": "Smart grid evidence accepted for quantum FL claim (DOMAIN_MISMATCH)",
+    "learned_pattern": "OFF_DOMAIN_EVIDENCE_ACCEPTED_AS_SUPPORT (FP_DOM_001)",
+    "run_2_input": "Similar quantum FL claim with smart grid evidence",
+    "historical_match": "TRUE (Risk: VERY_HIGH, Score: 0.92)",
+    "adaptive_verification": "Strict domain scope check activated",
+    "claim_recheck": "REJECT off-domain evidence",
+    "verdict_change": "Preliminary 'SUPPORT' -> Final 'NEI'"
+  }
+}

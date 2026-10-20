@@ -1,0 +1,96 @@
+{
+  "scifact": {
+    "dataset_name": "scifact",
+    "total_records": 2003,
+    "unique_claims": 1401,
+    "unique_evidence_documents": 629,
+    "split_distribution": {
+      "train": 1258,
+      "dev": 448,
+      "test": 297
+    },
+    "label_distribution": {
+      "NEUTRAL": 710,
+      "REFUTE": 463,
+      "SUPPORT": 830
+    },
+    "missing_values": {
+      "missing_evidence_text": 710,
+      "missing_evidence_title": 297
+    },
+    "length_statistics": {
+      "avg_claim_words": 12.3,
+      "avg_claim_chars": 89.15,
+      "avg_evidence_words": 31.91,
+      "avg_evidence_chars": 220.15
+    },
+    "preprocessing": {
+      "initial_count": 2011,
+      "processed_count": 2003,
+      "duplicates_removed": 8,
+      "missing_evidence_count": 710
+    }
+  },
+  "covert": {
+    "dataset_name": "covert",
+    "total_records": 3,
+    "unique_claims": 3,
+    "unique_evidence_documents": 3,
+    "split_distribution": {
+      "train": 1,
+      "dev": 1,
+      "test": 1
+    },
+    "label_distribution": {
+      "PARTIALLY_SUPPORTED": 1,
+      "REFUTE": 1,
+      "SUPPORT": 1
+    },
+    "missing_values": {
+      "missing_evidence_text": 0,
+      "missing_evidence_title": 0
+    },
+    "length_statistics": {
+      "avg_claim_words": 10.67,
+      "avg_claim_chars": 80.33,
+      "avg_evidence_words": 17.67,
+      "avg_evidence_chars": 130.33
+    },
+    "preprocessing": {
+      "initial_count": 3,
+      "processed_count": 3,
+      "duplicates_removed": 0,
+      "missing_evidence_count": 0
+    }
+  },
+  "sciclaimhunt": {
+    "dataset_name": "sciclaimhunt",
+    "total_records": 3,
+    "unique_claims": 3,
+    "unique_evidence_documents": 3,
+    "split_distribution": {
+      "train": 3
+    },
+    "label_distribution": {
+      "SUPPORT": 1,
+      "REFUTE": 1,
+      "PARTIALLY_SUPPORTED": 1
+    },
+    "missing_values": {
+      "missing_evidence_text": 0,
+      "missing_evidence_title": 0
+    },
+    "length_statistics": {
+      "avg_claim_words": 14.0,
+      "avg_claim_chars": 101.67,
+      "avg_evidence_words": 17.67,
+      "avg_evidence_chars": 123.67
+    },
+    "preprocessing": {
+      "initial_count": 9,
+      "processed_count": 3,
+      "duplicates_removed": 6,
+      "missing_evidence_count": 0
+    }
+  }
+}

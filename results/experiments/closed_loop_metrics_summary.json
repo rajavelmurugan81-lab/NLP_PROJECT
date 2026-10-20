@@ -1,0 +1,41 @@
+{
+  "timestamp": "2026-10-11T08:51:49.955599+00:00",
+  "total_held_out_cases": 13,
+  "baseline_metrics": {
+    "total_cases": 13,
+    "correct": 10,
+    "accuracy": 0.7692,
+    "repeat_failures": 3,
+    "repeat_failure_rate": 0.375,
+    "false_rejections": 0,
+    "false_rejection_rate": 0.0,
+    "false_positive_matches": 0,
+    "false_positive_match_rate": 0.0,
+    "avg_latency_ms": 1.33
+  },
+  "citeguard_metrics": {
+    "total_cases": 13,
+    "correct": 12,
+    "accuracy": 0.9231,
+    "repeat_failures": 1,
+    "repeat_failure_rate": 0.125,
+    "false_rejections": 0,
+    "false_rejection_rate": 0.0,
+    "false_positive_matches": 0,
+    "false_positive_match_rate": 0.0,
+    "avg_latency_ms": 1.32
+  },
+  "ablation_no_recheck_metrics": {
+    "total_cases": 13,
+    "correct": 10,
+    "accuracy": 0.7692,
+    "repeat_failures": 3,
+    "repeat_failure_rate": 0.375,
+    "false_rejections": 0,
+    "false_rejection_rate": 0.0,
+    "false_positive_matches": 0,
+    "false_positive_match_rate": 0.0,
+    "avg_latency_ms": 1.35
+  },
+  "repeat_failure_relative_reduction_pct": 66.67
+}

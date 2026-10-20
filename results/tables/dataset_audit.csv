@@ -1,0 +1,4 @@
+Dataset,Raw Records,Processed Records,Label Distribution,Missing Claims,Status
+scifact,2003,2003,"{""NEUTRAL"": 710, ""REFUTE"": 463, ""SUPPORT"": 830}",0,complete
+covert,3,3,"{""PARTIALLY_SUPPORTED"": 1, ""REFUTE"": 1, ""SUPPORT"": 1}",0,seed_fixture
+sciclaimhunt,110002,3,"{""SUPPORT"": 1, ""REFUTE"": 1, ""PARTIALLY_SUPPORTED"": 1}",0,seed_fixture

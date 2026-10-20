@@ -1,0 +1,35 @@
+{
+  "scifact": {
+    "processed_records": 2003,
+    "raw_records": 2003,
+    "label_distribution": {
+      "NEUTRAL": 710,
+      "REFUTE": 463,
+      "SUPPORT": 830
+    },
+    "missing_claims": 0,
+    "status": "complete"
+  },
+  "covert": {
+    "processed_records": 3,
+    "raw_records": 3,
+    "label_distribution": {
+      "PARTIALLY_SUPPORTED": 1,
+      "REFUTE": 1,
+      "SUPPORT": 1
+    },
+    "missing_claims": 0,
+    "status": "seed_fixture"
+  },
+  "sciclaimhunt": {
+    "processed_records": 3,
+    "raw_records": 110002,
+    "label_distribution": {
+      "SUPPORT": 1,
+      "REFUTE": 1,
+      "PARTIALLY_SUPPORTED": 1
+    },
+    "missing_claims": 0,
+    "status": "seed_fixture"
+  }
+}

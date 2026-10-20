@@ -1,0 +1,30 @@
+data:
+  data_dir: data/processed
+  dataset: scifact
+  raw_dir: data/raw
+  split: test
+evaluation:
+  k_eval_list:
+  - 1
+  - 3
+  - 5
+  - 10
+  score_threshold: 0.3
+  top_k: 5
+experiment:
+  name: citeguard_phase7_benchmark
+  output_dir: results/experiments
+  run_id_prefix: eval_run
+  seed: 42
+ledger:
+  ledger_path: results/hallucination_ledger/hallucination_ledger.jsonl
+multiagent:
+  agreement_threshold: 0.75
+  confidence_threshold: 0.7
+  evidence_quality_threshold: 0.3
+  fallback_behavior: NEI
+  max_reasoning_rounds: 3
+system:
+  default_baseline: citeguard_hybrid_multiagent
+  provider_type: mock
+  retrieval_mode: hybrid

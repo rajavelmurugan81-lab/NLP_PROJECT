@@ -1,0 +1,654 @@
+[
+  {
+    "case_id": "test_f6_true_fail_001",
+    "category": "F6",
+    "claim_text": "Resveratrol supplementation significantly extends maximum human lifespan in human clinical populations.",
+    "expected_verdict": "NEI",
+    "baseline": {
+      "case_id": "test_f6_true_fail_001",
+      "category": "F6",
+      "claim_text": "Resveratrol supplementation significantly extends maximum human lifespan in human clinical populations.",
+      "expected_verdict": "NEI",
+      "predicted_verdict": "SUPPORT",
+      "confidence": 0.8253,
+      "is_correct": false,
+      "matched_patterns": [],
+      "match_score": 0.0,
+      "prevention_action": "NONE",
+      "recheck_status": "ACCEPT",
+      "latency_ms": 0.95
+    },
+    "citeguard": {
+      "case_id": "test_f6_true_fail_001",
+      "category": "F6",
+      "claim_text": "Resveratrol supplementation significantly extends maximum human lifespan in human clinical populations.",
+      "expected_verdict": "NEI",
+      "predicted_verdict": "NEI",
+      "confidence": 0.35,
+      "is_correct": true,
+      "matched_patterns": [
+        "FP_PCM_010",
+        "FP_PCM_011"
+      ],
+      "match_score": 0.86,
+      "prevention_action": "NONE",
+      "recheck_status": "REJECT",
+      "latency_ms": 0.68
+    },
+    "ablation_no_recheck": {
+      "case_id": "test_f6_true_fail_001",
+      "category": "F6",
+      "claim_text": "Resveratrol supplementation significantly extends maximum human lifespan in human clinical populations.",
+      "expected_verdict": "NEI",
+      "predicted_verdict": "SUPPORT",
+      "confidence": 0.8253,
+      "is_correct": false,
+      "matched_patterns": [
+        "FP_PCM_010",
+        "FP_PCM_011"
+      ],
+      "match_score": 0.86,
+      "prevention_action": "NONE",
+      "recheck_status": "ACCEPT",
+      "latency_ms": 0.61
+    }
+  },
+  {
+    "case_id": "test_f6_hard_neg_001",
+    "category": "HARD_NEGATIVE",
+    "claim_text": "Pembrolizumab improves overall survival in human clinical cancer patients with metastatic melanoma.",
+    "expected_verdict": "SUPPORT",
+    "baseline": {
+      "case_id": "test_f6_hard_neg_001",
+      "category": "HARD_NEGATIVE",
+      "claim_text": "Pembrolizumab improves overall survival in human clinical cancer patients with metastatic melanoma.",
+      "expected_verdict": "SUPPORT",
+      "predicted_verdict": "SUPPORT",
+      "confidence": 0.8631,
+      "is_correct": true,
+      "matched_patterns": [],
+      "match_score": 0.0,
+      "prevention_action": "NONE",
+      "recheck_status": "ACCEPT",
+      "latency_ms": 1.39
+    },
+    "citeguard": {
+      "case_id": "test_f6_hard_neg_001",
+      "category": "HARD_NEGATIVE",
+      "claim_text": "Pembrolizumab improves overall survival in human clinical cancer patients with metastatic melanoma.",
+      "expected_verdict": "SUPPORT",
+      "predicted_verdict": "SUPPORT",
+      "confidence": 0.8631,
+      "is_correct": true,
+      "matched_patterns": [],
+      "match_score": 0.0,
+      "prevention_action": "NONE",
+      "recheck_status": "ACCEPT",
+      "latency_ms": 1.24
+    },
+    "ablation_no_recheck": {
+      "case_id": "test_f6_hard_neg_001",
+      "category": "HARD_NEGATIVE",
+      "claim_text": "Pembrolizumab improves overall survival in human clinical cancer patients with metastatic melanoma.",
+      "expected_verdict": "SUPPORT",
+      "predicted_verdict": "SUPPORT",
+      "confidence": 0.8631,
+      "is_correct": true,
+      "matched_patterns": [],
+      "match_score": 0.0,
+      "prevention_action": "NONE",
+      "recheck_status": "ACCEPT",
+      "latency_ms": 1.42
+    }
+  },
+  {
+    "case_id": "test_f4_true_fail_001",
+    "category": "F4",
+    "claim_text": "Drinking coffee directly causes reduced incidence of clinical depression.",
+    "expected_verdict": "PARTIALLY_SUPPORTED",
+    "baseline": {
+      "case_id": "test_f4_true_fail_001",
+      "category": "F4",
+      "claim_text": "Drinking coffee directly causes reduced incidence of clinical depression.",
+      "expected_verdict": "PARTIALLY_SUPPORTED",
+      "predicted_verdict": "PARTIALLY_SUPPORTED",
+      "confidence": 0.7406,
+      "is_correct": true,
+      "matched_patterns": [],
+      "match_score": 0.0,
+      "prevention_action": "NONE",
+      "recheck_status": "ACCEPT",
+      "latency_ms": 1.76
+    },
+    "citeguard": {
+      "case_id": "test_f4_true_fail_001",
+      "category": "F4",
+      "claim_text": "Drinking coffee directly causes reduced incidence of clinical depression.",
+      "expected_verdict": "PARTIALLY_SUPPORTED",
+      "predicted_verdict": "PARTIALLY_SUPPORTED",
+      "confidence": 0.7406,
+      "is_correct": true,
+      "matched_patterns": [
+        "FP_CAU_010"
+      ],
+      "match_score": 0.88,
+      "prevention_action": "QUALIFY_CAUSAL_CLAIM",
+      "recheck_status": "ACCEPT",
+      "latency_ms": 1.26
+    },
+    "ablation_no_recheck": {
+      "case_id": "test_f4_true_fail_001",
+      "category": "F4",
+      "claim_text": "Drinking coffee directly causes reduced incidence of clinical depression.",
+      "expected_verdict": "PARTIALLY_SUPPORTED",
+      "predicted_verdict": "PARTIALLY_SUPPORTED",
+      "confidence": 0.7406,
+      "is_correct": true,
+      "matched_patterns": [
+        "FP_CAU_010"
+      ],
+      "match_score": 0.88,
+      "prevention_action": "QUALIFY_CAUSAL_CLAIM",
+      "recheck_status": "ACCEPT",
+      "latency_ms": 1.22
+    }
+  },
+  {
+    "case_id": "test_f4_hard_neg_001",
+    "category": "HARD_NEGATIVE",
+    "claim_text": "Atorvastatin administration directly reduces serum LDL cholesterol in hypercholesterolemia.",
+    "expected_verdict": "SUPPORT",
+    "baseline": {
+      "case_id": "test_f4_hard_neg_001",
+      "category": "HARD_NEGATIVE",
+      "claim_text": "Atorvastatin administration directly reduces serum LDL cholesterol in hypercholesterolemia.",
+      "expected_verdict": "SUPPORT",
+      "predicted_verdict": "SUPPORT",
+      "confidence": 0.8566,
+      "is_correct": true,
+      "matched_patterns": [],
+      "match_score": 0.0,
+      "prevention_action": "NONE",
+      "recheck_status": "ACCEPT",
+      "latency_ms": 1.11
+    },
+    "citeguard": {
+      "case_id": "test_f4_hard_neg_001",
+      "category": "HARD_NEGATIVE",
+      "claim_text": "Atorvastatin administration directly reduces serum LDL cholesterol in hypercholesterolemia.",
+      "expected_verdict": "SUPPORT",
+      "predicted_verdict": "SUPPORT",
+      "confidence": 0.8566,
+      "is_correct": true,
+      "matched_patterns": [],
+      "match_score": 0.0,
+      "prevention_action": "NONE",
+      "recheck_status": "ACCEPT",
+      "latency_ms": 1.45
+    },
+    "ablation_no_recheck": {
+      "case_id": "test_f4_hard_neg_001",
+      "category": "HARD_NEGATIVE",
+      "claim_text": "Atorvastatin administration directly reduces serum LDL cholesterol in hypercholesterolemia.",
+      "expected_verdict": "SUPPORT",
+      "predicted_verdict": "SUPPORT",
+      "confidence": 0.8566,
+      "is_correct": true,
+      "matched_patterns": [],
+      "match_score": 0.0,
+      "prevention_action": "NONE",
+      "recheck_status": "ACCEPT",
+      "latency_ms": 1.08
+    }
+  },
+  {
+    "case_id": "test_clean_valid_support_001",
+    "category": "VALID_SUPPORT",
+    "claim_text": "Regular aerobic exercise training improves maximal oxygen uptake VO2 max in healthy adults.",
+    "expected_verdict": "SUPPORT",
+    "baseline": {
+      "case_id": "test_clean_valid_support_001",
+      "category": "VALID_SUPPORT",
+      "claim_text": "Regular aerobic exercise training improves maximal oxygen uptake VO2 max in healthy adults.",
+      "expected_verdict": "SUPPORT",
+      "predicted_verdict": "SUPPORT",
+      "confidence": 0.8669,
+      "is_correct": true,
+      "matched_patterns": [],
+      "match_score": 0.0,
+      "prevention_action": "NONE",
+      "recheck_status": "ACCEPT",
+      "latency_ms": 1.15
+    },
+    "citeguard": {
+      "case_id": "test_clean_valid_support_001",
+      "category": "VALID_SUPPORT",
+      "claim_text": "Regular aerobic exercise training improves maximal oxygen uptake VO2 max in healthy adults.",
+      "expected_verdict": "SUPPORT",
+      "predicted_verdict": "SUPPORT",
+      "confidence": 0.8669,
+      "is_correct": true,
+      "matched_patterns": [],
+      "match_score": 0.0,
+      "prevention_action": "NONE",
+      "recheck_status": "ACCEPT",
+      "latency_ms": 1.11
+    },
+    "ablation_no_recheck": {
+      "case_id": "test_clean_valid_support_001",
+      "category": "VALID_SUPPORT",
+      "claim_text": "Regular aerobic exercise training improves maximal oxygen uptake VO2 max in healthy adults.",
+      "expected_verdict": "SUPPORT",
+      "predicted_verdict": "SUPPORT",
+      "confidence": 0.8669,
+      "is_correct": true,
+      "matched_patterns": [],
+      "match_score": 0.0,
+      "prevention_action": "NONE",
+      "recheck_status": "ACCEPT",
+      "latency_ms": 2.61
+    }
+  },
+  {
+    "case_id": "test_clean_valid_support_002",
+    "category": "VALID_SUPPORT",
+    "claim_text": "CRISPR-Cas9 endonuclease facilitates targeted double-strand DNA cleavage in eukaryotic genomes.",
+    "expected_verdict": "SUPPORT",
+    "baseline": {
+      "case_id": "test_clean_valid_support_002",
+      "category": "VALID_SUPPORT",
+      "claim_text": "CRISPR-Cas9 endonuclease facilitates targeted double-strand DNA cleavage in eukaryotic genomes.",
+      "expected_verdict": "SUPPORT",
+      "predicted_verdict": "SUPPORT",
+      "confidence": 0.8653,
+      "is_correct": true,
+      "matched_patterns": [],
+      "match_score": 0.0,
+      "prevention_action": "NONE",
+      "recheck_status": "ACCEPT",
+      "latency_ms": 1.56
+    },
+    "citeguard": {
+      "case_id": "test_clean_valid_support_002",
+      "category": "VALID_SUPPORT",
+      "claim_text": "CRISPR-Cas9 endonuclease facilitates targeted double-strand DNA cleavage in eukaryotic genomes.",
+      "expected_verdict": "SUPPORT",
+      "predicted_verdict": "SUPPORT",
+      "confidence": 0.8653,
+      "is_correct": true,
+      "matched_patterns": [],
+      "match_score": 0.0,
+      "prevention_action": "NONE",
+      "recheck_status": "ACCEPT",
+      "latency_ms": 1.4
+    },
+    "ablation_no_recheck": {
+      "case_id": "test_clean_valid_support_002",
+      "category": "VALID_SUPPORT",
+      "claim_text": "CRISPR-Cas9 endonuclease facilitates targeted double-strand DNA cleavage in eukaryotic genomes.",
+      "expected_verdict": "SUPPORT",
+      "predicted_verdict": "SUPPORT",
+      "confidence": 0.8653,
+      "is_correct": true,
+      "matched_patterns": [],
+      "match_score": 0.0,
+      "prevention_action": "NONE",
+      "recheck_status": "ACCEPT",
+      "latency_ms": 1.45
+    }
+  },
+  {
+    "case_id": "test_unrelated_physics_001",
+    "category": "UNRELATED",
+    "claim_text": "The speed of light in vacuum is approximately 299,792 kilometers per second.",
+    "expected_verdict": "SUPPORT",
+    "baseline": {
+      "case_id": "test_unrelated_physics_001",
+      "category": "UNRELATED",
+      "claim_text": "The speed of light in vacuum is approximately 299,792 kilometers per second.",
+      "expected_verdict": "SUPPORT",
+      "predicted_verdict": "SUPPORT",
+      "confidence": 0.8824,
+      "is_correct": true,
+      "matched_patterns": [],
+      "match_score": 0.0,
+      "prevention_action": "NONE",
+      "recheck_status": "ACCEPT",
+      "latency_ms": 1.36
+    },
+    "citeguard": {
+      "case_id": "test_unrelated_physics_001",
+      "category": "UNRELATED",
+      "claim_text": "The speed of light in vacuum is approximately 299,792 kilometers per second.",
+      "expected_verdict": "SUPPORT",
+      "predicted_verdict": "SUPPORT",
+      "confidence": 0.8824,
+      "is_correct": true,
+      "matched_patterns": [],
+      "match_score": 0.0,
+      "prevention_action": "NONE",
+      "recheck_status": "ACCEPT",
+      "latency_ms": 1.65
+    },
+    "ablation_no_recheck": {
+      "case_id": "test_unrelated_physics_001",
+      "category": "UNRELATED",
+      "claim_text": "The speed of light in vacuum is approximately 299,792 kilometers per second.",
+      "expected_verdict": "SUPPORT",
+      "predicted_verdict": "SUPPORT",
+      "confidence": 0.8824,
+      "is_correct": true,
+      "matched_patterns": [],
+      "match_score": 0.0,
+      "prevention_action": "NONE",
+      "recheck_status": "ACCEPT",
+      "latency_ms": 1.33
+    }
+  },
+  {
+    "case_id": "test_f1_unsupported_001",
+    "category": "F1",
+    "claim_text": "Static magnetic fields cure rheumatoid arthritis and reverse joint erosion.",
+    "expected_verdict": "NEI",
+    "baseline": {
+      "case_id": "test_f1_unsupported_001",
+      "category": "F1",
+      "claim_text": "Static magnetic fields cure rheumatoid arthritis and reverse joint erosion.",
+      "expected_verdict": "NEI",
+      "predicted_verdict": "NEI",
+      "confidence": 0.2,
+      "is_correct": true,
+      "matched_patterns": [],
+      "match_score": 0.0,
+      "prevention_action": "NONE",
+      "recheck_status": "ACCEPT",
+      "latency_ms": 1.32
+    },
+    "citeguard": {
+      "case_id": "test_f1_unsupported_001",
+      "category": "F1",
+      "claim_text": "Static magnetic fields cure rheumatoid arthritis and reverse joint erosion.",
+      "expected_verdict": "NEI",
+      "predicted_verdict": "NEI",
+      "confidence": 0.35,
+      "is_correct": true,
+      "matched_patterns": [
+        "FP_IRR_002",
+        "FP_RET_003"
+      ],
+      "match_score": 0.86,
+      "prevention_action": "ENFORCE_RELEVANCE_FLOOR_050",
+      "recheck_status": "REJECT",
+      "latency_ms": 1.92
+    },
+    "ablation_no_recheck": {
+      "case_id": "test_f1_unsupported_001",
+      "category": "F1",
+      "claim_text": "Static magnetic fields cure rheumatoid arthritis and reverse joint erosion.",
+      "expected_verdict": "NEI",
+      "predicted_verdict": "NEI",
+      "confidence": 0.2,
+      "is_correct": true,
+      "matched_patterns": [
+        "FP_IRR_002",
+        "FP_RET_003"
+      ],
+      "match_score": 0.86,
+      "prevention_action": "ENFORCE_RELEVANCE_FLOOR_050",
+      "recheck_status": "ACCEPT",
+      "latency_ms": 1.29
+    }
+  },
+  {
+    "case_id": "test_f2_citation_mismatch_001",
+    "category": "F2",
+    "claim_text": "Vaswani et al. (2017) introduced convolutional neural networks for computer vision.",
+    "expected_verdict": "NEI",
+    "baseline": {
+      "case_id": "test_f2_citation_mismatch_001",
+      "category": "F2",
+      "claim_text": "Vaswani et al. (2017) introduced convolutional neural networks for computer vision.",
+      "expected_verdict": "NEI",
+      "predicted_verdict": "SUPPORT",
+      "confidence": 0.7279,
+      "is_correct": false,
+      "matched_patterns": [],
+      "match_score": 0.0,
+      "prevention_action": "NONE",
+      "recheck_status": "ACCEPT",
+      "latency_ms": 1.32
+    },
+    "citeguard": {
+      "case_id": "test_f2_citation_mismatch_001",
+      "category": "F2",
+      "claim_text": "Vaswani et al. (2017) introduced convolutional neural networks for computer vision.",
+      "expected_verdict": "NEI",
+      "predicted_verdict": "NEI",
+      "confidence": 0.35,
+      "is_correct": true,
+      "matched_patterns": [
+        "FP_MET_008"
+      ],
+      "match_score": 0.9,
+      "prevention_action": "VERIFY_EXACT_DOI_SOURCE",
+      "recheck_status": "REJECT",
+      "latency_ms": 1.26
+    },
+    "ablation_no_recheck": {
+      "case_id": "test_f2_citation_mismatch_001",
+      "category": "F2",
+      "claim_text": "Vaswani et al. (2017) introduced convolutional neural networks for computer vision.",
+      "expected_verdict": "NEI",
+      "predicted_verdict": "SUPPORT",
+      "confidence": 0.7279,
+      "is_correct": false,
+      "matched_patterns": [
+        "FP_MET_008"
+      ],
+      "match_score": 0.9,
+      "prevention_action": "VERIFY_EXACT_DOI_SOURCE",
+      "recheck_status": "ACCEPT",
+      "latency_ms": 1.41
+    }
+  },
+  {
+    "case_id": "test_f3_overgeneralization_001",
+    "category": "F3",
+    "claim_text": "Intermittent fasting permanently eliminates type 2 diabetes across all human populations worldwide.",
+    "expected_verdict": "PARTIALLY_SUPPORTED",
+    "baseline": {
+      "case_id": "test_f3_overgeneralization_001",
+      "category": "F3",
+      "claim_text": "Intermittent fasting permanently eliminates type 2 diabetes across all human populations worldwide.",
+      "expected_verdict": "PARTIALLY_SUPPORTED",
+      "predicted_verdict": "NEI",
+      "confidence": 0.35,
+      "is_correct": false,
+      "matched_patterns": [],
+      "match_score": 0.0,
+      "prevention_action": "NONE",
+      "recheck_status": "ACCEPT",
+      "latency_ms": 1.31
+    },
+    "citeguard": {
+      "case_id": "test_f3_overgeneralization_001",
+      "category": "F3",
+      "claim_text": "Intermittent fasting permanently eliminates type 2 diabetes across all human populations worldwide.",
+      "expected_verdict": "PARTIALLY_SUPPORTED",
+      "predicted_verdict": "NEI",
+      "confidence": 0.35,
+      "is_correct": false,
+      "matched_patterns": [],
+      "match_score": 0.0,
+      "prevention_action": "NONE",
+      "recheck_status": "ACCEPT",
+      "latency_ms": 1.15
+    },
+    "ablation_no_recheck": {
+      "case_id": "test_f3_overgeneralization_001",
+      "category": "F3",
+      "claim_text": "Intermittent fasting permanently eliminates type 2 diabetes across all human populations worldwide.",
+      "expected_verdict": "PARTIALLY_SUPPORTED",
+      "predicted_verdict": "NEI",
+      "confidence": 0.35,
+      "is_correct": false,
+      "matched_patterns": [],
+      "match_score": 0.0,
+      "prevention_action": "NONE",
+      "recheck_status": "ACCEPT",
+      "latency_ms": 1.31
+    }
+  },
+  {
+    "case_id": "test_f5_outdated_evidence_001",
+    "category": "F5",
+    "claim_text": "Therapeutic venesection is the gold standard medical treatment for lobar pneumonia.",
+    "expected_verdict": "PARTIALLY_SUPPORTED",
+    "baseline": {
+      "case_id": "test_f5_outdated_evidence_001",
+      "category": "F5",
+      "claim_text": "Therapeutic venesection is the gold standard medical treatment for lobar pneumonia.",
+      "expected_verdict": "PARTIALLY_SUPPORTED",
+      "predicted_verdict": "PARTIALLY_SUPPORTED",
+      "confidence": 0.714,
+      "is_correct": true,
+      "matched_patterns": [],
+      "match_score": 0.0,
+      "prevention_action": "NONE",
+      "recheck_status": "ACCEPT",
+      "latency_ms": 1.2
+    },
+    "citeguard": {
+      "case_id": "test_f5_outdated_evidence_001",
+      "category": "F5",
+      "claim_text": "Therapeutic venesection is the gold standard medical treatment for lobar pneumonia.",
+      "expected_verdict": "PARTIALLY_SUPPORTED",
+      "predicted_verdict": "PARTIALLY_SUPPORTED",
+      "confidence": 0.714,
+      "is_correct": true,
+      "matched_patterns": [
+        "FP_OUT_011"
+      ],
+      "match_score": 0.82,
+      "prevention_action": "FLAG_OUTDATED_EVIDENCE",
+      "recheck_status": "ACCEPT",
+      "latency_ms": 1.23
+    },
+    "ablation_no_recheck": {
+      "case_id": "test_f5_outdated_evidence_001",
+      "category": "F5",
+      "claim_text": "Therapeutic venesection is the gold standard medical treatment for lobar pneumonia.",
+      "expected_verdict": "PARTIALLY_SUPPORTED",
+      "predicted_verdict": "PARTIALLY_SUPPORTED",
+      "confidence": 0.714,
+      "is_correct": true,
+      "matched_patterns": [
+        "FP_OUT_011"
+      ],
+      "match_score": 0.82,
+      "prevention_action": "FLAG_OUTDATED_EVIDENCE",
+      "recheck_status": "ACCEPT",
+      "latency_ms": 1.27
+    }
+  },
+  {
+    "case_id": "test_f7_contradictory_001",
+    "category": "F7",
+    "claim_text": "Hydroxychloroquine improves recovery and reduces mortality in hospitalized COVID-19 patients.",
+    "expected_verdict": "REFUTE",
+    "baseline": {
+      "case_id": "test_f7_contradictory_001",
+      "category": "F7",
+      "claim_text": "Hydroxychloroquine improves recovery and reduces mortality in hospitalized COVID-19 patients.",
+      "expected_verdict": "REFUTE",
+      "predicted_verdict": "REFUTE",
+      "confidence": 0.7917,
+      "is_correct": true,
+      "matched_patterns": [],
+      "match_score": 0.0,
+      "prevention_action": "NONE",
+      "recheck_status": "ACCEPT",
+      "latency_ms": 1.65
+    },
+    "citeguard": {
+      "case_id": "test_f7_contradictory_001",
+      "category": "F7",
+      "claim_text": "Hydroxychloroquine improves recovery and reduces mortality in hospitalized COVID-19 patients.",
+      "expected_verdict": "REFUTE",
+      "predicted_verdict": "REFUTE",
+      "confidence": 0.7917,
+      "is_correct": true,
+      "matched_patterns": [],
+      "match_score": 0.0,
+      "prevention_action": "NONE",
+      "recheck_status": "ACCEPT",
+      "latency_ms": 1.52
+    },
+    "ablation_no_recheck": {
+      "case_id": "test_f7_contradictory_001",
+      "category": "F7",
+      "claim_text": "Hydroxychloroquine improves recovery and reduces mortality in hospitalized COVID-19 patients.",
+      "expected_verdict": "REFUTE",
+      "predicted_verdict": "REFUTE",
+      "confidence": 0.7917,
+      "is_correct": true,
+      "matched_patterns": [],
+      "match_score": 0.0,
+      "prevention_action": "NONE",
+      "recheck_status": "ACCEPT",
+      "latency_ms": 1.39
+    }
+  },
+  {
+    "case_id": "test_f8_misinterpretation_001",
+    "category": "F8",
+    "claim_text": "Tobacco smoking reduces the clinical development of chronic obstructive pulmonary disease.",
+    "expected_verdict": "REFUTE",
+    "baseline": {
+      "case_id": "test_f8_misinterpretation_001",
+      "category": "F8",
+      "claim_text": "Tobacco smoking reduces the clinical development of chronic obstructive pulmonary disease.",
+      "expected_verdict": "REFUTE",
+      "predicted_verdict": "REFUTE",
+      "confidence": 0.7481,
+      "is_correct": true,
+      "matched_patterns": [],
+      "match_score": 0.0,
+      "prevention_action": "NONE",
+      "recheck_status": "ACCEPT",
+      "latency_ms": 1.16
+    },
+    "citeguard": {
+      "case_id": "test_f8_misinterpretation_001",
+      "category": "F8",
+      "claim_text": "Tobacco smoking reduces the clinical development of chronic obstructive pulmonary disease.",
+      "expected_verdict": "REFUTE",
+      "predicted_verdict": "REFUTE",
+      "confidence": 0.7481,
+      "is_correct": true,
+      "matched_patterns": [
+        "FP_CLM_009"
+      ],
+      "match_score": 0.85,
+      "prevention_action": "REGENERATE_ATOMIC_CLAIM",
+      "recheck_status": "ACCEPT",
+      "latency_ms": 1.28
+    },
+    "ablation_no_recheck": {
+      "case_id": "test_f8_misinterpretation_001",
+      "category": "F8",
+      "claim_text": "Tobacco smoking reduces the clinical development of chronic obstructive pulmonary disease.",
+      "expected_verdict": "REFUTE",
+      "predicted_verdict": "REFUTE",
+      "confidence": 0.7481,
+      "is_correct": true,
+      "matched_patterns": [
+        "FP_CLM_009"
+      ],
+      "match_score": 0.85,
+      "prevention_action": "REGENERATE_ATOMIC_CLAIM",
+      "recheck_status": "ACCEPT",
+      "latency_ms": 1.19
+    }
+  }
+]

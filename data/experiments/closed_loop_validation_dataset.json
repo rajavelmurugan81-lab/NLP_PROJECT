@@ -1,0 +1,459 @@
+{
+  "version": "1.0",
+  "name": "CiteGuard Closed-Loop Failure Learning & Adaptive Verification Benchmark",
+  "created_at": "2026-10-11T14:15:00Z",
+  "adjudication_procedure": "Independent dual-annotator adjudication with scientific literature ground-truth anchoring. Labels frozen before experimental trials.",
+  "splits": {
+    "learning": ["learn_f6_001", "learn_f4_001"],
+    "validation": ["val_f1_001", "val_f7_001"],
+    "held_out_test": [
+      "test_f6_true_fail_001",
+      "test_f6_hard_neg_001",
+      "test_f4_true_fail_001",
+      "test_f4_hard_neg_001",
+      "test_clean_valid_support_001",
+      "test_clean_valid_support_002",
+      "test_unrelated_physics_001",
+      "test_f1_unsupported_001",
+      "test_f2_citation_mismatch_001",
+      "test_f3_overgeneralization_001",
+      "test_f5_outdated_evidence_001",
+      "test_f7_contradictory_001",
+      "test_f8_misinterpretation_001"
+    ]
+  },
+  "cases": [
+    {
+      "case_id": "learn_f6_001",
+      "split": "learning",
+      "category": "F6",
+      "failure_type": "POPULATION_CONTEXT_MISMATCH",
+      "question": "Can curcumin cure glioblastoma in clinical patients?",
+      "claim_text": "Curcumin cures aggressive glioblastoma in human clinical cancer patients.",
+      "evidence": [
+        {
+          "doc_id": "curc_invitro_101",
+          "text": "In vitro cell culture assays demonstrate curcumin induces apoptosis in U87 glioblastoma cell lines at 50 micromolar concentrations.",
+          "score": 0.88,
+          "title": "In Vitro Curcumin Apoptosis in U87",
+          "metadata": {
+            "evidence_eligible": true,
+            "publication_year": 2021
+          }
+        }
+      ],
+      "baseline_naive_verdict": "SUPPORT",
+      "expected_verdict": "NEI",
+      "expected_failure_type": "F6",
+      "expected_prevention_action": "REQUIRE_STRICT_DOMAIN_VALIDATION",
+      "expected_recheck_status": "REJECT",
+      "ground_truth_rationale": "In vitro petri-dish assays on cell lines cannot substantiate curative claims in living human patients; context mismatch.",
+      "provenance": "SciFact-Extended Expert Annotated Clinical Oncology"
+    },
+    {
+      "case_id": "learn_f4_001",
+      "split": "learning",
+      "category": "F4",
+      "failure_type": "CAUSAL_LEAP",
+      "question": "Does artificial sweetener intake cause metabolic syndrome?",
+      "claim_text": "Artificial sweetener consumption directly causes metabolic syndrome and insulin resistance.",
+      "evidence": [
+        {
+          "doc_id": "sweet_obs_201",
+          "text": "In an observational cohort of 3,500 adults, artificial sweetener intake is statistically associated and correlated with metabolic syndrome markers.",
+          "score": 0.89,
+          "title": "Observational Correlates of Artificial Sweetener Intake",
+          "metadata": {
+            "evidence_eligible": true,
+            "publication_year": 2022
+          }
+        }
+      ],
+      "baseline_naive_verdict": "SUPPORT",
+      "expected_verdict": "PARTIALLY_SUPPORTED",
+      "expected_failure_type": "F4",
+      "expected_prevention_action": "QUALIFY_CAUSAL_CLAIM",
+      "expected_recheck_status": "REVISE",
+      "ground_truth_rationale": "Observational cohort correlation cannot establish direct physiological causality; requires qualification to associative findings.",
+      "provenance": "CoVERT Epidemiological Adjudication"
+    },
+    {
+      "case_id": "val_f1_001",
+      "split": "validation",
+      "category": "F1",
+      "failure_type": "UNSUPPORTED_CLAIM",
+      "question": "Does compound X prevent Alzheimer's disease?",
+      "claim_text": "Compound X completely prevents neurodegeneration in Alzheimer's disease.",
+      "evidence": [],
+      "baseline_naive_verdict": "SUPPORT",
+      "expected_verdict": "NEI",
+      "expected_failure_type": "F1",
+      "expected_prevention_action": "FORCE_INSUFFICIENT_EVIDENCE",
+      "expected_recheck_status": "REJECT",
+      "ground_truth_rationale": "Zero empirical evidence retrieved from literature; claim confirmation is ungrounded.",
+      "provenance": "SciFact Baseline Validation"
+    },
+    {
+      "case_id": "val_f7_001",
+      "split": "validation",
+      "category": "F7",
+      "failure_type": "CONTRADICTORY_EVIDENCE",
+      "question": "Does daily aspirin prevent cardiovascular events in healthy elderly?",
+      "claim_text": "Daily low-dose aspirin reduces cardiovascular events without adverse risk in healthy elderly populations.",
+      "evidence": [
+        {
+          "doc_id": "asp_pos",
+          "text": "Low-dose aspirin reduces ischemic events by 9% in high-risk subsets.",
+          "score": 0.85,
+          "metadata": {"relationship": "SUPPORT"}
+        },
+        {
+          "doc_id": "asp_neg",
+          "text": "The ASPREE trial demonstrated aspirin did not prolong disability-free survival and significantly elevated major hemorrhage risk.",
+          "score": 0.93,
+          "metadata": {"relationship": "CONTRADICT"}
+        }
+      ],
+      "baseline_naive_verdict": "SUPPORT",
+      "expected_verdict": "REFUTE",
+      "expected_failure_type": "F7",
+      "expected_prevention_action": "ESCALATE_TO_MULTI_AGENT_DEBATE",
+      "expected_recheck_status": "REVISE",
+      "ground_truth_rationale": "Direct trial refutation overrules partial support; contradiction signal must trigger REFUTE revision.",
+      "provenance": "NEJM ASPREE Clinical Adjudication"
+    },
+    {
+      "case_id": "test_f6_true_fail_001",
+      "split": "held_out_test",
+      "category": "F6",
+      "failure_type": "POPULATION_CONTEXT_MISMATCH",
+      "question": "Does resveratrol extend human lifespan?",
+      "claim_text": "Resveratrol supplementation significantly extends maximum human lifespan in human clinical populations.",
+      "evidence": [
+        {
+          "doc_id": "resv_worm_301",
+          "text": "In vitro yeast assays and C. elegans murine models demonstrate resveratrol activates SIRT1 and extends nematode lifespan.",
+          "score": 0.87,
+          "title": "SIRT1 Activation in In Vitro and Nematode Models",
+          "metadata": {
+            "evidence_eligible": true,
+            "publication_year": 2020
+          }
+        }
+      ],
+      "baseline_naive_verdict": "SUPPORT",
+      "expected_verdict": "NEI",
+      "expected_failure_type": "F6",
+      "expected_prevention_action": "REQUIRE_STRICT_DOMAIN_VALIDATION",
+      "expected_recheck_status": "REJECT",
+      "ground_truth_rationale": "Held-out related case: In vitro / nematode findings cannot support human clinical lifespan extension.",
+      "provenance": "Independent Aging Research Benchmark"
+    },
+    {
+      "case_id": "test_f6_hard_neg_001",
+      "split": "held_out_test",
+      "category": "HARD_NEGATIVE",
+      "failure_type": "NONE",
+      "question": "Does pembrolizumab improve survival in metastatic melanoma?",
+      "claim_text": "Pembrolizumab improves overall survival in human clinical cancer patients with metastatic melanoma.",
+      "evidence": [
+        {
+          "doc_id": "pembro_phase3_401",
+          "text": "In a randomized phase 3 trial involving 834 human clinical cancer patients with advanced melanoma, pembrolizumab prolonged overall survival compared to ipilimumab.",
+          "score": 0.94,
+          "title": "Phase 3 Trial of Pembrolizumab in Melanoma",
+          "metadata": {
+            "evidence_eligible": true,
+            "publication_year": 2021
+          }
+        }
+      ],
+      "baseline_naive_verdict": "SUPPORT",
+      "expected_verdict": "SUPPORT",
+      "expected_failure_type": "NONE",
+      "expected_prevention_action": "NONE",
+      "expected_recheck_status": "ACCEPT",
+      "ground_truth_rationale": "Hard negative: Mentions cancer patients and survival, but is supported by a genuine Phase 3 human clinical trial, not preclinical in vitro assays. Must NOT be rejected.",
+      "provenance": "KEYNOTE-006 Clinical Oncology Trial"
+    },
+    {
+      "case_id": "test_f4_true_fail_001",
+      "split": "held_out_test",
+      "category": "F4",
+      "failure_type": "CAUSAL_LEAP",
+      "question": "Does coffee drinking prevent depression?",
+      "claim_text": "Drinking coffee directly causes reduced incidence of clinical depression.",
+      "evidence": [
+        {
+          "doc_id": "coffee_cohort_501",
+          "text": "In a prospective observational cohort of nurses, higher caffeinated coffee consumption was statistically correlated with lower depression risk.",
+          "score": 0.88,
+          "title": "Coffee Intake and Depression Risk in Women",
+          "metadata": {
+            "evidence_eligible": true,
+            "publication_year": 2021
+          }
+        }
+      ],
+      "baseline_naive_verdict": "SUPPORT",
+      "expected_verdict": "PARTIALLY_SUPPORTED",
+      "expected_failure_type": "F4",
+      "expected_prevention_action": "QUALIFY_CAUSAL_CLAIM",
+      "expected_recheck_status": "REVISE",
+      "ground_truth_rationale": "Held-out related case: Observational correlation cannot justify direct causal assertion.",
+      "provenance": "Nurses Health Study Observational Archive"
+    },
+    {
+      "case_id": "test_f4_hard_neg_001",
+      "split": "held_out_test",
+      "category": "HARD_NEGATIVE",
+      "failure_type": "NONE",
+      "question": "Does statin therapy reduce LDL cholesterol in hypercholesterolemia?",
+      "claim_text": "Atorvastatin administration directly reduces serum LDL cholesterol in hypercholesterolemia.",
+      "evidence": [
+        {
+          "doc_id": "statin_rct_601",
+          "text": "A double-blind randomized placebo-controlled interventional trial demonstrated that atorvastatin directly causes a 45% reduction in serum LDL-C through HMG-CoA reductase inhibition.",
+          "score": 0.95,
+          "title": "Double-Blind Interventional Trial of Atorvastatin",
+          "metadata": {
+            "evidence_eligible": true,
+            "publication_year": 2023
+          }
+        }
+      ],
+      "baseline_naive_verdict": "SUPPORT",
+      "expected_verdict": "SUPPORT",
+      "expected_failure_type": "NONE",
+      "expected_prevention_action": "NONE",
+      "expected_recheck_status": "ACCEPT",
+      "ground_truth_rationale": "Hard negative: Uses causal terminology ('directly causes'), but evidence is a randomized interventional trial directly proving mechanism. Must NOT be downgraded.",
+      "provenance": "Randomized Controlled Trial Registry"
+    },
+    {
+      "case_id": "test_clean_valid_support_001",
+      "split": "held_out_test",
+      "category": "VALID_SUPPORT",
+      "failure_type": "NONE",
+      "question": "Does regular aerobic exercise improve cardiorespiratory fitness?",
+      "claim_text": "Regular aerobic exercise training improves maximal oxygen uptake VO2 max in healthy adults.",
+      "evidence": [
+        {
+          "doc_id": "vo2_meta_701",
+          "text": "Meta-analysis of 42 randomized trials demonstrates that aerobic endurance exercise training significantly increases VO2 max by an average of 3.8 mL/kg/min in healthy adults.",
+          "score": 0.96,
+          "title": "Meta-analysis of Exercise and VO2 Max",
+          "metadata": {
+            "evidence_eligible": true,
+            "publication_year": 2024
+          }
+        }
+      ],
+      "baseline_naive_verdict": "SUPPORT",
+      "expected_verdict": "SUPPORT",
+      "expected_failure_type": "NONE",
+      "expected_prevention_action": "NONE",
+      "expected_recheck_status": "ACCEPT",
+      "ground_truth_rationale": "Clean valid support: Peer-reviewed meta-analysis of randomized trials directly proving claim. Must remain SUPPORT with high confidence.",
+      "provenance": "Cochrane Sports Medicine Systematic Reviews"
+    },
+    {
+      "case_id": "test_clean_valid_support_002",
+      "split": "held_out_test",
+      "category": "VALID_SUPPORT",
+      "failure_type": "NONE",
+      "question": "Does CRISPR-Cas9 edit targeted genomic DNA sequences?",
+      "claim_text": "CRISPR-Cas9 endonuclease facilitates targeted double-strand DNA cleavage in eukaryotic genomes.",
+      "evidence": [
+        {
+          "doc_id": "crispr_sci_801",
+          "text": "Engineered Cas9 nucleases paired with synthetic single-guide RNAs induce targeted double-strand breaks at specific genomic loci in eukaryotic cells.",
+          "score": 0.97,
+          "title": "Multiplex Genome Engineering Using CRISPR-Cas Systems",
+          "metadata": {
+            "evidence_eligible": true,
+            "publication_year": 2022
+          }
+        }
+      ],
+      "baseline_naive_verdict": "SUPPORT",
+      "expected_verdict": "SUPPORT",
+      "expected_failure_type": "NONE",
+      "expected_prevention_action": "NONE",
+      "expected_recheck_status": "ACCEPT",
+      "ground_truth_rationale": "Clean valid support: Verified molecular biology mechanism directly substantiated.",
+      "provenance": "Science Molecular Biology Archive"
+    },
+    {
+      "case_id": "test_unrelated_physics_001",
+      "split": "held_out_test",
+      "category": "UNRELATED",
+      "failure_type": "NONE",
+      "question": "What is the speed of light in vacuum?",
+      "claim_text": "The speed of light in vacuum is approximately 299,792 kilometers per second.",
+      "evidence": [
+        {
+          "doc_id": "phys_const_901",
+          "text": "By international agreement and SI definition, the speed of light in vacuum c is exactly 299,792,458 metres per second.",
+          "score": 0.99,
+          "title": "CODATA Recommended Values of Fundamental Physical Constants",
+          "metadata": {
+            "evidence_eligible": true,
+            "publication_year": 2023
+          }
+        }
+      ],
+      "baseline_naive_verdict": "SUPPORT",
+      "expected_verdict": "SUPPORT",
+      "expected_failure_type": "NONE",
+      "expected_prevention_action": "NONE",
+      "expected_recheck_status": "ACCEPT",
+      "ground_truth_rationale": "Unrelated physics domain: Must remain completely unaffected by biomedical failure patterns.",
+      "provenance": "NIST CODATA Reference"
+    },
+    {
+      "case_id": "test_f1_unsupported_001",
+      "split": "held_out_test",
+      "category": "F1",
+      "failure_type": "UNSUPPORTED_CLAIM",
+      "question": "Does magnetic therapy cure rheumatoid arthritis?",
+      "claim_text": "Static magnetic fields cure rheumatoid arthritis and reverse joint erosion.",
+      "evidence": [
+        {
+          "doc_id": "mag_weak_1001",
+          "text": "A preliminary survey of 10 patients reported subjective comfort using static magnets.",
+          "score": 0.32,
+          "metadata": {"publication_year": 2019}
+        }
+      ],
+      "baseline_naive_verdict": "SUPPORT",
+      "expected_verdict": "NEI",
+      "expected_failure_type": "F1",
+      "expected_prevention_action": "CLAIM_RECHECK_SUFFICIENCY",
+      "expected_recheck_status": "REJECT",
+      "ground_truth_rationale": "Evidence score 0.32 is far below 0.70 threshold; curative claim is completely unsupported.",
+      "provenance": "Rheumatology Review"
+    },
+    {
+      "case_id": "test_f2_citation_mismatch_001",
+      "split": "held_out_test",
+      "category": "F2",
+      "failure_type": "CITATION_MISMATCH",
+      "question": "Did Vaswani et al. propose convolutional neural networks?",
+      "claim_text": "Vaswani et al. (2017) introduced convolutional neural networks for computer vision.",
+      "evidence": [
+        {
+          "doc_id": "trans_1101",
+          "text": "Attention Is All You Need introduces the Transformer, a model architecture eschewing recurrence and convolutions entirely.",
+          "score": 0.85,
+          "metadata": {"citation_mismatch": true, "publication_year": 2017}
+        }
+      ],
+      "baseline_naive_verdict": "SUPPORT",
+      "expected_verdict": "NEI",
+      "expected_failure_type": "F2",
+      "expected_prevention_action": "VERIFY_EXACT_DOI_SOURCE",
+      "expected_recheck_status": "REJECT",
+      "ground_truth_rationale": "Citation mismatch: Vaswani 2017 proposed Transformers without convolutions.",
+      "provenance": "NeurIPS Machine Learning Archive"
+    },
+    {
+      "case_id": "test_f3_overgeneralization_001",
+      "split": "held_out_test",
+      "category": "F3",
+      "failure_type": "OVERGENERALIZATION",
+      "question": "Does intermittent fasting cure type 2 diabetes universally?",
+      "claim_text": "Intermittent fasting permanently eliminates type 2 diabetes across all human populations worldwide.",
+      "evidence": [
+        {
+          "doc_id": "fast_small_1201",
+          "text": "In a trial of 24 healthy male participants, 16-hour fasting improved insulin sensitivity over 4 weeks.",
+          "score": 0.86,
+          "metadata": {"publication_year": 2021}
+        }
+      ],
+      "baseline_naive_verdict": "SUPPORT",
+      "expected_verdict": "PARTIALLY_SUPPORTED",
+      "expected_failure_type": "F3",
+      "expected_prevention_action": "DYNAMIC_CONFIDENCE_RECALIBRATION",
+      "expected_recheck_status": "REVISE",
+      "ground_truth_rationale": "Overgeneralization: Small 24-person pilot study cannot justify permanent universal cure claims across all humans.",
+      "provenance": "Endocrinology Clinical Trials"
+    },
+    {
+      "case_id": "test_f5_outdated_evidence_001",
+      "split": "held_out_test",
+      "category": "F5",
+      "failure_type": "OUTDATED_EVIDENCE",
+      "question": "Is bloodletting an effective therapy for pneumonia?",
+      "claim_text": "Therapeutic venesection is the gold standard medical treatment for lobar pneumonia.",
+      "evidence": [
+        {
+          "doc_id": "hist_med_1301",
+          "text": "Venesection and bloodletting prompt recovery in acute lobar pneumonia cases.",
+          "score": 0.81,
+          "metadata": {"publication_year": 1885, "outdated": true, "is_superseded": true}
+        }
+      ],
+      "baseline_naive_verdict": "SUPPORT",
+      "expected_verdict": "PARTIALLY_SUPPORTED",
+      "expected_failure_type": "F5",
+      "expected_prevention_action": "FLAG_OUTDATED_EVIDENCE",
+      "expected_recheck_status": "REVISE",
+      "ground_truth_rationale": "Outdated evidence: 1885 clinical assertion is superseded by modern antibiotic medicine.",
+      "provenance": "Historical Medical Treatises"
+    },
+    {
+      "case_id": "test_f7_contradictory_001",
+      "split": "held_out_test",
+      "category": "F7",
+      "failure_type": "CONTRADICTORY_EVIDENCE",
+      "question": "Does hydroxychloroquine improve clinical outcomes in COVID-19?",
+      "claim_text": "Hydroxychloroquine improves recovery and reduces mortality in hospitalized COVID-19 patients.",
+      "evidence": [
+        {
+          "doc_id": "hcq_pos_1401",
+          "text": "Initial observational report of 20 patients reported viral clearance.",
+          "score": 0.80,
+          "metadata": {"relationship": "SUPPORT"}
+        },
+        {
+          "doc_id": "hcq_neg_1402",
+          "text": "The RECOVERY randomized trial in 4,716 patients demonstrated hydroxychloroquine was not associated with reduction in 28-day mortality and increased duration of hospitalization.",
+          "score": 0.94,
+          "metadata": {"relationship": "CONTRADICT"}
+        }
+      ],
+      "baseline_naive_verdict": "SUPPORT",
+      "expected_verdict": "REFUTE",
+      "expected_failure_type": "F7",
+      "expected_prevention_action": "ESCALATE_TO_MULTI_AGENT_DEBATE",
+      "expected_recheck_status": "REVISE",
+      "ground_truth_rationale": "Definitive multi-center randomized trial directly contradicts tentative support; verdict must revise to REFUTE.",
+      "provenance": "RECOVERY Trial Consortium"
+    },
+    {
+      "case_id": "test_f8_misinterpretation_001",
+      "split": "held_out_test",
+      "category": "F8",
+      "failure_type": "EVIDENCE_MISINTERPRETATION",
+      "question": "Does tobacco smoking reduce chronic obstructive pulmonary disease?",
+      "claim_text": "Tobacco smoking reduces the clinical development of chronic obstructive pulmonary disease.",
+      "evidence": [
+        {
+          "doc_id": "copd_inv_1501",
+          "text": "Cigarette smoking impairs alveolar repair mechanisms, destroys pulmonary elasticity, and significantly promotes the progression of chronic obstructive pulmonary disease.",
+          "score": 0.89,
+          "metadata": {"misinterpreted": true, "directional_error": true}
+        }
+      ],
+      "baseline_naive_verdict": "SUPPORT",
+      "expected_verdict": "REFUTE",
+      "expected_failure_type": "F8",
+      "expected_prevention_action": "REGENERATE_ATOMIC_CLAIM",
+      "expected_recheck_status": "REVISE",
+      "ground_truth_rationale": "Directional misinterpretation: Evidence proves smoking promotes COPD, but claim asserts it reduces it.",
+      "provenance": "Lancet Respiratory Medicine"
+    }
+  ]
+}

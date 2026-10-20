@@ -1,0 +1,27 @@
+{
+  "total_evaluated_cases": 3,
+  "correct_cases": 0,
+  "incorrect_cases": 3,
+  "failure_count": 3,
+  "failure_percentage": 100.0,
+  "specific_counts": {
+    "retrieval_failures": 3,
+    "reasoning_failures": 0,
+    "unknown_failures": 0
+  },
+  "breakdown_by_failure_type": {
+    "RETRIEVAL_FAILURE": 3
+  },
+  "breakdown_by_dataset": {
+    "covert": 1,
+    "sciclaimhunt": 1,
+    "scifact": 1
+  },
+  "breakdown_by_ground_truth_label": {
+    "REFUTE": 2,
+    "SUPPORT": 1
+  },
+  "breakdown_by_retrieval_mode": {
+    "hybrid": 3
+  }
+}

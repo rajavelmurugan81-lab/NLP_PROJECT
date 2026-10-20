@@ -1,0 +1,212 @@
+[
+  {
+    "index": 1,
+    "question": "Does sleep improve cognitive performance?",
+    "question_type": "SCIENTIFIC_HYPOTHESIS",
+    "openalex_status": "CONNECTED_WITH_RESULTS",
+    "elapsed_sec": 15.4,
+    "claims": [
+      {
+        "claim_id": "q_231b5c40_c001",
+        "claim_text": "Altering sleep directly impacts performance metrics associated with cognitive performance.",
+        "verdict": "SUPPORT",
+        "confidence": 0.85,
+        "evidence_count": 3,
+        "failure_type": "CONTRADICTORY_EVIDENCE",
+        "severity": "CRITICAL",
+        "ledger_status": "LOGGED_TO_AUDIT",
+        "explanation": "Contradictory evidence passages (1) detected for a SUPPORTED claim."
+      },
+      {
+        "claim_id": "q_231b5c40_c002",
+        "claim_text": "The magnitude of the effect of sleep on cognitive performance depends on operational parameters.",
+        "verdict": "SUPPORT",
+        "confidence": 0.85,
+        "evidence_count": 5,
+        "failure_type": "CLEAN",
+        "severity": "CLEAN",
+        "ledger_status": "CLEAN_CONTRACT",
+        "explanation": "Claim verified cleanly with evidence grounding conforming to verification contracts."
+      },
+      {
+        "claim_id": "q_231b5c40_c003",
+        "claim_text": "Optimizing sleep for cognitive performance involves system-level trade-offs and constraints.",
+        "verdict": "SUPPORT",
+        "confidence": 0.85,
+        "evidence_count": 4,
+        "failure_type": "CLEAN",
+        "severity": "CLEAN",
+        "ledger_status": "CLEAN_CONTRACT",
+        "explanation": "Claim verified cleanly with evidence grounding conforming to verification contracts."
+      }
+    ]
+  },
+  {
+    "index": 2,
+    "question": "How does increasing model size affect LLM performance?",
+    "question_type": "COMPARATIVE_SCIENTIFIC",
+    "openalex_status": "CONNECTED_WITH_RESULTS",
+    "elapsed_sec": 0.09,
+    "claims": [
+      {
+        "claim_id": "q_ab383057_c001",
+        "claim_text": "Altering increasing model size directly impacts performance metrics associated with LLM performance.",
+        "verdict": "SUPPORT",
+        "confidence": 0.85,
+        "evidence_count": 3,
+        "failure_type": "CLEAN",
+        "severity": "CLEAN",
+        "ledger_status": "CLEAN_CONTRACT",
+        "explanation": "Claim verified cleanly with evidence grounding conforming to verification contracts."
+      },
+      {
+        "claim_id": "q_ab383057_c002",
+        "claim_text": "The magnitude of the effect of increasing model size on LLM performance depends on operational parameters.",
+        "verdict": "SUPPORT",
+        "confidence": 0.85,
+        "evidence_count": 5,
+        "failure_type": "CLEAN",
+        "severity": "CLEAN",
+        "ledger_status": "CLEAN_CONTRACT",
+        "explanation": "Claim verified cleanly with evidence grounding conforming to verification contracts."
+      },
+      {
+        "claim_id": "q_ab383057_c003",
+        "claim_text": "Optimizing increasing model size for LLM performance involves system-level trade-offs and constraints.",
+        "verdict": "SUPPORT",
+        "confidence": 0.85,
+        "evidence_count": 5,
+        "failure_type": "CLEAN",
+        "severity": "CLEAN",
+        "ledger_status": "CLEAN_CONTRACT",
+        "explanation": "Claim verified cleanly with evidence grounding conforming to verification contracts."
+      }
+    ]
+  },
+  {
+    "index": 3,
+    "question": "Does miRNA regulation influence cancer progression?",
+    "question_type": "SCIENTIFIC_HYPOTHESIS",
+    "openalex_status": "CONNECTED_WITH_RESULTS",
+    "elapsed_sec": 0.07,
+    "claims": [
+      {
+        "claim_id": "q_fba02ada_c001",
+        "claim_text": "Altered miRNA expression plays a functional role in cancer progression.",
+        "verdict": "SUPPORT",
+        "confidence": 0.85,
+        "evidence_count": 5,
+        "failure_type": "CLEAN",
+        "severity": "CLEAN",
+        "ledger_status": "CLEAN_CONTRACT",
+        "explanation": "Claim verified cleanly with evidence grounding conforming to verification contracts."
+      },
+      {
+        "claim_id": "q_fba02ada_c002",
+        "claim_text": "Specific miRNA expression patterns regulate key cellular processes involved in cancer progression.",
+        "verdict": "SUPPORT",
+        "confidence": 0.85,
+        "evidence_count": 5,
+        "failure_type": "CLEAN",
+        "severity": "CLEAN",
+        "ledger_status": "CLEAN_CONTRACT",
+        "explanation": "Claim verified cleanly with evidence grounding conforming to verification contracts."
+      },
+      {
+        "claim_id": "q_fba02ada_c003",
+        "claim_text": "Modulating miRNA expression correlates with measurable clinical outcomes in cancer progression.",
+        "verdict": "SUPPORT",
+        "confidence": 0.85,
+        "evidence_count": 5,
+        "failure_type": "CLEAN",
+        "severity": "CLEAN",
+        "ledger_status": "CLEAN_CONTRACT",
+        "explanation": "Claim verified cleanly with evidence grounding conforming to verification contracts."
+      }
+    ]
+  },
+  {
+    "index": 4,
+    "question": "How does CRISPR improve gene editing efficiency?",
+    "question_type": "SCIENTIFIC_HYPOTHESIS",
+    "openalex_status": "CONNECTED_WITH_RESULTS",
+    "elapsed_sec": 0.08,
+    "claims": [
+      {
+        "claim_id": "q_3ee04a45_c001",
+        "claim_text": "Altering CRISPR directly impacts performance metrics associated with gene editing efficiency.",
+        "verdict": "SUPPORT",
+        "confidence": 0.85,
+        "evidence_count": 5,
+        "failure_type": "CLEAN",
+        "severity": "CLEAN",
+        "ledger_status": "CLEAN_CONTRACT",
+        "explanation": "Claim verified cleanly with evidence grounding conforming to verification contracts."
+      },
+      {
+        "claim_id": "q_3ee04a45_c002",
+        "claim_text": "The magnitude of the effect of CRISPR on gene editing efficiency depends on operational parameters.",
+        "verdict": "SUPPORT",
+        "confidence": 0.85,
+        "evidence_count": 5,
+        "failure_type": "CLEAN",
+        "severity": "CLEAN",
+        "ledger_status": "CLEAN_CONTRACT",
+        "explanation": "Claim verified cleanly with evidence grounding conforming to verification contracts."
+      },
+      {
+        "claim_id": "q_3ee04a45_c003",
+        "claim_text": "Optimizing CRISPR for gene editing efficiency involves system-level trade-offs and constraints.",
+        "verdict": "SUPPORT",
+        "confidence": 0.85,
+        "evidence_count": 5,
+        "failure_type": "CLEAN",
+        "severity": "CLEAN",
+        "ledger_status": "CLEAN_CONTRACT",
+        "explanation": "Claim verified cleanly with evidence grounding conforming to verification contracts."
+      }
+    ]
+  },
+  {
+    "index": 5,
+    "question": "what are the 10 most cited papers published in 2026 on quantum resistant federated learning and provide their exact DOI,citation count and experimental results?",
+    "question_type": "BIBLIOGRAPHIC_SEARCH",
+    "openalex_status": "CONNECTED_WITH_RESULTS",
+    "elapsed_sec": 0.02,
+    "claims": [
+      {
+        "claim_id": "q_ba6f4cb6_c001",
+        "claim_text": "Peer-reviewed scientific literature documents indexed research on quantum resistant federated learning published in 2026.",
+        "verdict": "SUPPORT",
+        "confidence": 0.85,
+        "evidence_count": 4,
+        "failure_type": "CLEAN",
+        "severity": "CLEAN",
+        "ledger_status": "CLEAN_CONTRACT",
+        "explanation": "Claim verified cleanly with evidence grounding conforming to verification contracts."
+      },
+      {
+        "claim_id": "q_ba6f4cb6_c002",
+        "claim_text": "Identified scientific publications on quantum resistant federated learning possess verifiable DOIs and recorded citation metrics.",
+        "verdict": "SUPPORT",
+        "confidence": 0.85,
+        "evidence_count": 3,
+        "failure_type": "CLEAN",
+        "severity": "CLEAN",
+        "ledger_status": "CLEAN_CONTRACT",
+        "explanation": "Claim verified cleanly with evidence grounding conforming to verification contracts."
+      },
+      {
+        "claim_id": "q_ba6f4cb6_c003",
+        "claim_text": "Experimental findings and methodology for quantum resistant federated learning are reported in primary scientific literature.",
+        "verdict": "SUPPORT",
+        "confidence": 0.85,
+        "evidence_count": 3,
+        "failure_type": "CLEAN",
+        "severity": "CLEAN",
+        "ledger_status": "CLEAN_CONTRACT",
+        "explanation": "Claim verified cleanly with evidence grounding conforming to verification contracts."
+      }
+    ]
+  }
+]

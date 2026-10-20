@@ -1,0 +1,2607 @@
+{
+  "version": "1.0",
+  "total_trusted_claims": 289,
+  "claims": [
+    {
+      "claim_id": "c_001_p004_p03",
+      "claim_text": "Here we show that RNA-guided DNA binding unleashes indiscriminate single-stranded DNA (ssDNA) cleavage activity by Cas12a that completely degrades ssDNA molecules.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9098,
+      "evidence_count": 5,
+      "question": "Does CRISPR-Cas9 targeted modification reduce off-target cleavage?",
+      "timestamp": "2026-10-10T16:08:33.336933+00:00"
+    },
+    {
+      "claim_id": "c_002_p004_p04",
+      "claim_text": "Target-activated, nonspecific single-stranded deoxyribonuclease (ssDNase) cleavage is also a property of other type V CRISPR-Cas12 enzymes.",
+      "verdict": "SUPPORT",
+      "confidence": 0.8811,
+      "evidence_count": 2,
+      "question": "Does CRISPR-Cas9 targeted modification reduce off-target cleavage?",
+      "timestamp": "2026-10-10T16:08:33.344310+00:00"
+    },
+    {
+      "claim_id": "c_003_p003_p05",
+      "claim_text": "Results demonstrate that the Cas9-crRNA complex functions as an RNA-guided endonuclease with RNA-directed target sequence recognition and protein-mediated DNA cleavage.",
+      "verdict": "SUPPORT",
+      "confidence": 0.917,
+      "evidence_count": 5,
+      "question": "Does CRISPR-Cas9 targeted modification reduce off-target cleavage?",
+      "timestamp": "2026-10-10T16:08:33.353669+00:00"
+    },
+    {
+      "claim_id": "c_001_p001_p02",
+      "claim_text": "In rodents, hippocampus-dependent memory may be particularly sensitive to sleep deprivation after training, as spatial memory in the Morris water maze is impaired by rapid eye movement sleep deprivation following training.",
+      "verdict": "SUPPORT",
+      "confidence": 0.917,
+      "evidence_count": 5,
+      "question": "What is the relationship between sleep duration and cognitive performance?",
+      "timestamp": "2026-10-10T16:08:44.938821+00:00"
+    },
+    {
+      "claim_id": "c_002_p001_p05",
+      "claim_text": "We found that sleep deprivation from 0-5 h after training for this task impaired memory consolidation for contextual fear conditioning whereas sleep deprivation from 5-10 h after training had no effect.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9227,
+      "evidence_count": 5,
+      "question": "What is the relationship between sleep duration and cognitive performance?",
+      "timestamp": "2026-10-10T16:08:44.952026+00:00"
+    },
+    {
+      "claim_id": "c_003_p004_p03",
+      "claim_text": "On the other hand, REM sleep is assumed to reduce the emotional tone of the memory.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9339,
+      "evidence_count": 3,
+      "question": "How does sleep loss impair spatial memory retention in mammals?",
+      "timestamp": "2026-10-11T16:56:23.069053+00:00"
+    },
+    {
+      "claim_id": "c_001_p001_p02",
+      "claim_text": "In rodents, hippocampus-dependent memory may be particularly sensitive to sleep deprivation after training, as spatial memory in the Morris water maze is impaired by rapid eye movement sleep deprivation following training.",
+      "verdict": "SUPPORT",
+      "confidence": 0.917,
+      "evidence_count": 5,
+      "question": "What is the relationship between sleep and memory?",
+      "timestamp": "2026-10-10T16:08:56.506982+00:00"
+    },
+    {
+      "claim_id": "c_002_p001_p05",
+      "claim_text": "We found that sleep deprivation from 0-5 h after training for this task impaired memory consolidation for contextual fear conditioning whereas sleep deprivation from 5-10 h after training had no effect.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9227,
+      "evidence_count": 5,
+      "question": "What is the relationship between sleep and memory?",
+      "timestamp": "2026-10-10T16:08:56.519710+00:00"
+    },
+    {
+      "claim_id": "c_003_p004_p03",
+      "claim_text": "On the other hand, REM sleep is assumed to reduce the emotional tone of the memory.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9209,
+      "evidence_count": 5,
+      "question": "What is the relationship between sleep and memory?",
+      "timestamp": "2026-10-10T16:08:56.530576+00:00"
+    },
+    {
+      "claim_id": "c_001_p001_p02",
+      "claim_text": "In rodents, hippocampus-dependent memory may be particularly sensitive to sleep deprivation after training, as spatial memory in the Morris water maze is impaired by rapid eye movement sleep deprivation following training.",
+      "verdict": "SUPPORT",
+      "confidence": 0.917,
+      "evidence_count": 5,
+      "question": "What is the relationship between sleep duration and cognitive performance?",
+      "timestamp": "2026-10-10T16:09:09.853771+00:00"
+    },
+    {
+      "claim_id": "c_002_p001_p05",
+      "claim_text": "We found that sleep deprivation from 0-5 h after training for this task impaired memory consolidation for contextual fear conditioning whereas sleep deprivation from 5-10 h after training had no effect.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9227,
+      "evidence_count": 5,
+      "question": "What is the relationship between sleep duration and cognitive performance?",
+      "timestamp": "2026-10-10T16:09:09.869484+00:00"
+    },
+    {
+      "claim_id": "c_003_p004_p03",
+      "claim_text": "On the other hand, REM sleep is assumed to reduce the emotional tone of the memory.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9209,
+      "evidence_count": 5,
+      "question": "What is the relationship between sleep duration and cognitive performance?",
+      "timestamp": "2026-10-10T16:09:09.881194+00:00"
+    },
+    {
+      "claim_id": "c_001_p001_p05",
+      "claim_text": "We found that sleep deprivation from 0-5 h after training for this task impaired memory consolidation for contextual fear conditioning whereas sleep deprivation from 5-10 h after training had no effect.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9285,
+      "evidence_count": 3,
+      "question": "What are the effects of sleep deprivation on memory consolidation?",
+      "timestamp": "2026-10-10T16:09:10.315286+00:00"
+    },
+    {
+      "claim_id": "c_002_p001_p02",
+      "claim_text": "In rodents, hippocampus-dependent memory may be particularly sensitive to sleep deprivation after training, as spatial memory in the Morris water maze is impaired by rapid eye movement sleep deprivation following training.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9212,
+      "evidence_count": 3,
+      "question": "What are the effects of sleep deprivation on memory consolidation?",
+      "timestamp": "2026-10-10T16:09:10.325387+00:00"
+    },
+    {
+      "claim_id": "c_003_p001_p07",
+      "claim_text": "Previous studies have determined that memory consolidation for fear conditioning is impaired when protein kinase A and protein synthesis inhibitors are administered at the same time as when sleep deprivation is effective, suggesting that sleep deprivation may act by modifying these molecular mechanisms of memory storage.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9199,
+      "evidence_count": 3,
+      "question": "What are the effects of sleep deprivation on memory consolidation?",
+      "timestamp": "2026-10-10T16:09:10.337084+00:00"
+    },
+    {
+      "claim_id": "c_001_p004_p05",
+      "claim_text": "We employed a library of miRNA inhibitors to screen for miRNA involved in cell growth and apoptosis.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9156,
+      "evidence_count": 5,
+      "question": "How does microRNA-21 affect carcinoma cell apoptosis?",
+      "timestamp": "2026-10-10T16:12:42.501253+00:00"
+    },
+    {
+      "claim_id": "c_002_p003_p01",
+      "claim_text": "The Cancer Genome Atlas profiled 279 head and neck squamous cell carcinomas (HNSCCs) to provide a comprehensive landscape of somatic genomic alterations.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9218,
+      "evidence_count": 5,
+      "question": "How does microRNA-21 affect carcinoma cell apoptosis?",
+      "timestamp": "2026-10-10T16:12:42.518026+00:00"
+    },
+    {
+      "claim_id": "c_003_p002_p04",
+      "claim_text": "Potential oncogenic functions of miR-184 were evaluated in tongue SCC cell lines (Cal27, HN21B, and HN96) with miR-184 inhibitor.",
+      "verdict": "SUPPORT",
+      "confidence": 0.917,
+      "evidence_count": 5,
+      "question": "How does microRNA-21 affect carcinoma cell apoptosis?",
+      "timestamp": "2026-10-10T16:12:42.531873+00:00"
+    },
+    {
+      "claim_id": "c_001_p004_p03",
+      "claim_text": "Here we show that RNA-guided DNA binding unleashes indiscriminate single-stranded DNA (ssDNA) cleavage activity by Cas12a that completely degrades ssDNA molecules.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9098,
+      "evidence_count": 5,
+      "question": "Does CRISPR-Cas9 targeted modification reduce off-target cleavage?",
+      "timestamp": "2026-10-10T16:12:59.198914+00:00"
+    },
+    {
+      "claim_id": "c_002_p004_p04",
+      "claim_text": "Target-activated, nonspecific single-stranded deoxyribonuclease (ssDNase) cleavage is also a property of other type V CRISPR-Cas12 enzymes.",
+      "verdict": "SUPPORT",
+      "confidence": 0.8811,
+      "evidence_count": 2,
+      "question": "Does CRISPR-Cas9 targeted modification reduce off-target cleavage?",
+      "timestamp": "2026-10-10T16:12:59.208653+00:00"
+    },
+    {
+      "claim_id": "c_003_p003_p05",
+      "claim_text": "Results demonstrate that the Cas9-crRNA complex functions as an RNA-guided endonuclease with RNA-directed target sequence recognition and protein-mediated DNA cleavage.",
+      "verdict": "SUPPORT",
+      "confidence": 0.917,
+      "evidence_count": 5,
+      "question": "Does CRISPR-Cas9 targeted modification reduce off-target cleavage?",
+      "timestamp": "2026-10-10T16:12:59.217787+00:00"
+    },
+    {
+      "claim_id": "c_001_p001_p02",
+      "claim_text": "In rodents, hippocampus-dependent memory may be particularly sensitive to sleep deprivation after training, as spatial memory in the Morris water maze is impaired by rapid eye movement sleep deprivation following training.",
+      "verdict": "SUPPORT",
+      "confidence": 0.917,
+      "evidence_count": 5,
+      "question": "What is the relationship between sleep duration and cognitive performance?",
+      "timestamp": "2026-10-10T16:13:10.887221+00:00"
+    },
+    {
+      "claim_id": "c_002_p001_p05",
+      "claim_text": "We found that sleep deprivation from 0-5 h after training for this task impaired memory consolidation for contextual fear conditioning whereas sleep deprivation from 5-10 h after training had no effect.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9227,
+      "evidence_count": 5,
+      "question": "What is the relationship between sleep duration and cognitive performance?",
+      "timestamp": "2026-10-10T16:13:10.901197+00:00"
+    },
+    {
+      "claim_id": "c_003_p004_p03",
+      "claim_text": "On the other hand, REM sleep is assumed to reduce the emotional tone of the memory.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9209,
+      "evidence_count": 5,
+      "question": "What is the relationship between sleep duration and cognitive performance?",
+      "timestamp": "2026-10-10T16:13:10.913453+00:00"
+    },
+    {
+      "claim_id": "c_001_p001_p02",
+      "claim_text": "In rodents, hippocampus-dependent memory may be particularly sensitive to sleep deprivation after training, as spatial memory in the Morris water maze is impaired by rapid eye movement sleep deprivation following training.",
+      "verdict": "SUPPORT",
+      "confidence": 0.917,
+      "evidence_count": 5,
+      "question": "What is the relationship between sleep and memory?",
+      "timestamp": "2026-10-10T16:13:41.451096+00:00"
+    },
+    {
+      "claim_id": "c_002_p001_p05",
+      "claim_text": "We found that sleep deprivation from 0-5 h after training for this task impaired memory consolidation for contextual fear conditioning whereas sleep deprivation from 5-10 h after training had no effect.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9227,
+      "evidence_count": 5,
+      "question": "What is the relationship between sleep and memory?",
+      "timestamp": "2026-10-10T16:13:41.459881+00:00"
+    },
+    {
+      "claim_id": "c_003_p004_p03",
+      "claim_text": "On the other hand, REM sleep is assumed to reduce the emotional tone of the memory.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9209,
+      "evidence_count": 5,
+      "question": "What is the relationship between sleep and memory?",
+      "timestamp": "2026-10-10T16:13:41.466900+00:00"
+    },
+    {
+      "claim_id": "c_001_p004_p05",
+      "claim_text": "We employed a library of miRNA inhibitors to screen for miRNA involved in cell growth and apoptosis.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9156,
+      "evidence_count": 5,
+      "question": "How does microRNA-21 affect carcinoma cell apoptosis?",
+      "timestamp": "2026-10-10T16:20:42.502247+00:00"
+    },
+    {
+      "claim_id": "c_002_p003_p01",
+      "claim_text": "The Cancer Genome Atlas profiled 279 head and neck squamous cell carcinomas (HNSCCs) to provide a comprehensive landscape of somatic genomic alterations.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9218,
+      "evidence_count": 5,
+      "question": "How does microRNA-21 affect carcinoma cell apoptosis?",
+      "timestamp": "2026-10-10T16:20:42.519452+00:00"
+    },
+    {
+      "claim_id": "c_003_p002_p04",
+      "claim_text": "Potential oncogenic functions of miR-184 were evaluated in tongue SCC cell lines (Cal27, HN21B, and HN96) with miR-184 inhibitor.",
+      "verdict": "SUPPORT",
+      "confidence": 0.917,
+      "evidence_count": 5,
+      "question": "How does microRNA-21 affect carcinoma cell apoptosis?",
+      "timestamp": "2026-10-10T16:20:42.533165+00:00"
+    },
+    {
+      "claim_id": "c_001_p004_p03",
+      "claim_text": "Here we show that RNA-guided DNA binding unleashes indiscriminate single-stranded DNA (ssDNA) cleavage activity by Cas12a that completely degrades ssDNA molecules.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9098,
+      "evidence_count": 5,
+      "question": "Does CRISPR-Cas9 targeted modification reduce off-target cleavage?",
+      "timestamp": "2026-10-10T16:20:53.926097+00:00"
+    },
+    {
+      "claim_id": "c_002_p004_p04",
+      "claim_text": "Target-activated, nonspecific single-stranded deoxyribonuclease (ssDNase) cleavage is also a property of other type V CRISPR-Cas12 enzymes.",
+      "verdict": "SUPPORT",
+      "confidence": 0.8811,
+      "evidence_count": 2,
+      "question": "Does CRISPR-Cas9 targeted modification reduce off-target cleavage?",
+      "timestamp": "2026-10-10T16:20:53.931096+00:00"
+    },
+    {
+      "claim_id": "c_003_p003_p05",
+      "claim_text": "Results demonstrate that the Cas9-crRNA complex functions as an RNA-guided endonuclease with RNA-directed target sequence recognition and protein-mediated DNA cleavage.",
+      "verdict": "SUPPORT",
+      "confidence": 0.917,
+      "evidence_count": 5,
+      "question": "Does CRISPR-Cas9 targeted modification reduce off-target cleavage?",
+      "timestamp": "2026-10-10T16:20:53.936676+00:00"
+    },
+    {
+      "claim_id": "c_001_p001_p02",
+      "claim_text": "In rodents, hippocampus-dependent memory may be particularly sensitive to sleep deprivation after training, as spatial memory in the Morris water maze is impaired by rapid eye movement sleep deprivation following training.",
+      "verdict": "SUPPORT",
+      "confidence": 0.917,
+      "evidence_count": 5,
+      "question": "What is the relationship between sleep duration and cognitive performance?",
+      "timestamp": "2026-10-10T16:21:04.741761+00:00"
+    },
+    {
+      "claim_id": "c_002_p001_p05",
+      "claim_text": "We found that sleep deprivation from 0-5 h after training for this task impaired memory consolidation for contextual fear conditioning whereas sleep deprivation from 5-10 h after training had no effect.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9227,
+      "evidence_count": 5,
+      "question": "What is the relationship between sleep duration and cognitive performance?",
+      "timestamp": "2026-10-10T16:21:04.749582+00:00"
+    },
+    {
+      "claim_id": "c_003_p004_p03",
+      "claim_text": "On the other hand, REM sleep is assumed to reduce the emotional tone of the memory.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9209,
+      "evidence_count": 5,
+      "question": "What is the relationship between sleep duration and cognitive performance?",
+      "timestamp": "2026-10-10T16:21:04.756255+00:00"
+    },
+    {
+      "claim_id": "c_001_p001_p02",
+      "claim_text": "In rodents, hippocampus-dependent memory may be particularly sensitive to sleep deprivation after training, as spatial memory in the Morris water maze is impaired by rapid eye movement sleep deprivation following training.",
+      "verdict": "SUPPORT",
+      "confidence": 0.917,
+      "evidence_count": 5,
+      "question": "What is the relationship between sleep and memory?",
+      "timestamp": "2026-10-10T16:21:13.773912+00:00"
+    },
+    {
+      "claim_id": "c_002_p001_p05",
+      "claim_text": "We found that sleep deprivation from 0-5 h after training for this task impaired memory consolidation for contextual fear conditioning whereas sleep deprivation from 5-10 h after training had no effect.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9227,
+      "evidence_count": 5,
+      "question": "What is the relationship between sleep and memory?",
+      "timestamp": "2026-10-10T16:21:13.790405+00:00"
+    },
+    {
+      "claim_id": "c_003_p004_p03",
+      "claim_text": "On the other hand, REM sleep is assumed to reduce the emotional tone of the memory.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9209,
+      "evidence_count": 5,
+      "question": "What is the relationship between sleep and memory?",
+      "timestamp": "2026-10-10T16:21:13.802322+00:00"
+    },
+    {
+      "claim_id": "c_003_p004_p03",
+      "claim_text": "On the other hand, REM sleep is assumed to reduce the emotional tone of the memory.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9189,
+      "evidence_count": 3,
+      "question": "How does sleep loss impair spatial memory retention in mammals?",
+      "timestamp": "2026-10-10T16:50:19.291331+00:00"
+    },
+    {
+      "claim_id": "c_003_p004_p03",
+      "claim_text": "On the other hand, REM sleep is assumed to reduce the emotional tone of the memory.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9189,
+      "evidence_count": 3,
+      "question": "How does sleep loss impair spatial memory retention in mammals?",
+      "timestamp": "2026-10-10T16:52:30.055987+00:00"
+    },
+    {
+      "claim_id": "c_003_p004_p03",
+      "claim_text": "On the other hand, REM sleep is assumed to reduce the emotional tone of the memory.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9189,
+      "evidence_count": 3,
+      "question": "How does sleep loss impair spatial memory retention in mammals?",
+      "timestamp": "2026-10-10T16:55:59.986083+00:00"
+    },
+    {
+      "claim_id": "c_003_p004_p03",
+      "claim_text": "On the other hand, REM sleep is assumed to reduce the emotional tone of the memory.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9189,
+      "evidence_count": 3,
+      "question": "How does sleep loss impair spatial memory retention in mammals?",
+      "timestamp": "2026-10-10T17:00:42.405742+00:00"
+    },
+    {
+      "claim_id": "c_003_p004_p03",
+      "claim_text": "On the other hand, REM sleep is assumed to reduce the emotional tone of the memory.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9189,
+      "evidence_count": 3,
+      "question": "How does sleep loss impair spatial memory retention in mammals?",
+      "timestamp": "2026-10-10T17:03:26.511341+00:00"
+    },
+    {
+      "claim_id": "c_001_p001_p04",
+      "claim_text": "In this paper, we show an avenue for aligning language models with user intent on a wide range of tasks by fine-tuning with human feedback.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9105,
+      "evidence_count": 5,
+      "question": "How does model size affect the accuracy and computational cost of large language models?",
+      "timestamp": "2026-10-10T17:06:55.600257+00:00"
+    },
+    {
+      "claim_id": "c_002_p002_p02",
+      "claim_text": "We train our models on trillions of tokens, and show that it is possible to train state-of-the-art models using publicly available datasets exclusively, without resorting to proprietary and inaccessible datasets.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9034,
+      "evidence_count": 5,
+      "question": "How does model size affect the accuracy and computational cost of large language models?",
+      "timestamp": "2026-10-10T17:06:55.610204+00:00"
+    },
+    {
+      "claim_id": "c_003_p001_p05",
+      "claim_text": "Starting with a set of labeler-written prompts and prompts submitted through the OpenAI API, we collect a dataset of labeler demonstrations of the desired model behavior, which we use to fine-tune GPT-3 using supervised learning.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9062,
+      "evidence_count": 5,
+      "question": "How does model size affect the accuracy and computational cost of large language models?",
+      "timestamp": "2026-10-10T17:06:55.620814+00:00"
+    },
+    {
+      "claim_id": "c_002_p003_p01",
+      "claim_text": "The Cancer Genome Atlas profiled 279 head and neck squamous cell carcinomas (HNSCCs) to provide a comprehensive landscape of somatic genomic alterations.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9129,
+      "evidence_count": 5,
+      "question": "How does microRNA-21 affect carcinoma cell apoptosis?",
+      "timestamp": "2026-10-10T17:10:05.082116+00:00"
+    },
+    {
+      "claim_id": "c_003_p002_p04",
+      "claim_text": "Potential oncogenic functions of miR-184 were evaluated in tongue SCC cell lines (Cal27, HN21B, and HN96) with miR-184 inhibitor.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9081,
+      "evidence_count": 5,
+      "question": "How does microRNA-21 affect carcinoma cell apoptosis?",
+      "timestamp": "2026-10-10T17:10:05.100816+00:00"
+    },
+    {
+      "claim_id": "c_001_p004_p03",
+      "claim_text": "Here we show that RNA-guided DNA binding unleashes indiscriminate single-stranded DNA (ssDNA) cleavage activity by Cas12a that completely degrades ssDNA molecules.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9041,
+      "evidence_count": 5,
+      "question": "Does CRISPR-Cas9 targeted modification reduce off-target cleavage?",
+      "timestamp": "2026-10-10T17:10:36.699754+00:00"
+    },
+    {
+      "claim_id": "c_002_p004_p04",
+      "claim_text": "Target-activated, nonspecific single-stranded deoxyribonuclease (ssDNase) cleavage is also a property of other type V CRISPR-Cas12 enzymes.",
+      "verdict": "SUPPORT",
+      "confidence": 0.8871,
+      "evidence_count": 2,
+      "question": "Does CRISPR-Cas9 targeted modification reduce off-target cleavage?",
+      "timestamp": "2026-10-10T17:10:36.710628+00:00"
+    },
+    {
+      "claim_id": "c_003_p003_p05",
+      "claim_text": "Results demonstrate that the Cas9-crRNA complex functions as an RNA-guided endonuclease with RNA-directed target sequence recognition and protein-mediated DNA cleavage.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9081,
+      "evidence_count": 5,
+      "question": "Does CRISPR-Cas9 targeted modification reduce off-target cleavage?",
+      "timestamp": "2026-10-10T17:10:36.723900+00:00"
+    },
+    {
+      "claim_id": "c_003_p004_p03",
+      "claim_text": "On the other hand, REM sleep is assumed to reduce the emotional tone of the memory.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9189,
+      "evidence_count": 3,
+      "question": "How does sleep loss impair spatial memory retention in mammals?",
+      "timestamp": "2026-10-10T17:11:11.514963+00:00"
+    },
+    {
+      "claim_id": "c_003_p004_p03",
+      "claim_text": "On the other hand, REM sleep is assumed to reduce the emotional tone of the memory.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9339,
+      "evidence_count": 3,
+      "question": "How does sleep loss impair spatial memory retention in mammals?",
+      "timestamp": "2026-10-10T17:17:03.949333+00:00"
+    },
+    {
+      "claim_id": "c_003_p004_p03",
+      "claim_text": "On the other hand, REM sleep is assumed to reduce the emotional tone of the memory.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9339,
+      "evidence_count": 3,
+      "question": "How does sleep loss impair spatial memory retention in mammals?",
+      "timestamp": "2026-10-10T17:21:31.447681+00:00"
+    },
+    {
+      "claim_id": "c_003_p004_p03",
+      "claim_text": "On the other hand, REM sleep is assumed to reduce the emotional tone of the memory.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9339,
+      "evidence_count": 3,
+      "question": "How does sleep loss impair spatial memory retention in mammals?",
+      "timestamp": "2026-10-10T17:28:01.672174+00:00"
+    },
+    {
+      "claim_id": "c_001_p001_p04",
+      "claim_text": "In this paper, we show an avenue for aligning language models with user intent on a wide range of tasks by fine-tuning with human feedback.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9285,
+      "evidence_count": 5,
+      "question": "How does model size affect the accuracy and computational cost of large language models?",
+      "timestamp": "2026-10-10T17:30:13.929719+00:00"
+    },
+    {
+      "claim_id": "c_002_p002_p02",
+      "claim_text": "We train our models on trillions of tokens, and show that it is possible to train state-of-the-art models using publicly available datasets exclusively, without resorting to proprietary and inaccessible datasets.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9118,
+      "evidence_count": 5,
+      "question": "How does model size affect the accuracy and computational cost of large language models?",
+      "timestamp": "2026-10-10T17:30:13.949617+00:00"
+    },
+    {
+      "claim_id": "c_003_p001_p05",
+      "claim_text": "Starting with a set of labeler-written prompts and prompts submitted through the OpenAI API, we collect a dataset of labeler demonstrations of the desired model behavior, which we use to fine-tune GPT-3 using supervised learning.",
+      "verdict": "SUPPORT",
+      "confidence": 0.92,
+      "evidence_count": 5,
+      "question": "How does model size affect the accuracy and computational cost of large language models?",
+      "timestamp": "2026-10-10T17:30:13.971516+00:00"
+    },
+    {
+      "claim_id": "c_002_p003_p01",
+      "claim_text": "The Cancer Genome Atlas profiled 279 head and neck squamous cell carcinomas (HNSCCs) to provide a comprehensive landscape of somatic genomic alterations.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9309,
+      "evidence_count": 5,
+      "question": "How does microRNA-21 affect carcinoma cell apoptosis?",
+      "timestamp": "2026-10-10T17:30:51.673705+00:00"
+    },
+    {
+      "claim_id": "c_003_p002_p04",
+      "claim_text": "Potential oncogenic functions of miR-184 were evaluated in tongue SCC cell lines (Cal27, HN21B, and HN96) with miR-184 inhibitor.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9261,
+      "evidence_count": 5,
+      "question": "How does microRNA-21 affect carcinoma cell apoptosis?",
+      "timestamp": "2026-10-10T17:30:51.683605+00:00"
+    },
+    {
+      "claim_id": "c_001_p004_p03",
+      "claim_text": "Here we show that RNA-guided DNA binding unleashes indiscriminate single-stranded DNA (ssDNA) cleavage activity by Cas12a that completely degrades ssDNA molecules.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9189,
+      "evidence_count": 5,
+      "question": "Does CRISPR-Cas9 targeted modification reduce off-target cleavage?",
+      "timestamp": "2026-10-10T17:31:02.102754+00:00"
+    },
+    {
+      "claim_id": "c_002_p004_p04",
+      "claim_text": "Target-activated, nonspecific single-stranded deoxyribonuclease (ssDNase) cleavage is also a property of other type V CRISPR-Cas12 enzymes.",
+      "verdict": "SUPPORT",
+      "confidence": 0.8902,
+      "evidence_count": 2,
+      "question": "Does CRISPR-Cas9 targeted modification reduce off-target cleavage?",
+      "timestamp": "2026-10-10T17:31:02.109224+00:00"
+    },
+    {
+      "claim_id": "c_003_p003_p05",
+      "claim_text": "Results demonstrate that the Cas9-crRNA complex functions as an RNA-guided endonuclease with RNA-directed target sequence recognition and protein-mediated DNA cleavage.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9261,
+      "evidence_count": 5,
+      "question": "Does CRISPR-Cas9 targeted modification reduce off-target cleavage?",
+      "timestamp": "2026-10-10T17:31:02.116701+00:00"
+    },
+    {
+      "claim_id": "c_003_p004_p03",
+      "claim_text": "On the other hand, REM sleep is assumed to reduce the emotional tone of the memory.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9339,
+      "evidence_count": 3,
+      "question": "How does sleep loss impair spatial memory retention in mammals?",
+      "timestamp": "2026-10-10T17:31:34.886496+00:00"
+    },
+    {
+      "claim_id": "c_003_p004_p03",
+      "claim_text": "On the other hand, REM sleep is assumed to reduce the emotional tone of the memory.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9339,
+      "evidence_count": 3,
+      "question": "How does sleep loss impair spatial memory retention in mammals?",
+      "timestamp": "2026-10-10T17:35:12.233151+00:00"
+    },
+    {
+      "claim_id": "c_001_p001_p04",
+      "claim_text": "In this paper, we show an avenue for aligning language models with user intent on a wide range of tasks by fine-tuning with human feedback.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9285,
+      "evidence_count": 5,
+      "question": "How does model size affect the accuracy and computational cost of large language models?",
+      "timestamp": "2026-10-10T17:36:57.685231+00:00"
+    },
+    {
+      "claim_id": "c_002_p002_p02",
+      "claim_text": "We train our models on trillions of tokens, and show that it is possible to train state-of-the-art models using publicly available datasets exclusively, without resorting to proprietary and inaccessible datasets.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9118,
+      "evidence_count": 5,
+      "question": "How does model size affect the accuracy and computational cost of large language models?",
+      "timestamp": "2026-10-10T17:36:57.701522+00:00"
+    },
+    {
+      "claim_id": "c_003_p001_p05",
+      "claim_text": "Starting with a set of labeler-written prompts and prompts submitted through the OpenAI API, we collect a dataset of labeler demonstrations of the desired model behavior, which we use to fine-tune GPT-3 using supervised learning.",
+      "verdict": "SUPPORT",
+      "confidence": 0.92,
+      "evidence_count": 5,
+      "question": "How does model size affect the accuracy and computational cost of large language models?",
+      "timestamp": "2026-10-10T17:36:57.718213+00:00"
+    },
+    {
+      "claim_id": "c_002_p003_p01",
+      "claim_text": "The Cancer Genome Atlas profiled 279 head and neck squamous cell carcinomas (HNSCCs) to provide a comprehensive landscape of somatic genomic alterations.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9309,
+      "evidence_count": 5,
+      "question": "How does microRNA-21 affect carcinoma cell apoptosis?",
+      "timestamp": "2026-10-10T17:37:47.008762+00:00"
+    },
+    {
+      "claim_id": "c_003_p002_p04",
+      "claim_text": "Potential oncogenic functions of miR-184 were evaluated in tongue SCC cell lines (Cal27, HN21B, and HN96) with miR-184 inhibitor.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9261,
+      "evidence_count": 5,
+      "question": "How does microRNA-21 affect carcinoma cell apoptosis?",
+      "timestamp": "2026-10-10T17:37:47.022448+00:00"
+    },
+    {
+      "claim_id": "c_001_p004_p03",
+      "claim_text": "Here we show that RNA-guided DNA binding unleashes indiscriminate single-stranded DNA (ssDNA) cleavage activity by Cas12a that completely degrades ssDNA molecules.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9189,
+      "evidence_count": 5,
+      "question": "Does CRISPR-Cas9 targeted modification reduce off-target cleavage?",
+      "timestamp": "2026-10-10T17:37:58.159380+00:00"
+    },
+    {
+      "claim_id": "c_002_p004_p04",
+      "claim_text": "Target-activated, nonspecific single-stranded deoxyribonuclease (ssDNase) cleavage is also a property of other type V CRISPR-Cas12 enzymes.",
+      "verdict": "SUPPORT",
+      "confidence": 0.8902,
+      "evidence_count": 2,
+      "question": "Does CRISPR-Cas9 targeted modification reduce off-target cleavage?",
+      "timestamp": "2026-10-10T17:37:58.169162+00:00"
+    },
+    {
+      "claim_id": "c_003_p003_p05",
+      "claim_text": "Results demonstrate that the Cas9-crRNA complex functions as an RNA-guided endonuclease with RNA-directed target sequence recognition and protein-mediated DNA cleavage.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9261,
+      "evidence_count": 5,
+      "question": "Does CRISPR-Cas9 targeted modification reduce off-target cleavage?",
+      "timestamp": "2026-10-10T17:37:58.181027+00:00"
+    },
+    {
+      "claim_id": "c_003_p004_p03",
+      "claim_text": "On the other hand, REM sleep is assumed to reduce the emotional tone of the memory.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9339,
+      "evidence_count": 3,
+      "question": "How does sleep loss impair spatial memory retention in mammals?",
+      "timestamp": "2026-10-10T17:39:21.743953+00:00"
+    },
+    {
+      "claim_id": "c_001_p001_p02",
+      "claim_text": "In rodents, hippocampus-dependent memory may be particularly sensitive to sleep deprivation after training, as spatial memory in the Morris water maze is impaired by rapid eye movement sleep deprivation following training.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9212,
+      "evidence_count": 3,
+      "question": "Does sleep deprivation affect spatial working memory in rodents?",
+      "timestamp": "2026-10-10T17:41:35.012060+00:00"
+    },
+    {
+      "claim_id": "c_002_p001_p05",
+      "claim_text": "We found that sleep deprivation from 0-5 h after training for this task impaired memory consolidation for contextual fear conditioning whereas sleep deprivation from 5-10 h after training had no effect.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9285,
+      "evidence_count": 3,
+      "question": "Does sleep deprivation affect spatial working memory in rodents?",
+      "timestamp": "2026-10-10T17:41:35.020049+00:00"
+    },
+    {
+      "claim_id": "c_003_p004_p03",
+      "claim_text": "On the other hand, REM sleep is assumed to reduce the emotional tone of the memory.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9248,
+      "evidence_count": 3,
+      "question": "Does sleep deprivation affect spatial working memory in rodents?",
+      "timestamp": "2026-10-10T17:41:35.026040+00:00"
+    },
+    {
+      "claim_id": "c_001_p001_p01",
+      "claim_text": "BACKGROUND: Human immunodeficiency virus (HIV)-infected persons have an elevated risk for lung cancer, but whether the increase reflects solely their heavy tobacco use remains an open question.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9161,
+      "evidence_count": 5,
+      "question": "Does smoking increase the risk of lung cancer?",
+      "timestamp": "2026-10-10T17:44:23.586857+00:00"
+    },
+    {
+      "claim_id": "c_002_p005_p01",
+      "claim_text": "BACKGROUND: We examine whether the lung cancer risk due to smoking has increased over time.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9247,
+      "evidence_count": 5,
+      "question": "Does smoking increase the risk of lung cancer?",
+      "timestamp": "2026-10-10T17:44:23.607197+00:00"
+    },
+    {
+      "claim_id": "c_003_p009_p01",
+      "claim_text": "Passive smoking and lung cancer: increased risk is not disputed.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9306,
+      "evidence_count": 5,
+      "question": "Does smoking increase the risk of lung cancer?",
+      "timestamp": "2026-10-10T17:44:23.624576+00:00"
+    },
+    {
+      "claim_id": "c_001_p27453479_p01",
+      "claim_text": "Ecological studies have been evaluated in epidemiological contexts in terms of the \"ecological fallacy. \" Although the empirical evidence for a lack of comparability between correlations derived from ecological- and individual-level analyses is compelling, the conceptual meaning of the ecological fallacy remains problematic.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9039,
+      "evidence_count": 3,
+      "question": "Does an experimental method with no supporting evidence always improve scientific accuracy?",
+      "timestamp": "2026-10-10T17:46:28.007870+00:00"
+    },
+    {
+      "claim_id": "c_002_p7227763_p01",
+      "claim_text": "The increase in lactate (L) and pyruvate (P) content of arterial blood during experimental and clinical shock states and the extent to which such increases serve as measures of oxygen deficit and irreversible injury were investigated on an empirical basis.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9034,
+      "evidence_count": 5,
+      "question": "Does an experimental method with no supporting evidence always improve scientific accuracy?",
+      "timestamp": "2026-10-10T17:46:28.027409+00:00"
+    },
+    {
+      "claim_id": "c_003_p16705338_p02",
+      "claim_text": "However, large scale determination of CPI is a big challenge for in vitro or in vivo experiments, while in silico prediction shows great advantages due to low cost and high accuracy.",
+      "verdict": "SUPPORT",
+      "confidence": 0.8969,
+      "evidence_count": 5,
+      "question": "Does an experimental method with no supporting evidence always improve scientific accuracy?",
+      "timestamp": "2026-10-10T17:46:28.041655+00:00"
+    },
+    {
+      "claim_id": "c_001_p002_p01",
+      "claim_text": "This thesis defines mortality in acromegaly in a modern patient cohort, elucidates underlying explanations for the increased mortality and explores the impact of treatment, focussing on somatostatin analogue therapy.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9134,
+      "evidence_count": 5,
+      "question": "A treatment improved outcomes in 12 mice. Does this prove it works for every human patient?",
+      "timestamp": "2026-10-10T17:47:13.875831+00:00"
+    },
+    {
+      "claim_id": "c_002_p001_p01",
+      "claim_text": "In the field of ischemic cerebral injury, precise characterization of neurovascular hemodynamic is required to select candidates for reperfusion treatments.It is thus admitted that advanced imaging-based approaches would be able to better diagnose and prognose those patients and would contribute to better clinical care.Current imaging modalities like MRI allow a precise diagnostic of cerebral injury but suffer from limited availability and transportability.The recently developed ultrafast ultrasound could be a powerful tool to perform emergency imaging and long term follow-up of cerebral perfusion, which could, in combination with MRI, improve imaging solutions for neuroradiologists.Methods: In this study, in a model of in situ thromboembolic stroke in mice, we compared a control group of non-treated mice (N=10) with a group receiving the gold standard pharmacological stroke therapy (N=9).We combined the established tool of magnetic resonance imaging (7T MRI) with two innovative ultrafast ultrasound methods, ultrafast Doppler and Ultrasound Localization Microscopy, to image the cerebral blood volumes at early and late times after stroke onset and compare with the formation of ischemic lesions.Results: Our study shows that ultrafast ultrasound can be used through the mouse skull to monitor cerebral perfusion during ischemic stroke.In our data, the monitoring of the reperfusion following thrombolytic within the first 2 h post stroke onset matches ischemic lesions measured 24 h.Moreover, similar results can be made with Ultrasound Localization Microscopy which could make it applicable to human patients in the future.Conclusion: We thus provide the proof of concept that in a mouse model of thromboembolic stroke with an intact skull, early ultrafast ultrasound can be indicative of responses to treatment and cerebral tissue fates following stroke.It brings new tools to study ischemic stroke in preclinical models and is the first step prior translation to the clinical settings.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9079,
+      "evidence_count": 5,
+      "question": "A treatment improved outcomes in 12 mice. Does this prove it works for every human patient?",
+      "timestamp": "2026-10-10T17:47:13.927783+00:00"
+    },
+    {
+      "claim_id": "c_003_p005_p01",
+      "claim_text": "Pharmacological senolysis reduces doxorubicin-induced cardiotoxicity and improves cardiac function in mice.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9071,
+      "evidence_count": 3,
+      "question": "A treatment improved outcomes in 12 mice. Does this prove it works for every human patient?",
+      "timestamp": "2026-10-10T17:47:13.943896+00:00"
+    },
+    {
+      "claim_id": "c_001_p002_p04",
+      "claim_text": "We also show that accuracy can be similarly improved by employing perturbation theory kernels whose structure is entirely determined by symmetries instead of evolution equations valid in particular models (like in the usual Einstein-de Sitter approximation).",
+      "verdict": "SUPPORT",
+      "confidence": 0.9035,
+      "evidence_count": 5,
+      "question": "If a paper reports that model accuracy decreased from 95% to 87%, can we claim that accuracy improved?",
+      "timestamp": "2026-10-10T17:48:21.813033+00:00"
+    },
+    {
+      "claim_id": "c_002_p002_p03",
+      "claim_text": "Here we show, using a Fisher matrix approach, that precision of this method for the case of the one-loop power spectrum is greatly improved with the inclusion of the tree-level bispectrum.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9052,
+      "evidence_count": 4,
+      "question": "If a paper reports that model accuracy decreased from 95% to 87%, can we claim that accuracy improved?",
+      "timestamp": "2026-10-10T17:48:21.828541+00:00"
+    },
+    {
+      "claim_id": "c_003_p001_p05",
+      "claim_text": "1) By leveraging the native vertical coordinates of European Centre for Medium Range Weather Forecasts (ECMWF) Integrated Forecasting System (IFS) instead of interpolating to terrain-following coordinates, we achieved an improvement in trajectory accuracy, leading to a \u223c 8\u221210 % reduction in conservation errors for semi-conserved quantities like potential vorticity.",
+      "verdict": "SUPPORT",
+      "confidence": 0.903,
+      "evidence_count": 4,
+      "question": "If a paper reports that model accuracy decreased from 95% to 87%, can we claim that accuracy improved?",
+      "timestamp": "2026-10-10T17:48:21.845851+00:00"
+    },
+    {
+      "claim_id": "c_001_p001_p01",
+      "claim_text": "BACKGROUND: Human immunodeficiency virus (HIV)-infected persons have an elevated risk for lung cancer, but whether the increase reflects solely their heavy tobacco use remains an open question.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9161,
+      "evidence_count": 5,
+      "question": "Does smoking increase the risk of lung cancer?",
+      "timestamp": "2026-10-10T17:48:37.231252+00:00"
+    },
+    {
+      "claim_id": "c_002_p005_p01",
+      "claim_text": "BACKGROUND: We examine whether the lung cancer risk due to smoking has increased over time.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9247,
+      "evidence_count": 5,
+      "question": "Does smoking increase the risk of lung cancer?",
+      "timestamp": "2026-10-10T17:48:37.250969+00:00"
+    },
+    {
+      "claim_id": "c_003_p009_p01",
+      "claim_text": "Passive smoking and lung cancer: increased risk is not disputed.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9306,
+      "evidence_count": 5,
+      "question": "Does smoking increase the risk of lung cancer?",
+      "timestamp": "2026-10-10T17:48:37.269779+00:00"
+    },
+    {
+      "claim_id": "c_001_p001_p04",
+      "claim_text": "MicroRNAs, very short non-coding RNAs, are abnormally expressed in cancer and some harbor mutations that affect expression levels.",
+      "verdict": "SUPPORT",
+      "confidence": 0.8953,
+      "evidence_count": 5,
+      "question": "Does miRNA expression play a role in cancer progression?",
+      "timestamp": "2026-10-10T17:51:12.995558+00:00"
+    },
+    {
+      "claim_id": "c_002_p006_p03",
+      "claim_text": "Several studies have now shown that miRNAs are involved in the initiation and progression of cancer.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9226,
+      "evidence_count": 5,
+      "question": "Does miRNA expression play a role in cancer progression?",
+      "timestamp": "2026-10-10T17:51:13.013780+00:00"
+    },
+    {
+      "claim_id": "c_003_p001_p06",
+      "claim_text": "MicroRNAs are also located in cancer- associated genomic regions, which have been previously shown to affect gene expression leading to the activation or inhibition of cancer growth.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9143,
+      "evidence_count": 5,
+      "question": "Does miRNA expression play a role in cancer progression?",
+      "timestamp": "2026-10-10T17:51:13.030952+00:00"
+    },
+    {
+      "claim_id": "c_001_p001_p04",
+      "claim_text": "Several factors affect solar cell efficiency.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9314,
+      "evidence_count": 5,
+      "question": "What factors influence solar cell efficiency?",
+      "timestamp": "2026-10-10T17:51:38.566989+00:00"
+    },
+    {
+      "claim_id": "c_002_p001_p05",
+      "claim_text": "This paper presents the most important factors that affecting efficiency of solar cells.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9273,
+      "evidence_count": 5,
+      "question": "What factors influence solar cell efficiency?",
+      "timestamp": "2026-10-10T17:51:38.580620+00:00"
+    },
+    {
+      "claim_id": "c_003_p004_p01",
+      "claim_text": "We report on the fabrication of efficient PbS solar cells, showing power conversion efficiencies approaching 4% and fill factors of 60% under AM1.5 illumination.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9149,
+      "evidence_count": 5,
+      "question": "What factors influence solar cell efficiency?",
+      "timestamp": "2026-10-10T17:51:38.594769+00:00"
+    },
+    {
+      "claim_id": "c_001_p001_p04",
+      "claim_text": "Several factors affect solar cell efficiency.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9314,
+      "evidence_count": 5,
+      "question": "What factors influence solar cell efficiency?",
+      "timestamp": "2026-10-10T17:53:12.659068+00:00"
+    },
+    {
+      "claim_id": "c_002_p001_p05",
+      "claim_text": "This paper presents the most important factors that affecting efficiency of solar cells.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9273,
+      "evidence_count": 5,
+      "question": "What factors influence solar cell efficiency?",
+      "timestamp": "2026-10-10T17:53:12.674294+00:00"
+    },
+    {
+      "claim_id": "c_003_p004_p01",
+      "claim_text": "We report on the fabrication of efficient PbS solar cells, showing power conversion efficiencies approaching 4% and fill factors of 60% under AM1.5 illumination.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9149,
+      "evidence_count": 5,
+      "question": "What factors influence solar cell efficiency?",
+      "timestamp": "2026-10-10T17:53:12.686817+00:00"
+    },
+    {
+      "claim_id": "c_001_p001_p04",
+      "claim_text": "In this paper, we show an avenue for aligning language models with user intent on a wide range of tasks by fine-tuning with human feedback.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9194,
+      "evidence_count": 5,
+      "question": "How does model size affect the accuracy and computational cost of large language models?",
+      "timestamp": "2026-10-10T17:56:18.491924+00:00"
+    },
+    {
+      "claim_id": "c_002_p002_p02",
+      "claim_text": "We train our models on trillions of tokens, and show that it is possible to train state-of-the-art models using publicly available datasets exclusively, without resorting to proprietary and inaccessible datasets.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9027,
+      "evidence_count": 5,
+      "question": "How does model size affect the accuracy and computational cost of large language models?",
+      "timestamp": "2026-10-10T17:56:18.513584+00:00"
+    },
+    {
+      "claim_id": "c_003_p001_p05",
+      "claim_text": "Starting with a set of labeler-written prompts and prompts submitted through the OpenAI API, we collect a dataset of labeler demonstrations of the desired model behavior, which we use to fine-tune GPT-3 using supervised learning.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9109,
+      "evidence_count": 5,
+      "question": "How does model size affect the accuracy and computational cost of large language models?",
+      "timestamp": "2026-10-10T17:56:18.530778+00:00"
+    },
+    {
+      "claim_id": "c_001_p001_p01",
+      "claim_text": "INTRODUCTION: Intermittent fasting (IF) has been suggested to have neuroprotective effects through the activation of multiple signaling pathways.",
+      "verdict": "SUPPORT",
+      "confidence": 0.921,
+      "evidence_count": 3,
+      "question": "How does intermittent fasting influence neurogenesis in adult rodents?",
+      "timestamp": "2026-10-10T18:02:33.252505+00:00"
+    },
+    {
+      "claim_id": "c_002_p005_p01",
+      "claim_text": "Abstract Intermittent fasting (IF) is a promising strategy to counteract ageing shown to increase the number of adult\u2010born neurons in the dentate gyrus of mice.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9195,
+      "evidence_count": 3,
+      "question": "How does intermittent fasting influence neurogenesis in adult rodents?",
+      "timestamp": "2026-10-10T18:02:33.256399+00:00"
+    },
+    {
+      "claim_id": "c_003_p002_p04",
+      "claim_text": "Intermittent fasting or calorie restriction, a nutritional method, increases brain-derived neurotrophic factor expression in various regions of the human and rodent brain.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9256,
+      "evidence_count": 3,
+      "question": "How does intermittent fasting influence neurogenesis in adult rodents?",
+      "timestamp": "2026-10-10T18:02:33.262408+00:00"
+    },
+    {
+      "claim_id": "c_001_p004_p03",
+      "claim_text": "Here we show that RNA-guided DNA binding unleashes indiscriminate single-stranded DNA (ssDNA) cleavage activity by Cas12a that completely degrades ssDNA molecules.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9098,
+      "evidence_count": 5,
+      "question": "How does CRISPR-Cas9 enable targeted DNA cleavage?",
+      "timestamp": "2026-10-11T03:36:46.816501+00:00"
+    },
+    {
+      "claim_id": "c_002_p001_p02",
+      "claim_text": "We show here that in a subset of these systems, the mature crRNA that is base-paired to trans-activating crRNA (tracrRNA) forms a two-RNA structure that directs the CRISPR-associated protein Cas9 to introduce double-stranded (ds) breaks in target DNA.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9158,
+      "evidence_count": 5,
+      "question": "How does CRISPR-Cas9 enable targeted DNA cleavage?",
+      "timestamp": "2026-10-11T03:36:46.852473+00:00"
+    },
+    {
+      "claim_id": "c_003_p003_p05",
+      "claim_text": "Results demonstrate that the Cas9-crRNA complex functions as an RNA-guided endonuclease with RNA-directed target sequence recognition and protein-mediated DNA cleavage.",
+      "verdict": "SUPPORT",
+      "confidence": 0.917,
+      "evidence_count": 5,
+      "question": "How does CRISPR-Cas9 enable targeted DNA cleavage?",
+      "timestamp": "2026-10-11T03:36:46.873434+00:00"
+    },
+    {
+      "claim_id": "c_003_p004_p03",
+      "claim_text": "On the other hand, REM sleep is assumed to reduce the emotional tone of the memory.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9339,
+      "evidence_count": 3,
+      "question": "Does sleep deprivation impair spatial working memory in rodents?",
+      "timestamp": "2026-10-11T03:50:07.832687+00:00"
+    },
+    {
+      "claim_id": "c_003_p004_p03",
+      "claim_text": "On the other hand, REM sleep is assumed to reduce the emotional tone of the memory.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9339,
+      "evidence_count": 3,
+      "question": "Does sleep deprivation impair spatial working memory in rodents?",
+      "timestamp": "2026-10-11T03:55:10.465227+00:00"
+    },
+    {
+      "claim_id": "c_003_p004_p03",
+      "claim_text": "On the other hand, REM sleep is assumed to reduce the emotional tone of the memory.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9339,
+      "evidence_count": 3,
+      "question": "Does sleep deprivation impair spatial working memory in rodents?",
+      "timestamp": "2026-10-11T03:57:32.657664+00:00"
+    },
+    {
+      "claim_id": "c_003_p004_p03",
+      "claim_text": "On the other hand, REM sleep is assumed to reduce the emotional tone of the memory.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9339,
+      "evidence_count": 3,
+      "question": "Does sleep deprivation impair spatial working memory in rodents?",
+      "timestamp": "2026-10-11T03:58:53.581312+00:00"
+    },
+    {
+      "claim_id": "c_003_p004_p03",
+      "claim_text": "On the other hand, REM sleep is assumed to reduce the emotional tone of the memory.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9339,
+      "evidence_count": 3,
+      "question": "Does sleep deprivation impair spatial working memory in rodents?",
+      "timestamp": "2026-10-11T04:01:17.437467+00:00"
+    },
+    {
+      "claim_id": "c_001_p001_p04",
+      "claim_text": "In this paper, we show an avenue for aligning language models with user intent on a wide range of tasks by fine-tuning with human feedback.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9285,
+      "evidence_count": 5,
+      "question": "How does model size affect the accuracy and computational cost of large language models?",
+      "timestamp": "2026-10-11T04:01:38.589241+00:00"
+    },
+    {
+      "claim_id": "c_002_p002_p02",
+      "claim_text": "We train our models on trillions of tokens, and show that it is possible to train state-of-the-art models using publicly available datasets exclusively, without resorting to proprietary and inaccessible datasets.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9118,
+      "evidence_count": 5,
+      "question": "How does model size affect the accuracy and computational cost of large language models?",
+      "timestamp": "2026-10-11T04:01:38.600778+00:00"
+    },
+    {
+      "claim_id": "c_003_p001_p05",
+      "claim_text": "Starting with a set of labeler-written prompts and prompts submitted through the OpenAI API, we collect a dataset of labeler demonstrations of the desired model behavior, which we use to fine-tune GPT-3 using supervised learning.",
+      "verdict": "SUPPORT",
+      "confidence": 0.92,
+      "evidence_count": 5,
+      "question": "How does model size affect the accuracy and computational cost of large language models?",
+      "timestamp": "2026-10-11T04:01:38.612229+00:00"
+    },
+    {
+      "claim_id": "c_002_p003_p01",
+      "claim_text": "The Cancer Genome Atlas profiled 279 head and neck squamous cell carcinomas (HNSCCs) to provide a comprehensive landscape of somatic genomic alterations.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9309,
+      "evidence_count": 5,
+      "question": "How does microRNA-21 affect carcinoma cell apoptosis?",
+      "timestamp": "2026-10-11T04:02:10.856395+00:00"
+    },
+    {
+      "claim_id": "c_003_p002_p04",
+      "claim_text": "Potential oncogenic functions of miR-184 were evaluated in tongue SCC cell lines (Cal27, HN21B, and HN96) with miR-184 inhibitor.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9261,
+      "evidence_count": 5,
+      "question": "How does microRNA-21 affect carcinoma cell apoptosis?",
+      "timestamp": "2026-10-11T04:02:10.875007+00:00"
+    },
+    {
+      "claim_id": "c_001_p004_p03",
+      "claim_text": "Here we show that RNA-guided DNA binding unleashes indiscriminate single-stranded DNA (ssDNA) cleavage activity by Cas12a that completely degrades ssDNA molecules.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9189,
+      "evidence_count": 5,
+      "question": "Does CRISPR-Cas9 targeted modification reduce off-target cleavage?",
+      "timestamp": "2026-10-11T04:02:22.070088+00:00"
+    },
+    {
+      "claim_id": "c_002_p004_p04",
+      "claim_text": "Target-activated, nonspecific single-stranded deoxyribonuclease (ssDNase) cleavage is also a property of other type V CRISPR-Cas12 enzymes.",
+      "verdict": "SUPPORT",
+      "confidence": 0.8902,
+      "evidence_count": 2,
+      "question": "Does CRISPR-Cas9 targeted modification reduce off-target cleavage?",
+      "timestamp": "2026-10-11T04:02:22.078007+00:00"
+    },
+    {
+      "claim_id": "c_003_p003_p05",
+      "claim_text": "Results demonstrate that the Cas9-crRNA complex functions as an RNA-guided endonuclease with RNA-directed target sequence recognition and protein-mediated DNA cleavage.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9261,
+      "evidence_count": 5,
+      "question": "Does CRISPR-Cas9 targeted modification reduce off-target cleavage?",
+      "timestamp": "2026-10-11T04:02:22.086134+00:00"
+    },
+    {
+      "claim_id": "c_003_p004_p03",
+      "claim_text": "On the other hand, REM sleep is assumed to reduce the emotional tone of the memory.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9339,
+      "evidence_count": 3,
+      "question": "How does sleep loss impair spatial memory retention in mammals?",
+      "timestamp": "2026-10-11T04:04:43.052925+00:00"
+    },
+    {
+      "claim_id": "c_001_p003_p05",
+      "claim_text": "The first is that impaired, vitamin D status is common to many populations across the globe.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9251,
+      "evidence_count": 5,
+      "question": "Does vitamin C cure cancer in humans?",
+      "timestamp": "2026-10-11T04:06:19.082882+00:00"
+    },
+    {
+      "claim_id": "c_002_p005_p04",
+      "claim_text": "So far, certain evidences have been reported showing vitamin D helps curing or reduces the death rate of colon cancer, prostate cancer and breast cancer.",
+      "verdict": "SUPPORT",
+      "confidence": 0.924,
+      "evidence_count": 5,
+      "question": "Does vitamin C cure cancer in humans?",
+      "timestamp": "2026-10-11T04:06:19.094143+00:00"
+    },
+    {
+      "claim_id": "c_003_p004_p02",
+      "claim_text": "However, subclinical vitamin D deficiency is more prevalent, and it is associated with osteoporosis and higher incidence of falls or fractures.",
+      "verdict": "SUPPORT",
+      "confidence": 0.912,
+      "evidence_count": 5,
+      "question": "Does vitamin C cure cancer in humans?",
+      "timestamp": "2026-10-11T04:06:19.105838+00:00"
+    },
+    {
+      "claim_id": "c_003_p004_p03",
+      "claim_text": "On the other hand, REM sleep is assumed to reduce the emotional tone of the memory.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9339,
+      "evidence_count": 3,
+      "question": "Does sleep deprivation impair spatial working memory in rodents?",
+      "timestamp": "2026-10-11T06:03:45.028738+00:00"
+    },
+    {
+      "claim_id": "c_001_p001_p04",
+      "claim_text": "In this paper, we show an avenue for aligning language models with user intent on a wide range of tasks by fine-tuning with human feedback.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9285,
+      "evidence_count": 5,
+      "question": "How does model size affect the accuracy and computational cost of large language models?",
+      "timestamp": "2026-10-11T06:04:05.904216+00:00"
+    },
+    {
+      "claim_id": "c_002_p002_p02",
+      "claim_text": "We train our models on trillions of tokens, and show that it is possible to train state-of-the-art models using publicly available datasets exclusively, without resorting to proprietary and inaccessible datasets.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9118,
+      "evidence_count": 5,
+      "question": "How does model size affect the accuracy and computational cost of large language models?",
+      "timestamp": "2026-10-11T06:04:05.919576+00:00"
+    },
+    {
+      "claim_id": "c_003_p001_p05",
+      "claim_text": "Starting with a set of labeler-written prompts and prompts submitted through the OpenAI API, we collect a dataset of labeler demonstrations of the desired model behavior, which we use to fine-tune GPT-3 using supervised learning.",
+      "verdict": "SUPPORT",
+      "confidence": 0.92,
+      "evidence_count": 5,
+      "question": "How does model size affect the accuracy and computational cost of large language models?",
+      "timestamp": "2026-10-11T06:04:05.931644+00:00"
+    },
+    {
+      "claim_id": "c_002_p003_p01",
+      "claim_text": "The Cancer Genome Atlas profiled 279 head and neck squamous cell carcinomas (HNSCCs) to provide a comprehensive landscape of somatic genomic alterations.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9309,
+      "evidence_count": 5,
+      "question": "How does microRNA-21 affect carcinoma cell apoptosis?",
+      "timestamp": "2026-10-11T06:04:35.912369+00:00"
+    },
+    {
+      "claim_id": "c_003_p002_p04",
+      "claim_text": "Potential oncogenic functions of miR-184 were evaluated in tongue SCC cell lines (Cal27, HN21B, and HN96) with miR-184 inhibitor.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9261,
+      "evidence_count": 5,
+      "question": "How does microRNA-21 affect carcinoma cell apoptosis?",
+      "timestamp": "2026-10-11T06:04:35.927882+00:00"
+    },
+    {
+      "claim_id": "c_001_p004_p03",
+      "claim_text": "Here we show that RNA-guided DNA binding unleashes indiscriminate single-stranded DNA (ssDNA) cleavage activity by Cas12a that completely degrades ssDNA molecules.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9189,
+      "evidence_count": 5,
+      "question": "Does CRISPR-Cas9 targeted modification reduce off-target cleavage?",
+      "timestamp": "2026-10-11T06:04:45.154947+00:00"
+    },
+    {
+      "claim_id": "c_002_p004_p04",
+      "claim_text": "Target-activated, nonspecific single-stranded deoxyribonuclease (ssDNase) cleavage is also a property of other type V CRISPR-Cas12 enzymes.",
+      "verdict": "SUPPORT",
+      "confidence": 0.8902,
+      "evidence_count": 2,
+      "question": "Does CRISPR-Cas9 targeted modification reduce off-target cleavage?",
+      "timestamp": "2026-10-11T06:04:45.163492+00:00"
+    },
+    {
+      "claim_id": "c_003_p003_p05",
+      "claim_text": "Results demonstrate that the Cas9-crRNA complex functions as an RNA-guided endonuclease with RNA-directed target sequence recognition and protein-mediated DNA cleavage.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9261,
+      "evidence_count": 5,
+      "question": "Does CRISPR-Cas9 targeted modification reduce off-target cleavage?",
+      "timestamp": "2026-10-11T06:04:45.171666+00:00"
+    },
+    {
+      "claim_id": "c_003_p004_p03",
+      "claim_text": "On the other hand, REM sleep is assumed to reduce the emotional tone of the memory.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9339,
+      "evidence_count": 3,
+      "question": "How does sleep loss impair spatial memory retention in mammals?",
+      "timestamp": "2026-10-11T06:05:13.667228+00:00"
+    },
+    {
+      "claim_id": "c_001_p001_p01",
+      "claim_text": "Intermittent fasting is increasing in popularity as a means of losing weight and controlling chronic illness.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9267,
+      "evidence_count": 5,
+      "question": "Does intermittent fasting reverse type 2 diabetes in humans?",
+      "timestamp": "2026-10-11T06:06:09.064717+00:00"
+    },
+    {
+      "claim_id": "c_002_p001_p06",
+      "claim_text": "This article provides an overview of the available knowledge and a review of the very limited pertinent literature on the effects of intermittent fasting among people with diabetes.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9258,
+      "evidence_count": 5,
+      "question": "Does intermittent fasting reverse type 2 diabetes in humans?",
+      "timestamp": "2026-10-11T06:06:09.080756+00:00"
+    },
+    {
+      "claim_id": "c_003_p001_p10",
+      "claim_text": "When done under the supervision of the patient's healthcare provider, and with appropriate personal glucose monitoring, intermittent fasting can be safely undertaken in patients with diabetes.",
+      "verdict": "SUPPORT",
+      "confidence": 0.924,
+      "evidence_count": 5,
+      "question": "Does intermittent fasting reverse type 2 diabetes in humans?",
+      "timestamp": "2026-10-11T06:06:09.096225+00:00"
+    },
+    {
+      "claim_id": "c_002_p006_p03",
+      "claim_text": "Several studies have now shown that miRNAs are involved in the initiation and progression of cancer.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9317,
+      "evidence_count": 5,
+      "question": "Does miRNA expression play a role in cancer progression?",
+      "timestamp": "2026-10-11T06:12:08.783163+00:00"
+    },
+    {
+      "claim_id": "c_001_p001_p04",
+      "claim_text": "In this paper, we show an avenue for aligning language models with user intent on a wide range of tasks by fine-tuning with human feedback.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9285,
+      "evidence_count": 5,
+      "question": "How does model size affect the accuracy and computational cost of large language models?",
+      "timestamp": "2026-10-11T06:12:45.434570+00:00"
+    },
+    {
+      "claim_id": "c_002_p002_p02",
+      "claim_text": "We train our models on trillions of tokens, and show that it is possible to train state-of-the-art models using publicly available datasets exclusively, without resorting to proprietary and inaccessible datasets.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9118,
+      "evidence_count": 5,
+      "question": "How does model size affect the accuracy and computational cost of large language models?",
+      "timestamp": "2026-10-11T06:12:45.457574+00:00"
+    },
+    {
+      "claim_id": "c_003_p001_p05",
+      "claim_text": "Starting with a set of labeler-written prompts and prompts submitted through the OpenAI API, we collect a dataset of labeler demonstrations of the desired model behavior, which we use to fine-tune GPT-3 using supervised learning.",
+      "verdict": "SUPPORT",
+      "confidence": 0.92,
+      "evidence_count": 5,
+      "question": "How does model size affect the accuracy and computational cost of large language models?",
+      "timestamp": "2026-10-11T06:12:45.481001+00:00"
+    },
+    {
+      "claim_id": "c_001_p007_p01",
+      "claim_text": "ABSTRACT As Large Language Models (LLMs) are increasingly deployed within the systems engineering domain, optimizing these models to balance performance accuracy and cost for given computational resources becomes essential.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9204,
+      "evidence_count": 10,
+      "question": "How does model size affect the accuracy and computational cost of large language models?",
+      "timestamp": "2026-10-11T06:16:53.646558+00:00"
+    },
+    {
+      "claim_id": "c_002_p002_p02",
+      "claim_text": "We evaluated how concatenating queries with multiple clinical notes and tasks simultaneously affects model performance under increasing computational loads.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9195,
+      "evidence_count": 10,
+      "question": "How does model size affect the accuracy and computational cost of large language models?",
+      "timestamp": "2026-10-11T06:16:53.683723+00:00"
+    },
+    {
+      "claim_id": "c_003_p006_p01",
+      "claim_text": "Scaling up language models has been shown to predictably improve performance and sample efficiency on a wide range of downstream tasks.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9235,
+      "evidence_count": 10,
+      "question": "How does model size affect the accuracy and computational cost of large language models?",
+      "timestamp": "2026-10-11T06:16:53.717794+00:00"
+    },
+    {
+      "claim_id": "c_001_p001_p05",
+      "claim_text": "In this review, we focused on the inhibition effect of curcumin on various cancer progression by regulating expression of multiple microRNAs.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9258,
+      "evidence_count": 10,
+      "question": "Does miRNA expression play a role in cancer progression?",
+      "timestamp": "2026-10-11T06:17:27.551908+00:00"
+    },
+    {
+      "claim_id": "c_002_p009_p01",
+      "claim_text": "Loss of microRNA-200a expression correlates with tumor progression in breast cancer.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9305,
+      "evidence_count": 10,
+      "question": "Does miRNA expression play a role in cancer progression?",
+      "timestamp": "2026-10-11T06:17:27.581583+00:00"
+    },
+    {
+      "claim_id": "c_003_p003_p04",
+      "claim_text": "In this study, we report differential miRNA expression in IBD patients with associated CRC from non-neoplastic tissue to dysplasia and eventually cancer.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9219,
+      "evidence_count": 10,
+      "question": "Does miRNA expression play a role in cancer progression?",
+      "timestamp": "2026-10-11T06:17:27.615833+00:00"
+    },
+    {
+      "claim_id": "c_001_p003_p03",
+      "claim_text": "DNA cleavage is impaired by more than 100- fold for the high-fidelity variants.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9118,
+      "evidence_count": 10,
+      "question": "How does CRISPR-Cas9 enable targeted DNA cleavage?",
+      "timestamp": "2026-10-11T06:17:47.740699+00:00"
+    },
+    {
+      "claim_id": "c_002_p003_p04",
+      "claim_text": "The high-fidelity variants improve discrimination by slowing the observed rate of cleavage without increasing the rate of DNA rewinding and release.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9153,
+      "evidence_count": 10,
+      "question": "How does CRISPR-Cas9 enable targeted DNA cleavage?",
+      "timestamp": "2026-10-11T06:17:47.768848+00:00"
+    },
+    {
+      "claim_id": "c_003_p003_p01",
+      "claim_text": "CRISPR/Cas9 is a programmable genome editing tool widely used for biological applications and engineered Cas9s have increased discrimination against off-target cleavage compared with wild-type Streptococcus pyogenes (SpCas9) in vivo.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9192,
+      "evidence_count": 10,
+      "question": "How does CRISPR-Cas9 enable targeted DNA cleavage?",
+      "timestamp": "2026-10-11T06:17:47.793808+00:00"
+    },
+    {
+      "claim_id": "c_001_p003_p03",
+      "claim_text": "DNA cleavage is impaired by more than 100- fold for the high-fidelity variants.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9118,
+      "evidence_count": 10,
+      "question": "How does CRISPR-Cas9 enable targeted DNA cleavage?",
+      "timestamp": "2026-10-11T06:18:39.968547+00:00"
+    },
+    {
+      "claim_id": "c_002_p003_p04",
+      "claim_text": "The high-fidelity variants improve discrimination by slowing the observed rate of cleavage without increasing the rate of DNA rewinding and release.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9153,
+      "evidence_count": 10,
+      "question": "How does CRISPR-Cas9 enable targeted DNA cleavage?",
+      "timestamp": "2026-10-11T06:18:39.997417+00:00"
+    },
+    {
+      "claim_id": "c_003_p003_p01",
+      "claim_text": "CRISPR/Cas9 is a programmable genome editing tool widely used for biological applications and engineered Cas9s have increased discrimination against off-target cleavage compared with wild-type Streptococcus pyogenes (SpCas9) in vivo.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9192,
+      "evidence_count": 10,
+      "question": "How does CRISPR-Cas9 enable targeted DNA cleavage?",
+      "timestamp": "2026-10-11T06:18:40.030570+00:00"
+    },
+    {
+      "claim_id": "c_003_p004_p03",
+      "claim_text": "On the other hand, REM sleep is assumed to reduce the emotional tone of the memory.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9339,
+      "evidence_count": 3,
+      "question": "Does sleep deprivation impair spatial working memory in rodents?",
+      "timestamp": "2026-10-11T06:22:32.575957+00:00"
+    },
+    {
+      "claim_id": "c_001_p001_p04",
+      "claim_text": "In this paper, we show an avenue for aligning language models with user intent on a wide range of tasks by fine-tuning with human feedback.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9285,
+      "evidence_count": 5,
+      "question": "How does model size affect the accuracy and computational cost of large language models?",
+      "timestamp": "2026-10-11T06:22:53.369384+00:00"
+    },
+    {
+      "claim_id": "c_002_p002_p02",
+      "claim_text": "We train our models on trillions of tokens, and show that it is possible to train state-of-the-art models using publicly available datasets exclusively, without resorting to proprietary and inaccessible datasets.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9118,
+      "evidence_count": 5,
+      "question": "How does model size affect the accuracy and computational cost of large language models?",
+      "timestamp": "2026-10-11T06:22:53.395595+00:00"
+    },
+    {
+      "claim_id": "c_003_p001_p05",
+      "claim_text": "Starting with a set of labeler-written prompts and prompts submitted through the OpenAI API, we collect a dataset of labeler demonstrations of the desired model behavior, which we use to fine-tune GPT-3 using supervised learning.",
+      "verdict": "SUPPORT",
+      "confidence": 0.92,
+      "evidence_count": 5,
+      "question": "How does model size affect the accuracy and computational cost of large language models?",
+      "timestamp": "2026-10-11T06:22:53.419387+00:00"
+    },
+    {
+      "claim_id": "c_002_p003_p01",
+      "claim_text": "The Cancer Genome Atlas profiled 279 head and neck squamous cell carcinomas (HNSCCs) to provide a comprehensive landscape of somatic genomic alterations.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9309,
+      "evidence_count": 5,
+      "question": "How does microRNA-21 affect carcinoma cell apoptosis?",
+      "timestamp": "2026-10-11T06:23:28.504927+00:00"
+    },
+    {
+      "claim_id": "c_003_p002_p04",
+      "claim_text": "Potential oncogenic functions of miR-184 were evaluated in tongue SCC cell lines (Cal27, HN21B, and HN96) with miR-184 inhibitor.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9261,
+      "evidence_count": 5,
+      "question": "How does microRNA-21 affect carcinoma cell apoptosis?",
+      "timestamp": "2026-10-11T06:23:28.527922+00:00"
+    },
+    {
+      "claim_id": "c_001_p004_p03",
+      "claim_text": "Here we show that RNA-guided DNA binding unleashes indiscriminate single-stranded DNA (ssDNA) cleavage activity by Cas12a that completely degrades ssDNA molecules.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9189,
+      "evidence_count": 5,
+      "question": "Does CRISPR-Cas9 targeted modification reduce off-target cleavage?",
+      "timestamp": "2026-10-11T06:23:39.083118+00:00"
+    },
+    {
+      "claim_id": "c_002_p004_p04",
+      "claim_text": "Target-activated, nonspecific single-stranded deoxyribonuclease (ssDNase) cleavage is also a property of other type V CRISPR-Cas12 enzymes.",
+      "verdict": "SUPPORT",
+      "confidence": 0.8902,
+      "evidence_count": 2,
+      "question": "Does CRISPR-Cas9 targeted modification reduce off-target cleavage?",
+      "timestamp": "2026-10-11T06:23:39.099059+00:00"
+    },
+    {
+      "claim_id": "c_003_p003_p05",
+      "claim_text": "Results demonstrate that the Cas9-crRNA complex functions as an RNA-guided endonuclease with RNA-directed target sequence recognition and protein-mediated DNA cleavage.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9261,
+      "evidence_count": 5,
+      "question": "Does CRISPR-Cas9 targeted modification reduce off-target cleavage?",
+      "timestamp": "2026-10-11T06:23:39.115050+00:00"
+    },
+    {
+      "claim_id": "c_003_p004_p03",
+      "claim_text": "On the other hand, REM sleep is assumed to reduce the emotional tone of the memory.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9339,
+      "evidence_count": 3,
+      "question": "How does sleep loss impair spatial memory retention in mammals?",
+      "timestamp": "2026-10-11T06:24:15.091098+00:00"
+    },
+    {
+      "claim_id": "c_001_p001_p01",
+      "claim_text": "Intermittent fasting is increasing in popularity as a means of losing weight and controlling chronic illness.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9267,
+      "evidence_count": 5,
+      "question": "Does intermittent fasting reverse type 2 diabetes in humans?",
+      "timestamp": "2026-10-11T06:24:33.600767+00:00"
+    },
+    {
+      "claim_id": "c_002_p001_p06",
+      "claim_text": "This article provides an overview of the available knowledge and a review of the very limited pertinent literature on the effects of intermittent fasting among people with diabetes.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9258,
+      "evidence_count": 5,
+      "question": "Does intermittent fasting reverse type 2 diabetes in humans?",
+      "timestamp": "2026-10-11T06:24:33.625160+00:00"
+    },
+    {
+      "claim_id": "c_003_p001_p10",
+      "claim_text": "When done under the supervision of the patient's healthcare provider, and with appropriate personal glucose monitoring, intermittent fasting can be safely undertaken in patients with diabetes.",
+      "verdict": "SUPPORT",
+      "confidence": 0.924,
+      "evidence_count": 5,
+      "question": "Does intermittent fasting reverse type 2 diabetes in humans?",
+      "timestamp": "2026-10-11T06:24:33.653915+00:00"
+    },
+    {
+      "claim_id": "c_003_p004_p03",
+      "claim_text": "On the other hand, REM sleep is assumed to reduce the emotional tone of the memory.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9339,
+      "evidence_count": 3,
+      "question": "Does sleep deprivation impair spatial working memory in rodents?",
+      "timestamp": "2026-10-11T06:30:29.914252+00:00"
+    },
+    {
+      "claim_id": "c_001_p001_p04",
+      "claim_text": "In this paper, we show an avenue for aligning language models with user intent on a wide range of tasks by fine-tuning with human feedback.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9285,
+      "evidence_count": 5,
+      "question": "How does model size affect the accuracy and computational cost of large language models?",
+      "timestamp": "2026-10-11T06:30:50.083757+00:00"
+    },
+    {
+      "claim_id": "c_002_p002_p02",
+      "claim_text": "We train our models on trillions of tokens, and show that it is possible to train state-of-the-art models using publicly available datasets exclusively, without resorting to proprietary and inaccessible datasets.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9118,
+      "evidence_count": 5,
+      "question": "How does model size affect the accuracy and computational cost of large language models?",
+      "timestamp": "2026-10-11T06:30:50.096307+00:00"
+    },
+    {
+      "claim_id": "c_003_p001_p05",
+      "claim_text": "Starting with a set of labeler-written prompts and prompts submitted through the OpenAI API, we collect a dataset of labeler demonstrations of the desired model behavior, which we use to fine-tune GPT-3 using supervised learning.",
+      "verdict": "SUPPORT",
+      "confidence": 0.92,
+      "evidence_count": 5,
+      "question": "How does model size affect the accuracy and computational cost of large language models?",
+      "timestamp": "2026-10-11T06:30:50.109145+00:00"
+    },
+    {
+      "claim_id": "c_002_p003_p01",
+      "claim_text": "The Cancer Genome Atlas profiled 279 head and neck squamous cell carcinomas (HNSCCs) to provide a comprehensive landscape of somatic genomic alterations.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9309,
+      "evidence_count": 5,
+      "question": "How does microRNA-21 affect carcinoma cell apoptosis?",
+      "timestamp": "2026-10-11T06:31:21.409070+00:00"
+    },
+    {
+      "claim_id": "c_003_p002_p04",
+      "claim_text": "Potential oncogenic functions of miR-184 were evaluated in tongue SCC cell lines (Cal27, HN21B, and HN96) with miR-184 inhibitor.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9261,
+      "evidence_count": 5,
+      "question": "How does microRNA-21 affect carcinoma cell apoptosis?",
+      "timestamp": "2026-10-11T06:31:21.422170+00:00"
+    },
+    {
+      "claim_id": "c_001_p004_p03",
+      "claim_text": "Here we show that RNA-guided DNA binding unleashes indiscriminate single-stranded DNA (ssDNA) cleavage activity by Cas12a that completely degrades ssDNA molecules.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9189,
+      "evidence_count": 5,
+      "question": "Does CRISPR-Cas9 targeted modification reduce off-target cleavage?",
+      "timestamp": "2026-10-11T06:31:31.362105+00:00"
+    },
+    {
+      "claim_id": "c_002_p004_p04",
+      "claim_text": "Target-activated, nonspecific single-stranded deoxyribonuclease (ssDNase) cleavage is also a property of other type V CRISPR-Cas12 enzymes.",
+      "verdict": "SUPPORT",
+      "confidence": 0.8902,
+      "evidence_count": 2,
+      "question": "Does CRISPR-Cas9 targeted modification reduce off-target cleavage?",
+      "timestamp": "2026-10-11T06:31:31.373808+00:00"
+    },
+    {
+      "claim_id": "c_003_p003_p05",
+      "claim_text": "Results demonstrate that the Cas9-crRNA complex functions as an RNA-guided endonuclease with RNA-directed target sequence recognition and protein-mediated DNA cleavage.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9261,
+      "evidence_count": 5,
+      "question": "Does CRISPR-Cas9 targeted modification reduce off-target cleavage?",
+      "timestamp": "2026-10-11T06:31:31.383510+00:00"
+    },
+    {
+      "claim_id": "c_003_p004_p03",
+      "claim_text": "On the other hand, REM sleep is assumed to reduce the emotional tone of the memory.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9339,
+      "evidence_count": 3,
+      "question": "How does sleep loss impair spatial memory retention in mammals?",
+      "timestamp": "2026-10-11T06:32:02.536393+00:00"
+    },
+    {
+      "claim_id": "c_001_p001_p01",
+      "claim_text": "Intermittent fasting is increasing in popularity as a means of losing weight and controlling chronic illness.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9267,
+      "evidence_count": 5,
+      "question": "Does intermittent fasting reverse type 2 diabetes in humans?",
+      "timestamp": "2026-10-11T06:32:23.664976+00:00"
+    },
+    {
+      "claim_id": "c_002_p001_p06",
+      "claim_text": "This article provides an overview of the available knowledge and a review of the very limited pertinent literature on the effects of intermittent fasting among people with diabetes.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9258,
+      "evidence_count": 5,
+      "question": "Does intermittent fasting reverse type 2 diabetes in humans?",
+      "timestamp": "2026-10-11T06:32:23.692878+00:00"
+    },
+    {
+      "claim_id": "c_003_p001_p10",
+      "claim_text": "When done under the supervision of the patient's healthcare provider, and with appropriate personal glucose monitoring, intermittent fasting can be safely undertaken in patients with diabetes.",
+      "verdict": "SUPPORT",
+      "confidence": 0.924,
+      "evidence_count": 5,
+      "question": "Does intermittent fasting reverse type 2 diabetes in humans?",
+      "timestamp": "2026-10-11T06:32:23.719240+00:00"
+    },
+    {
+      "claim_id": "c_001_p003_p06",
+      "claim_text": "In this presentation, I will briefly review evidence showing that intermittent fasting extends lifespan in animals.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9342,
+      "evidence_count": 3,
+      "question": "Does intermittent fasting extend human lifespan?",
+      "timestamp": "2026-10-11T07:50:39.515724+00:00"
+    },
+    {
+      "claim_id": "c_002_p001_p05",
+      "claim_text": "Recently, fasting-related interventions such as intermittent fasting (IF) and time-restricted feeding (TRF) have emerged as alternatives of CR.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9301,
+      "evidence_count": 3,
+      "question": "Does intermittent fasting extend human lifespan?",
+      "timestamp": "2026-10-11T07:50:39.527872+00:00"
+    },
+    {
+      "claim_id": "c_003_p003_p04",
+      "claim_text": "Dozens of studies in animals suggest that intermittent fasting decreases body weight; reduces the incidence of and/or progression of several chronic diseases; and extends lifespan.",
+      "verdict": "SUPPORT",
+      "confidence": 0.929,
+      "evidence_count": 3,
+      "question": "Does intermittent fasting extend human lifespan?",
+      "timestamp": "2026-10-11T07:50:39.536722+00:00"
+    },
+    {
+      "claim_id": "c_001_p003_p06",
+      "claim_text": "In this presentation, I will briefly review evidence showing that intermittent fasting extends lifespan in animals.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9342,
+      "evidence_count": 3,
+      "question": "Does intermittent fasting extend human lifespan?",
+      "timestamp": "2026-10-11T07:53:19.262264+00:00"
+    },
+    {
+      "claim_id": "c_002_p001_p05",
+      "claim_text": "Recently, fasting-related interventions such as intermittent fasting (IF) and time-restricted feeding (TRF) have emerged as alternatives of CR.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9301,
+      "evidence_count": 3,
+      "question": "Does intermittent fasting extend human lifespan?",
+      "timestamp": "2026-10-11T07:53:19.272856+00:00"
+    },
+    {
+      "claim_id": "c_003_p003_p04",
+      "claim_text": "Dozens of studies in animals suggest that intermittent fasting decreases body weight; reduces the incidence of and/or progression of several chronic diseases; and extends lifespan.",
+      "verdict": "SUPPORT",
+      "confidence": 0.929,
+      "evidence_count": 3,
+      "question": "Does intermittent fasting extend human lifespan?",
+      "timestamp": "2026-10-11T07:53:19.286328+00:00"
+    },
+    {
+      "claim_id": "c_001_p003_p06",
+      "claim_text": "In this presentation, I will briefly review evidence showing that intermittent fasting extends lifespan in animals.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9342,
+      "evidence_count": 3,
+      "question": "Does intermittent fasting extend human lifespan?",
+      "timestamp": "2026-10-11T08:01:08.323134+00:00"
+    },
+    {
+      "claim_id": "c_002_p001_p05",
+      "claim_text": "Recently, fasting-related interventions such as intermittent fasting (IF) and time-restricted feeding (TRF) have emerged as alternatives of CR.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9301,
+      "evidence_count": 3,
+      "question": "Does intermittent fasting extend human lifespan?",
+      "timestamp": "2026-10-11T08:01:08.332937+00:00"
+    },
+    {
+      "claim_id": "c_003_p003_p04",
+      "claim_text": "Dozens of studies in animals suggest that intermittent fasting decreases body weight; reduces the incidence of and/or progression of several chronic diseases; and extends lifespan.",
+      "verdict": "SUPPORT",
+      "confidence": 0.929,
+      "evidence_count": 3,
+      "question": "Does intermittent fasting extend human lifespan?",
+      "timestamp": "2026-10-11T08:01:08.341075+00:00"
+    },
+    {
+      "claim_id": "c_001_p007_p01",
+      "claim_text": "ABSTRACT As Large Language Models (LLMs) are increasingly deployed within the systems engineering domain, optimizing these models to balance performance accuracy and cost for given computational resources becomes essential.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9204,
+      "evidence_count": 10,
+      "question": "How does model size affect the accuracy and computational cost of large language models?",
+      "timestamp": "2026-10-11T08:11:44.271714+00:00"
+    },
+    {
+      "claim_id": "c_002_p002_p02",
+      "claim_text": "We evaluated how concatenating queries with multiple clinical notes and tasks simultaneously affects model performance under increasing computational loads.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9195,
+      "evidence_count": 10,
+      "question": "How does model size affect the accuracy and computational cost of large language models?",
+      "timestamp": "2026-10-11T08:11:44.312182+00:00"
+    },
+    {
+      "claim_id": "c_003_p006_p01",
+      "claim_text": "Scaling up language models has been shown to predictably improve performance and sample efficiency on a wide range of downstream tasks.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9235,
+      "evidence_count": 10,
+      "question": "How does model size affect the accuracy and computational cost of large language models?",
+      "timestamp": "2026-10-11T08:11:44.347468+00:00"
+    },
+    {
+      "claim_id": "c_001_p007_p01",
+      "claim_text": "ABSTRACT As Large Language Models (LLMs) are increasingly deployed within the systems engineering domain, optimizing these models to balance performance accuracy and cost for given computational resources becomes essential.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9204,
+      "evidence_count": 10,
+      "question": "How does model size affect the accuracy and computational cost of large language models?",
+      "timestamp": "2026-10-11T08:12:05.284691+00:00"
+    },
+    {
+      "claim_id": "c_002_p002_p02",
+      "claim_text": "We evaluated how concatenating queries with multiple clinical notes and tasks simultaneously affects model performance under increasing computational loads.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9195,
+      "evidence_count": 10,
+      "question": "How does model size affect the accuracy and computational cost of large language models?",
+      "timestamp": "2026-10-11T08:12:05.319733+00:00"
+    },
+    {
+      "claim_id": "c_003_p006_p01",
+      "claim_text": "Scaling up language models has been shown to predictably improve performance and sample efficiency on a wide range of downstream tasks.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9235,
+      "evidence_count": 10,
+      "question": "How does model size affect the accuracy and computational cost of large language models?",
+      "timestamp": "2026-10-11T08:12:05.358176+00:00"
+    },
+    {
+      "claim_id": "c_001_p003_p03",
+      "claim_text": "DNA cleavage is impaired by more than 100- fold for the high-fidelity variants.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9118,
+      "evidence_count": 10,
+      "question": "How does CRISPR-Cas9 enable targeted DNA cleavage?",
+      "timestamp": "2026-10-11T08:12:13.689768+00:00"
+    },
+    {
+      "claim_id": "c_002_p003_p04",
+      "claim_text": "The high-fidelity variants improve discrimination by slowing the observed rate of cleavage without increasing the rate of DNA rewinding and release.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9153,
+      "evidence_count": 10,
+      "question": "How does CRISPR-Cas9 enable targeted DNA cleavage?",
+      "timestamp": "2026-10-11T08:12:13.717303+00:00"
+    },
+    {
+      "claim_id": "c_003_p003_p01",
+      "claim_text": "CRISPR/Cas9 is a programmable genome editing tool widely used for biological applications and engineered Cas9s have increased discrimination against off-target cleavage compared with wild-type Streptococcus pyogenes (SpCas9) in vivo.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9192,
+      "evidence_count": 10,
+      "question": "How does CRISPR-Cas9 enable targeted DNA cleavage?",
+      "timestamp": "2026-10-11T08:12:13.750266+00:00"
+    },
+    {
+      "claim_id": "c_001_p001_p05",
+      "claim_text": "In this review, we focused on the inhibition effect of curcumin on various cancer progression by regulating expression of multiple microRNAs.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9258,
+      "evidence_count": 10,
+      "question": "Does miRNA expression play a role in cancer progression?",
+      "timestamp": "2026-10-11T08:12:54.995649+00:00"
+    },
+    {
+      "claim_id": "c_002_p009_p01",
+      "claim_text": "Loss of microRNA-200a expression correlates with tumor progression in breast cancer.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9305,
+      "evidence_count": 10,
+      "question": "Does miRNA expression play a role in cancer progression?",
+      "timestamp": "2026-10-11T08:12:55.030192+00:00"
+    },
+    {
+      "claim_id": "c_003_p003_p04",
+      "claim_text": "In this study, we report differential miRNA expression in IBD patients with associated CRC from non-neoplastic tissue to dysplasia and eventually cancer.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9219,
+      "evidence_count": 10,
+      "question": "Does miRNA expression play a role in cancer progression?",
+      "timestamp": "2026-10-11T08:12:55.071793+00:00"
+    },
+    {
+      "claim_id": "c_001_p003_p03",
+      "claim_text": "DNA cleavage is impaired by more than 100- fold for the high-fidelity variants.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9118,
+      "evidence_count": 10,
+      "question": "How does CRISPR-Cas9 enable targeted DNA cleavage?",
+      "timestamp": "2026-10-11T08:14:09.249980+00:00"
+    },
+    {
+      "claim_id": "c_002_p003_p04",
+      "claim_text": "The high-fidelity variants improve discrimination by slowing the observed rate of cleavage without increasing the rate of DNA rewinding and release.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9153,
+      "evidence_count": 10,
+      "question": "How does CRISPR-Cas9 enable targeted DNA cleavage?",
+      "timestamp": "2026-10-11T08:14:09.278002+00:00"
+    },
+    {
+      "claim_id": "c_003_p003_p01",
+      "claim_text": "CRISPR/Cas9 is a programmable genome editing tool widely used for biological applications and engineered Cas9s have increased discrimination against off-target cleavage compared with wild-type Streptococcus pyogenes (SpCas9) in vivo.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9192,
+      "evidence_count": 10,
+      "question": "How does CRISPR-Cas9 enable targeted DNA cleavage?",
+      "timestamp": "2026-10-11T08:14:09.309856+00:00"
+    },
+    {
+      "claim_id": "c_001_p003_p08",
+      "claim_text": "Results A comparative performance evaluation demonstrates that MilQAuth achieves reduced computational and communication costs while ensuring stronger privacy guarantees than existing QFL protocols.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9191,
+      "evidence_count": 10,
+      "question": "Does quantum-resistant federated learning improve secure communication?",
+      "timestamp": "2026-10-11T08:23:31.889860+00:00"
+    },
+    {
+      "claim_id": "c_002_p007_p01",
+      "claim_text": "This study presents the design and evaluation of a quantum-resistant federated learning protocol (QFLP) for secure, privacypreserving financial fraud detection across globally distributed institutions.Traditional federated learning frameworks suffer from exposure to gradient inference attacks, model poisoning, and vulnerability to future quantum adversaries.To overcome these challenges, QFLP integrates lattice-based post-quantum cryptographic primitives (CRYSTALS-Kyber, Dilithium), secure multi-party aggregation, and anomaly-aware trust scoring into a unified federated architecture.Each participating node locally trains a fraud detection model using non-identically distributed transactional data and transmits encrypted, masked updates to a coordinating server for robust aggregation.Simulation experiments under adversarial, non-IID, and bandwidth-constrained conditions demonstrate that QFLP achieves faster convergence, superior fraud recall, and up to 42% reduction in false positive rates compared to baseline FL methods.Despite minor increases in bandwidth and encryption latency, the protocol sustains low computational overhead while delivering strong cryptographic guarantees against both classical and quantum attacks.The QFLP framework enables compliant, cross-border collaboration without raw data exchange, offering a scalable foundation for modernizing decentralized financial security.This work contributes a resilient software architecture aligned with emerging regulatory, cryptographic, and operational demands in post-quantum secure fintech environments.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9145,
+      "evidence_count": 10,
+      "question": "Does quantum-resistant federated learning improve secure communication?",
+      "timestamp": "2026-10-11T08:23:31.962679+00:00"
+    },
+    {
+      "claim_id": "c_003_p005_p07",
+      "claim_text": "Authentication breaches were reduced by 93.5%, and communication overhead decreased by 27.8%, while quantum-attack-based cryptographic resilience increased by 41.6% with an average latency of 0.84s per aggregation round.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9201,
+      "evidence_count": 10,
+      "question": "Does quantum-resistant federated learning improve secure communication?",
+      "timestamp": "2026-10-11T08:23:31.995590+00:00"
+    },
+    {
+      "claim_id": "c_003_p004_p03",
+      "claim_text": "On the other hand, REM sleep is assumed to reduce the emotional tone of the memory.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9339,
+      "evidence_count": 3,
+      "question": "Does sleep deprivation impair spatial working memory in rodents?",
+      "timestamp": "2026-10-11T09:01:05.556353+00:00"
+    },
+    {
+      "claim_id": "c_001_p003_p06",
+      "claim_text": "In this presentation, I will briefly review evidence showing that intermittent fasting extends lifespan in animals.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9342,
+      "evidence_count": 3,
+      "question": "Does intermittent fasting extend human lifespan?",
+      "timestamp": "2026-10-11T09:01:21.599072+00:00"
+    },
+    {
+      "claim_id": "c_002_p001_p05",
+      "claim_text": "Recently, fasting-related interventions such as intermittent fasting (IF) and time-restricted feeding (TRF) have emerged as alternatives of CR.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9301,
+      "evidence_count": 3,
+      "question": "Does intermittent fasting extend human lifespan?",
+      "timestamp": "2026-10-11T09:01:21.608450+00:00"
+    },
+    {
+      "claim_id": "c_003_p003_p04",
+      "claim_text": "Dozens of studies in animals suggest that intermittent fasting decreases body weight; reduces the incidence of and/or progression of several chronic diseases; and extends lifespan.",
+      "verdict": "SUPPORT",
+      "confidence": 0.929,
+      "evidence_count": 3,
+      "question": "Does intermittent fasting extend human lifespan?",
+      "timestamp": "2026-10-11T09:01:21.617741+00:00"
+    },
+    {
+      "claim_id": "c_001_p004_p01",
+      "claim_text": "Pharmacological inhibition of lipid droplet formation enhances the effectiveness of curcumin in glioblastoma.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9234,
+      "evidence_count": 3,
+      "question": "Does curcumin cure glioblastoma in humans?",
+      "timestamp": "2026-10-11T09:30:11.742699+00:00"
+    },
+    {
+      "claim_id": "c_002_p001_p02",
+      "claim_text": "We have used the noninvasive strategy of intranasal (IN) delivery of a glioblastoma\u2010directed adduct of curcumin (CC), CC\u2010CD68Ab, into the brain of mouse GBM GL261\u2010implanted mice to study the effect of CC on tumor remission and on the phenotype of the tumor\u2010associated microglial cells (TAMs).",
+      "verdict": "SUPPORT",
+      "confidence": 0.9281,
+      "evidence_count": 3,
+      "question": "Does curcumin cure glioblastoma in humans?",
+      "timestamp": "2026-10-11T09:30:11.750655+00:00"
+    },
+    {
+      "claim_id": "c_003_p005_p01",
+      "claim_text": "The present review focuses on the multi-faceted effects of curcumin on the neurobiology glioblastoma multiforme (GBM), with a special emphasis on autophagy (ATG)-dependent molecular pathways activated by such a natural polyphenol.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9292,
+      "evidence_count": 3,
+      "question": "Does curcumin cure glioblastoma in humans?",
+      "timestamp": "2026-10-11T09:30:11.755642+00:00"
+    },
+    {
+      "claim_id": "c_001_p003_p03",
+      "claim_text": "DNA cleavage is impaired by more than 100- fold for the high-fidelity variants.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9118,
+      "evidence_count": 10,
+      "question": "How does CRISPR-Cas9 enable targeted DNA cleavage?",
+      "timestamp": "2026-10-11T09:41:04.878330+00:00"
+    },
+    {
+      "claim_id": "c_002_p003_p04",
+      "claim_text": "The high-fidelity variants improve discrimination by slowing the observed rate of cleavage without increasing the rate of DNA rewinding and release.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9153,
+      "evidence_count": 10,
+      "question": "How does CRISPR-Cas9 enable targeted DNA cleavage?",
+      "timestamp": "2026-10-11T09:41:04.894636+00:00"
+    },
+    {
+      "claim_id": "c_003_p003_p01",
+      "claim_text": "CRISPR/Cas9 is a programmable genome editing tool widely used for biological applications and engineered Cas9s have increased discrimination against off-target cleavage compared with wild-type Streptococcus pyogenes (SpCas9) in vivo.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9192,
+      "evidence_count": 10,
+      "question": "How does CRISPR-Cas9 enable targeted DNA cleavage?",
+      "timestamp": "2026-10-11T09:41:04.911844+00:00"
+    },
+    {
+      "claim_id": "c_001_p008_p01",
+      "claim_text": "Motivation is one of the key factors that affect L2 learners\u2019 success and performance in the language learning process; that is why, widely concerns teachers and researchers.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9095,
+      "evidence_count": 10,
+      "question": "Relation between deep learing and student performance",
+      "timestamp": "2026-10-11T09:41:48.627261+00:00"
+    },
+    {
+      "claim_id": "c_002_p009_p01",
+      "claim_text": "The study focused on the factors that affect the academic performance in secondary schools in Ilala district.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9208,
+      "evidence_count": 10,
+      "question": "Relation between deep learing and student performance",
+      "timestamp": "2026-10-11T09:41:48.644231+00:00"
+    },
+    {
+      "claim_id": "c_003_p009_p02",
+      "claim_text": "The study was guided by the following research objectives: to relate how English capacity among the students affects the student academic performance, to relate the how the teaching and learning facilities such as (text books, chemicals facilities) and the students\u2019 academic performance in secondary schools in Ilala District, and to establish how guidance and counseling affect academic performance of students in secondary schools.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9176,
+      "evidence_count": 10,
+      "question": "Relation between deep learing and student performance",
+      "timestamp": "2026-10-11T09:41:48.665524+00:00"
+    },
+    {
+      "claim_id": "c_001_p003_p01",
+      "claim_text": "Abstract We present an interesting case and images of a patient with identified as having Brugada syndrome due to dynamic electrocardiographic (ECG) changes seen during high-grade fever in the context of an associated COVID-19 infection.",
+      "verdict": "SUPPORT",
+      "confidence": 0.919,
+      "evidence_count": 10,
+      "question": "What is the relationship between the covid 19 and fever ?",
+      "timestamp": "2026-10-11T14:37:00.172856+00:00"
+    },
+    {
+      "claim_id": "c_002_p003_p02",
+      "claim_text": "We show serial ECGs demonstrating dynamic but unusual change from a Brugada Type-1 to a non-Type-1 Brugada pattern, then ultimately having ECG normalisation once the fever had been corrected with antipyretic medication.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9111,
+      "evidence_count": 7,
+      "question": "What is the relationship between the covid 19 and fever ?",
+      "timestamp": "2026-10-11T14:37:00.191661+00:00"
+    },
+    {
+      "claim_id": "c_003_p004_p07",
+      "claim_text": "Looking at this association, ECG monitoring then becomes important in COVID-19, especially in those with chest pain and fever.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9146,
+      "evidence_count": 10,
+      "question": "What is the relationship between the covid 19 and fever ?",
+      "timestamp": "2026-10-11T14:37:00.204894+00:00"
+    },
+    {
+      "claim_id": "c_001_p004_p03",
+      "claim_text": "Here we show that RNA-guided DNA binding unleashes indiscriminate single-stranded DNA (ssDNA) cleavage activity by Cas12a that completely degrades ssDNA molecules.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9189,
+      "evidence_count": 5,
+      "question": "How does CRISPR-Cas9 enable targeted DNA cleavage?",
+      "timestamp": "2026-10-11T15:34:50.748346+00:00"
+    },
+    {
+      "claim_id": "c_002_p001_p02",
+      "claim_text": "We show here that in a subset of these systems, the mature crRNA that is base-paired to trans-activating crRNA (tracrRNA) forms a two-RNA structure that directs the CRISPR-associated protein Cas9 to introduce double-stranded (ds) breaks in target DNA.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9249,
+      "evidence_count": 5,
+      "question": "How does CRISPR-Cas9 enable targeted DNA cleavage?",
+      "timestamp": "2026-10-11T15:34:50.771943+00:00"
+    },
+    {
+      "claim_id": "c_003_p003_p05",
+      "claim_text": "Results demonstrate that the Cas9-crRNA complex functions as an RNA-guided endonuclease with RNA-directed target sequence recognition and protein-mediated DNA cleavage.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9261,
+      "evidence_count": 5,
+      "question": "How does CRISPR-Cas9 enable targeted DNA cleavage?",
+      "timestamp": "2026-10-11T15:34:50.789808+00:00"
+    },
+    {
+      "claim_id": "c_003_p004_p03",
+      "claim_text": "On the other hand, REM sleep is assumed to reduce the emotional tone of the memory.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9339,
+      "evidence_count": 3,
+      "question": "What is the relationship between sleep duration and cognitive performance?",
+      "timestamp": "2026-10-11T15:58:32.045497+00:00"
+    },
+    {
+      "claim_id": "c_003_p004_p03",
+      "claim_text": "On the other hand, REM sleep is assumed to reduce the emotional tone of the memory.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9339,
+      "evidence_count": 3,
+      "question": "What is the relationship between sleep duration and cognitive performance?",
+      "timestamp": "2026-10-11T15:59:35.985667+00:00"
+    },
+    {
+      "claim_id": "c_001_p001_p04",
+      "claim_text": "In this paper, we show an avenue for aligning language models with user intent on a wide range of tasks by fine-tuning with human feedback.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9285,
+      "evidence_count": 5,
+      "question": "How does model size affect the accuracy and computational cost of large language models?",
+      "timestamp": "2026-10-11T16:04:06.892812+00:00"
+    },
+    {
+      "claim_id": "c_002_p002_p02",
+      "claim_text": "We train our models on trillions of tokens, and show that it is possible to train state-of-the-art models using publicly available datasets exclusively, without resorting to proprietary and inaccessible datasets.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9118,
+      "evidence_count": 5,
+      "question": "How does model size affect the accuracy and computational cost of large language models?",
+      "timestamp": "2026-10-11T16:04:06.915625+00:00"
+    },
+    {
+      "claim_id": "c_003_p001_p05",
+      "claim_text": "Starting with a set of labeler-written prompts and prompts submitted through the OpenAI API, we collect a dataset of labeler demonstrations of the desired model behavior, which we use to fine-tune GPT-3 using supervised learning.",
+      "verdict": "SUPPORT",
+      "confidence": 0.92,
+      "evidence_count": 5,
+      "question": "How does model size affect the accuracy and computational cost of large language models?",
+      "timestamp": "2026-10-11T16:04:06.936360+00:00"
+    },
+    {
+      "claim_id": "c_001_p003_p03",
+      "claim_text": "DNA cleavage is impaired by more than 100- fold for the high-fidelity variants.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9118,
+      "evidence_count": 10,
+      "question": "How does CRISPR-Cas9 enable targeted DNA cleavage?",
+      "timestamp": "2026-10-11T16:07:19.157225+00:00"
+    },
+    {
+      "claim_id": "c_002_p003_p04",
+      "claim_text": "The high-fidelity variants improve discrimination by slowing the observed rate of cleavage without increasing the rate of DNA rewinding and release.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9153,
+      "evidence_count": 10,
+      "question": "How does CRISPR-Cas9 enable targeted DNA cleavage?",
+      "timestamp": "2026-10-11T16:07:19.183107+00:00"
+    },
+    {
+      "claim_id": "c_003_p003_p01",
+      "claim_text": "CRISPR/Cas9 is a programmable genome editing tool widely used for biological applications and engineered Cas9s have increased discrimination against off-target cleavage compared with wild-type Streptococcus pyogenes (SpCas9) in vivo.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9192,
+      "evidence_count": 10,
+      "question": "How does CRISPR-Cas9 enable targeted DNA cleavage?",
+      "timestamp": "2026-10-11T16:07:19.210289+00:00"
+    },
+    {
+      "claim_id": "c_001_p007_p01",
+      "claim_text": "ABSTRACT As Large Language Models (LLMs) are increasingly deployed within the systems engineering domain, optimizing these models to balance performance accuracy and cost for given computational resources becomes essential.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9204,
+      "evidence_count": 10,
+      "question": "How does model size affect the accuracy and computational cost of large language models?",
+      "timestamp": "2026-10-11T16:10:24.109089+00:00"
+    },
+    {
+      "claim_id": "c_002_p002_p02",
+      "claim_text": "We evaluated how concatenating queries with multiple clinical notes and tasks simultaneously affects model performance under increasing computational loads.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9195,
+      "evidence_count": 10,
+      "question": "How does model size affect the accuracy and computational cost of large language models?",
+      "timestamp": "2026-10-11T16:10:24.138383+00:00"
+    },
+    {
+      "claim_id": "c_003_p006_p01",
+      "claim_text": "Scaling up language models has been shown to predictably improve performance and sample efficiency on a wide range of downstream tasks.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9235,
+      "evidence_count": 10,
+      "question": "How does model size affect the accuracy and computational cost of large language models?",
+      "timestamp": "2026-10-11T16:10:24.168294+00:00"
+    },
+    {
+      "claim_id": "c_001_p001_p05",
+      "claim_text": "In this review, we focused on the inhibition effect of curcumin on various cancer progression by regulating expression of multiple microRNAs.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9258,
+      "evidence_count": 10,
+      "question": "Does miRNA expression play a role in cancer progression?",
+      "timestamp": "2026-10-11T16:10:36.986897+00:00"
+    },
+    {
+      "claim_id": "c_002_p009_p01",
+      "claim_text": "Loss of microRNA-200a expression correlates with tumor progression in breast cancer.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9305,
+      "evidence_count": 10,
+      "question": "Does miRNA expression play a role in cancer progression?",
+      "timestamp": "2026-10-11T16:10:37.017253+00:00"
+    },
+    {
+      "claim_id": "c_003_p003_p04",
+      "claim_text": "In this study, we report differential miRNA expression in IBD patients with associated CRC from non-neoplastic tissue to dysplasia and eventually cancer.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9219,
+      "evidence_count": 10,
+      "question": "Does miRNA expression play a role in cancer progression?",
+      "timestamp": "2026-10-11T16:10:37.047154+00:00"
+    },
+    {
+      "claim_id": "c_001_p003_p03",
+      "claim_text": "DNA cleavage is impaired by more than 100- fold for the high-fidelity variants.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9118,
+      "evidence_count": 10,
+      "question": "How does CRISPR-Cas9 enable targeted DNA cleavage?",
+      "timestamp": "2026-10-11T16:10:47.683617+00:00"
+    },
+    {
+      "claim_id": "c_002_p003_p04",
+      "claim_text": "The high-fidelity variants improve discrimination by slowing the observed rate of cleavage without increasing the rate of DNA rewinding and release.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9153,
+      "evidence_count": 10,
+      "question": "How does CRISPR-Cas9 enable targeted DNA cleavage?",
+      "timestamp": "2026-10-11T16:10:47.708701+00:00"
+    },
+    {
+      "claim_id": "c_003_p003_p01",
+      "claim_text": "CRISPR/Cas9 is a programmable genome editing tool widely used for biological applications and engineered Cas9s have increased discrimination against off-target cleavage compared with wild-type Streptococcus pyogenes (SpCas9) in vivo.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9192,
+      "evidence_count": 10,
+      "question": "How does CRISPR-Cas9 enable targeted DNA cleavage?",
+      "timestamp": "2026-10-11T16:10:47.738893+00:00"
+    },
+    {
+      "claim_id": "c_003_p004_p03",
+      "claim_text": "On the other hand, REM sleep is assumed to reduce the emotional tone of the memory.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9339,
+      "evidence_count": 3,
+      "question": "What is the relationship between sleep duration and cognitive performance?",
+      "timestamp": "2026-10-11T16:27:40.607712+00:00"
+    },
+    {
+      "claim_id": "c_001_p002_p03",
+      "claim_text": "Remdesivir is an antiviral agent used for the treatment of hospitalized patients with COVID-19 to improve the time to recovery, reduce the duration of mechanical ventilation, decrease the need for supplemental oxygen, and decrease the risk of mortality.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9311,
+      "evidence_count": 3,
+      "question": "Does remdesivir improve recovery times in hospitalized COVID-19 patients?",
+      "timestamp": "2026-10-11T16:28:50.961514+00:00"
+    },
+    {
+      "claim_id": "c_002_p002_p04",
+      "claim_text": "Remdesivir-associated hepatotoxicity has been observed as increased transaminases more than five times the upper limit of normal in hospitalized patients with COVID-19, but causality has not been proven.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9316,
+      "evidence_count": 3,
+      "question": "Does remdesivir improve recovery times in hospitalized COVID-19 patients?",
+      "timestamp": "2026-10-11T16:28:50.994878+00:00"
+    },
+    {
+      "claim_id": "c_003_p001_p01",
+      "claim_text": "On May 1, 2020, after review of yet unpublished data from available clinical trials, the US Food and Drug Administration issued an emergency use authorization (EUA) to permit the use of remdesivir, a nucleotide analog that inhibits viral RNA-dependent RNA polymerase (RDRP), for treatment of adults and children hospitalized with severe coronavirus disease 2019 (COVID-19).",
+      "verdict": "SUPPORT",
+      "confidence": 0.9283,
+      "evidence_count": 3,
+      "question": "Does remdesivir improve recovery times in hospitalized COVID-19 patients?",
+      "timestamp": "2026-10-11T16:28:51.039238+00:00"
+    },
+    {
+      "claim_id": "c_001_p002_p03",
+      "claim_text": "Remdesivir is an antiviral agent used for the treatment of hospitalized patients with COVID-19 to improve the time to recovery, reduce the duration of mechanical ventilation, decrease the need for supplemental oxygen, and decrease the risk of mortality.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9311,
+      "evidence_count": 3,
+      "question": "Does remdesivir improve recovery times in hospitalized COVID-19 patients?",
+      "timestamp": "2026-10-11T16:29:38.294850+00:00"
+    },
+    {
+      "claim_id": "c_002_p002_p04",
+      "claim_text": "Remdesivir-associated hepatotoxicity has been observed as increased transaminases more than five times the upper limit of normal in hospitalized patients with COVID-19, but causality has not been proven.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9316,
+      "evidence_count": 3,
+      "question": "Does remdesivir improve recovery times in hospitalized COVID-19 patients?",
+      "timestamp": "2026-10-11T16:29:38.313442+00:00"
+    },
+    {
+      "claim_id": "c_003_p001_p01",
+      "claim_text": "On May 1, 2020, after review of yet unpublished data from available clinical trials, the US Food and Drug Administration issued an emergency use authorization (EUA) to permit the use of remdesivir, a nucleotide analog that inhibits viral RNA-dependent RNA polymerase (RDRP), for treatment of adults and children hospitalized with severe coronavirus disease 2019 (COVID-19).",
+      "verdict": "SUPPORT",
+      "confidence": 0.9283,
+      "evidence_count": 3,
+      "question": "Does remdesivir improve recovery times in hospitalized COVID-19 patients?",
+      "timestamp": "2026-10-11T16:29:38.338270+00:00"
+    },
+    {
+      "claim_id": "c_001_p002_p01",
+      "claim_text": "Scaling up language models has been shown to predictably improve performance and sample efficiency on a wide range of downstream tasks.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9235,
+      "evidence_count": 10,
+      "question": "Does retrieval-augmented generation improve factual accuracy compared with standalone large language models?",
+      "timestamp": "2026-10-11T16:32:45.422670+00:00"
+    },
+    {
+      "claim_id": "c_002_p006_p01",
+      "claim_text": "[Context and motivation] Large language models (LLMs) show notable results in natural language processing (NLP) tasks for requirements engineering (RE).",
+      "verdict": "SUPPORT",
+      "confidence": 0.9295,
+      "evidence_count": 10,
+      "question": "Does retrieval-augmented generation improve factual accuracy compared with standalone large language models?",
+      "timestamp": "2026-10-11T16:32:45.451747+00:00"
+    },
+    {
+      "claim_id": "c_003_p007_p01",
+      "claim_text": "ABSTRACT As Large Language Models (LLMs) are increasingly deployed within the systems engineering domain, optimizing these models to balance performance accuracy and cost for given computational resources becomes essential.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9204,
+      "evidence_count": 10,
+      "question": "Does retrieval-augmented generation improve factual accuracy compared with standalone large language models?",
+      "timestamp": "2026-10-11T16:32:45.486870+00:00"
+    },
+    {
+      "claim_id": "c_002_p004_p01",
+      "claim_text": "Objective: This review paper aims to evaluate existing solutions in healthcare authentication and provides an insight into the technologies incorporated in Internet of Healthcare Things (IoHT) and multi-factor authentication (MFA) applications for next-generation authentication practices.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9181,
+      "evidence_count": 10,
+      "question": "Does multi-factor authentication reduce the risk of account compromise compared with password-only authentication?",
+      "timestamp": "2026-10-11T16:34:44.279246+00:00"
+    },
+    {
+      "claim_id": "c_003_p006_p01",
+      "claim_text": "Password managers reduce the difficulties in creating and remembering strong passwords.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9236,
+      "evidence_count": 7,
+      "question": "Does multi-factor authentication reduce the risk of account compromise compared with password-only authentication?",
+      "timestamp": "2026-10-11T16:34:44.308971+00:00"
+    },
+    {
+      "claim_id": "c_001_p44384384_p01",
+      "claim_text": "AIMS While randomized clinical trials have compared clopidogrel with higher potency adenosine diphosphate (ADP) receptor inhibitors among patients with acute myocardial infarction, little is known about the frequency, effectiveness and safety of switching between ADP receptor inhibitors in routine clinical practice.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9172,
+      "evidence_count": 10,
+      "question": "Does spaced repetition improve long-term retention compared with massed practice?",
+      "timestamp": "2026-10-11T16:41:45.244991+00:00"
+    },
+    {
+      "claim_id": "c_002_p20492020_p01",
+      "claim_text": "Since the discovery of long-term potentiation (LTP) in 1973, thousands of papers have been published on this intriguing phenomenon, which provides a compelling cellular model for learning and memory.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9201,
+      "evidence_count": 4,
+      "question": "Does spaced repetition improve long-term retention compared with massed practice?",
+      "timestamp": "2026-10-11T16:41:45.283234+00:00"
+    },
+    {
+      "claim_id": "c_003_p39059143_p01",
+      "claim_text": "CONTEXT The association of an adult tele-intensive care unit (ICU) intervention with hospital mortality, length of stay, best practice adherence, and preventable complications for an academic medical center has not been reported.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9229,
+      "evidence_count": 10,
+      "question": "Does spaced repetition improve long-term retention compared with massed practice?",
+      "timestamp": "2026-10-11T16:41:45.328045+00:00"
+    },
+    {
+      "claim_id": "c_001_p001_p01",
+      "claim_text": "The number and intensity of heat waves has increased, and this trend is likely to continue throughout the 21st century.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9231,
+      "evidence_count": 10,
+      "question": "How does rising global temperature affect the frequency and intensity of extreme heat events?",
+      "timestamp": "2026-10-11T17:00:26.789264+00:00"
+    },
+    {
+      "claim_id": "c_002_p005_p01",
+      "claim_text": "Rising Temperatures, Rising Risks: Intense Heat Events in the Era of Global Warming This research paper provides a comprehensive analysis of extreme heat events as one of the most critical and rapidly intensifying consequences of global climate change.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9222,
+      "evidence_count": 10,
+      "question": "How does rising global temperature affect the frequency and intensity of extreme heat events?",
+      "timestamp": "2026-10-11T17:00:26.839938+00:00"
+    },
+    {
+      "claim_id": "c_003_p002_p06",
+      "claim_text": "We also explore risks associated with compound extreme events and nonlinear impacts associated with extreme heat.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9273,
+      "evidence_count": 10,
+      "question": "How does rising global temperature affect the frequency and intensity of extreme heat events?",
+      "timestamp": "2026-10-11T17:00:26.879908+00:00"
+    },
+    {
+      "claim_id": "c_001_p001_p02",
+      "claim_text": "We show here that in a subset of these systems, the mature crRNA that is base-paired to trans-activating crRNA (tracrRNA) forms a two-RNA structure that directs the CRISPR-associated protein Cas9 to introduce double-stranded (ds) breaks in target DNA.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9249,
+      "evidence_count": 5,
+      "question": "How does CRISPR-Cas9 enable targeted DNA cleavage, and what factors affect its specificity?",
+      "timestamp": "2026-10-11T17:01:51.289202+00:00"
+    },
+    {
+      "claim_id": "c_002_p004_p03",
+      "claim_text": "Here we show that RNA-guided DNA binding unleashes indiscriminate single-stranded DNA (ssDNA) cleavage activity by Cas12a that completely degrades ssDNA molecules.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9189,
+      "evidence_count": 5,
+      "question": "How does CRISPR-Cas9 enable targeted DNA cleavage, and what factors affect its specificity?",
+      "timestamp": "2026-10-11T17:01:51.311250+00:00"
+    },
+    {
+      "claim_id": "c_003_p003_p05",
+      "claim_text": "Results demonstrate that the Cas9-crRNA complex functions as an RNA-guided endonuclease with RNA-directed target sequence recognition and protein-mediated DNA cleavage.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9261,
+      "evidence_count": 5,
+      "question": "How does CRISPR-Cas9 enable targeted DNA cleavage, and what factors affect its specificity?",
+      "timestamp": "2026-10-11T17:01:51.334383+00:00"
+    },
+    {
+      "claim_id": "c_001_p003_p03",
+      "claim_text": "DNA cleavage is impaired by more than 100- fold for the high-fidelity variants.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9118,
+      "evidence_count": 10,
+      "question": "How does CRISPR-Cas9 enable targeted DNA cleavage, and what factors affect its specificity?",
+      "timestamp": "2026-10-11T17:05:05.267749+00:00"
+    },
+    {
+      "claim_id": "c_002_p003_p04",
+      "claim_text": "The high-fidelity variants improve discrimination by slowing the observed rate of cleavage without increasing the rate of DNA rewinding and release.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9153,
+      "evidence_count": 10,
+      "question": "How does CRISPR-Cas9 enable targeted DNA cleavage, and what factors affect its specificity?",
+      "timestamp": "2026-10-11T17:05:05.295422+00:00"
+    },
+    {
+      "claim_id": "c_003_p003_p01",
+      "claim_text": "CRISPR/Cas9 is a programmable genome editing tool widely used for biological applications and engineered Cas9s have increased discrimination against off-target cleavage compared with wild-type Streptococcus pyogenes (SpCas9) in vivo.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9192,
+      "evidence_count": 10,
+      "question": "How does CRISPR-Cas9 enable targeted DNA cleavage, and what factors affect its specificity?",
+      "timestamp": "2026-10-11T17:05:05.327974+00:00"
+    },
+    {
+      "claim_id": "c_001_p003_p04",
+      "claim_text": "In this paper, we show an avenue for aligning language models with user intent on a wide range of tasks by fine-tuning with human feedback.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9285,
+      "evidence_count": 5,
+      "question": "Does retrieval-augmented generation improve factual accuracy and reduce hallucinations compared with standalone large language models?",
+      "timestamp": "2026-10-11T17:06:46.126447+00:00"
+    },
+    {
+      "claim_id": "c_002_p004_p02",
+      "claim_text": "Reasons for its popularity are that it provides a wide variety of particle interaction models for different materials, that it runs on any platform from a single CPU core to the largest supercomputers with accelerators, and that it gives users control over simulation details, either via the input script or by adding code for new interatomic potentials, constraints, diagnostics, or other features needed for their models.",
+      "verdict": "SUPPORT",
+      "confidence": 0.92,
+      "evidence_count": 5,
+      "question": "Does retrieval-augmented generation improve factual accuracy and reduce hallucinations compared with standalone large language models?",
+      "timestamp": "2026-10-11T17:06:46.165018+00:00"
+    },
+    {
+      "claim_id": "c_003_p005_p02",
+      "claim_text": "We train our models on trillions of tokens, and show that it is possible to train state-of-the-art models using publicly available datasets exclusively, without resorting to proprietary and inaccessible datasets.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9118,
+      "evidence_count": 5,
+      "question": "Does retrieval-augmented generation improve factual accuracy and reduce hallucinations compared with standalone large language models?",
+      "timestamp": "2026-10-11T17:06:46.196358+00:00"
+    },
+    {
+      "claim_id": "c_001_p001_p01",
+      "claim_text": "The number and intensity of heat waves has increased, and this trend is likely to continue throughout the 21st century.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9231,
+      "evidence_count": 10,
+      "question": "How does rising global temperature affect the frequency and intensity of extreme heat events?",
+      "timestamp": "2026-10-12T04:20:05.437738+00:00"
+    },
+    {
+      "claim_id": "c_002_p005_p01",
+      "claim_text": "Rising Temperatures, Rising Risks: Intense Heat Events in the Era of Global Warming This research paper provides a comprehensive analysis of extreme heat events as one of the most critical and rapidly intensifying consequences of global climate change.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9222,
+      "evidence_count": 10,
+      "question": "How does rising global temperature affect the frequency and intensity of extreme heat events?",
+      "timestamp": "2026-10-12T04:20:05.490511+00:00"
+    },
+    {
+      "claim_id": "c_003_p002_p06",
+      "claim_text": "We also explore risks associated with compound extreme events and nonlinear impacts associated with extreme heat.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9273,
+      "evidence_count": 10,
+      "question": "How does rising global temperature affect the frequency and intensity of extreme heat events?",
+      "timestamp": "2026-10-12T04:20:05.533990+00:00"
+    },
+    {
+      "claim_id": "c_001_p001_p01",
+      "claim_text": "The nature of quantum mechanics provides us with an opportunity to statistically detect eavesdropping in quantum key distribution (QKD) protocols, which is unimaginable in classical digital communications.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9256,
+      "evidence_count": 5,
+      "question": "Can quantum key distribution detect eavesdropping during quantum communication?",
+      "timestamp": "2026-10-12T04:21:58.079753+00:00"
+    },
+    {
+      "claim_id": "c_002_p009_p01",
+      "claim_text": "Quantum key distribution (QKD) can provide unconditional security to next generation communication networks guaranteed by the laws of quantum physics.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9005,
+      "evidence_count": 5,
+      "question": "Can quantum key distribution detect eavesdropping during quantum communication?",
+      "timestamp": "2026-10-12T04:21:58.107604+00:00"
+    },
+    {
+      "claim_id": "c_003_p006_p02",
+      "claim_text": "This paper explores the foundational concepts and key protocols of QKD, emphasizing its role in addressing the vulnerabilities associated with classical key exchange methods.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9114,
+      "evidence_count": 5,
+      "question": "Can quantum key distribution detect eavesdropping during quantum communication?",
+      "timestamp": "2026-10-12T04:21:58.132174+00:00"
+    },
+    {
+      "claim_id": "c_001_p004_p03",
+      "claim_text": "Here we show that RNA-guided DNA binding unleashes indiscriminate single-stranded DNA (ssDNA) cleavage activity by Cas12a that completely degrades ssDNA molecules.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9189,
+      "evidence_count": 5,
+      "question": "How does CRISPR-Cas9 enable targeted DNA cleavage?",
+      "timestamp": "2026-10-12T04:34:20.772431+00:00"
+    },
+    {
+      "claim_id": "c_002_p001_p02",
+      "claim_text": "We show here that in a subset of these systems, the mature crRNA that is base-paired to trans-activating crRNA (tracrRNA) forms a two-RNA structure that directs the CRISPR-associated protein Cas9 to introduce double-stranded (ds) breaks in target DNA.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9249,
+      "evidence_count": 5,
+      "question": "How does CRISPR-Cas9 enable targeted DNA cleavage?",
+      "timestamp": "2026-10-12T04:34:20.798178+00:00"
+    },
+    {
+      "claim_id": "c_003_p003_p05",
+      "claim_text": "Results demonstrate that the Cas9-crRNA complex functions as an RNA-guided endonuclease with RNA-directed target sequence recognition and protein-mediated DNA cleavage.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9261,
+      "evidence_count": 5,
+      "question": "How does CRISPR-Cas9 enable targeted DNA cleavage?",
+      "timestamp": "2026-10-12T04:34:20.823226+00:00"
+    },
+    {
+      "claim_id": "c_001_p007_p01",
+      "claim_text": "ABSTRACT As Large Language Models (LLMs) are increasingly deployed within the systems engineering domain, optimizing these models to balance performance accuracy and cost for given computational resources becomes essential.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9204,
+      "evidence_count": 10,
+      "question": "How does model size affect the accuracy and computational cost of large language models?",
+      "timestamp": "2026-10-12T04:42:14.605334+00:00"
+    },
+    {
+      "claim_id": "c_002_p002_p02",
+      "claim_text": "We evaluated how concatenating queries with multiple clinical notes and tasks simultaneously affects model performance under increasing computational loads.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9195,
+      "evidence_count": 10,
+      "question": "How does model size affect the accuracy and computational cost of large language models?",
+      "timestamp": "2026-10-12T04:42:14.646494+00:00"
+    },
+    {
+      "claim_id": "c_003_p006_p01",
+      "claim_text": "Scaling up language models has been shown to predictably improve performance and sample efficiency on a wide range of downstream tasks.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9235,
+      "evidence_count": 10,
+      "question": "How does model size affect the accuracy and computational cost of large language models?",
+      "timestamp": "2026-10-12T04:42:14.689788+00:00"
+    },
+    {
+      "claim_id": "c_002_p001_p03",
+      "claim_text": "Currently, it has been shown that memories formed in a waking state are organised during sleep through cooperation among the hippocampus, neocortex and prefrontal cortex.",
+      "verdict": "SUPPORT",
+      "confidence": 0.904,
+      "evidence_count": 10,
+      "question": "What is the relationship between sleep duration and cognitive performance?",
+      "timestamp": "2026-10-12T11:33:01.618609+00:00"
+    },
+    {
+      "claim_id": "c_001_p003_p03",
+      "claim_text": "DNA cleavage is impaired by more than 100- fold for the high-fidelity variants.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9118,
+      "evidence_count": 10,
+      "question": "How does CRISPR-Cas9 enable targeted DNA cleavage?",
+      "timestamp": "2026-10-12T12:20:30.832018+00:00"
+    },
+    {
+      "claim_id": "c_002_p003_p04",
+      "claim_text": "The high-fidelity variants improve discrimination by slowing the observed rate of cleavage without increasing the rate of DNA rewinding and release.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9153,
+      "evidence_count": 10,
+      "question": "How does CRISPR-Cas9 enable targeted DNA cleavage?",
+      "timestamp": "2026-10-12T12:20:30.865689+00:00"
+    },
+    {
+      "claim_id": "c_003_p003_p01",
+      "claim_text": "CRISPR/Cas9 is a programmable genome editing tool widely used for biological applications and engineered Cas9s have increased discrimination against off-target cleavage compared with wild-type Streptococcus pyogenes (SpCas9) in vivo.",
+      "verdict": "SUPPORT",
+      "confidence": 0.9192,
+      "evidence_count": 10,
+      "question": "How does CRISPR-Cas9 enable targeted DNA cleavage?",
+      "timestamp": "2026-10-12T12:20:30.901524+00:00"
+    }
+  ]
+}

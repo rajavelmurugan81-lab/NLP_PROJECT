@@ -1,0 +1,91 @@
+{
+  "run_id": "phase9_citeguard_hybrid_multiagent",
+  "system_name": "citeguard_hybrid_multiagent",
+  "dataset": "scifact",
+  "split": "test",
+  "total_examples": 50,
+  "retrieval_metrics": {
+    "recall_at_k": {},
+    "precision_at_k": {},
+    "mrr": 0.0,
+    "hit_at_k": {},
+    "ndcg_at_k": {}
+  },
+  "classification_metrics": {
+    "accuracy": 0.4,
+    "precision": 0.1333,
+    "recall": 0.3333,
+    "macro_f1": 0.1905,
+    "micro_f1": 0.4,
+    "weighted_f1": 0.2286,
+    "confusion_matrix": {
+      "SUPPORT": {
+        "SUPPORT": 20,
+        "REFUTE": 0,
+        "NEI": 0
+      },
+      "REFUTE": {
+        "SUPPORT": 10,
+        "REFUTE": 0,
+        "NEI": 0
+      },
+      "NEI": {
+        "SUPPORT": 20,
+        "REFUTE": 0,
+        "NEI": 0
+      }
+    },
+    "class_report": {
+      "SUPPORT": {
+        "precision": 0.4,
+        "recall": 1.0,
+        "f1": 0.5714,
+        "support": 20
+      },
+      "REFUTE": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 10
+      },
+      "NEI": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 20
+      }
+    }
+  },
+  "multi_agent_metrics": {
+    "total_examples": 50,
+    "agents_invoked": 200,
+    "reasoning_rounds": 1.0,
+    "agreement_rate": 1.0,
+    "disagreement_rate": 0.0,
+    "debate_activation_rate": 0.0,
+    "average_execution_time_sec": 0.0005,
+    "token_usage": {
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_tokens": 0
+    }
+  },
+  "rhr_metrics": {
+    "repeated_hallucination_rate": 1.0,
+    "stateless_rhr": 0.5,
+    "rhr_reduction_percent": 0.0,
+    "total_failures": 30,
+    "repeated_failures_count": 30
+  },
+  "failure_breakdown": {
+    "UNKNOWN_FAILURE": 20,
+    "CONTRADICTORY_EVIDENCE": 10
+  },
+  "timestamp": "2026-09-05T16:08:49.249395+00:00",
+  "metadata": {
+    "dataset_complete": true,
+    "limit": 50,
+    "ece_calibration_error": 0.45,
+    "development_run": true
+  }
+}

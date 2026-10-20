@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CiteGuard — Scientific Claim Verification & Evidence Synthesis</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css?v=2.0.0">
+</head>
+<body>
+
+    <!-- Main Application Shell -->
+    <div class="app-layout">
+
+        <!-- 1. Left Sidebar Navigation -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="brand-wrapper">
+                    <div class="brand-icon-box">
+                        <svg class="brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            <path d="m9 12 2 2 4-4"/>
+                        </svg>
+                    </div>
+                    <div class="brand-text">
+                        <span class="brand-title">CiteGuard</span>
+                        <span class="brand-edition">Research Platform</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar Navigation Links -->
+            <nav class="sidebar-nav">
+                <div class="nav-group-label">RESEARCH ENGINE</div>
+                <button type="button" class="nav-item active" id="navWorkspaceBtn" data-view="workspace">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                    </svg>
+                    <span>Research Workspace</span>
+                </button>
+
+                <div class="nav-group-label">SCIENTIFIC MEMORY</div>
+                <button type="button" class="nav-item" id="navTrustedBtn" data-view="trusted">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                    <span>Trusted Memory</span>
+                    <span class="nav-pill" id="sideTrustedCount">226</span>
+                </button>
+                <button type="button" class="nav-item" id="navPatternsBtn" data-view="patterns">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                        <line x1="8" y1="21" x2="16" y2="21"/>
+                        <line x1="12" y1="17" x2="12" y2="21"/>
+                    </svg>
+                    <span>Failure-Pattern Memory</span>
+                    <span class="nav-pill" id="sidePatternsCount">15</span>
+                </button>
+
+                <div class="nav-group-label">AUDIT &amp; BENCHMARKS</div>
+                <button type="button" class="nav-item" id="navAuditBtn" data-view="audit">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                        <polyline points="14 2 14 8 20 8"/>
+                        <line x1="16" y1="13" x2="8" y2="13"/>
+                        <line x1="16" y1="17" x2="8" y2="17"/>
+                        <polyline points="10 9 9 9 8 9"/>
+                    </svg>
+                    <span>Runtime Audit Ledger</span>
+                    <span class="nav-pill" id="sideAuditCount">0</span>
+                </button>
+                <button type="button" class="nav-item" id="navBenchmarkBtn" data-view="benchmark">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <ellipse cx="12" cy="5" rx="9" ry="3"/>
+                        <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+                        <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+                    </svg>
+                    <span>Historical Benchmarks</span>
+                    <span class="nav-pill" id="sideBenchmarkCount">228</span>
+                </button>
+
+                <div class="nav-group-label">SYSTEM &amp; CORPUS</div>
+                <button type="button" class="nav-item" id="navSystemBtn" data-view="system">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="3"/>
+                        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                    </svg>
+                    <span>System &amp; Architecture</span>
+                </button>
+            </nav>
+
+            <!-- Sidebar System Footnote -->
+            <div class="sidebar-footer">
+                <div class="pipeline-status-card">
+                    <div class="status-indicator-dot">
+                        <span class="pulse-dot"></span>
+                    </div>
+                    <div class="status-indicator-text">
+                        <span class="status-title">Verifier Engine Online</span>
+                        <span class="status-corpus">Hybrid OpenAlex + Local SciFact</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- 2. Main Content Wrapper -->
+        <div class="main-wrapper">
+
+            <!-- Compact Top Bar -->
+            <header class="topbar">
+                <div class="topbar-left">
+                    <button type="button" class="btn-mobile-toggle" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="3" y1="12" x2="21" y2="12"/>
+                            <line x1="3" y1="6" x2="21" y2="6"/>
+                            <line x1="3" y1="18" x2="21" y2="18"/>
+                        </svg>
+                    </button>
+                    <div class="breadcrumb" id="topbarBreadcrumb">
+                        <span class="breadcrumb-root">CiteGuard</span>
+                        <span class="breadcrumb-sep">/</span>
+                        <span class="breadcrumb-current" id="breadcrumbActive">Research Workspace</span>
+                    </div>
+                </div>
+
+                <div class="topbar-right">
+                    <div class="status-badge-group">
+                        <span class="status-pill">
+                            <span class="status-dot online"></span> OpenAlex: <strong id="statusOpenAlex">Connected</strong>
+                        </span>
+                        <span class="status-pill">
+                            <span class="status-dot online"></span> Local Corpus: <strong id="statusLocalCorpus">Ready</strong>
+                        </span>
+                        <span class="status-pill">
+                            <span class="status-dot online"></span> Verifier: <strong id="statusVerification">Ready</strong>
+                        </span>
+                    </div>
+
+                    <span class="provider-badge" id="providerBadge">
+                        <span class="pulse-dot"></span> Provider: OpenAlex + Local Corpus
+                    </span>
+                </div>
+            </header>
+
+            <!-- Main Content Area -->
+            <main class="content-area">
+
+                <!-- VIEW 1: Primary Research Workspace -->
+                <div id="viewWorkspace" class="app-view active">
+
+                    <!-- Scientific Research Question Input Card -->
+                    <section class="card hero-card">
+                        <div class="card-header-clean">
+                            <div class="header-icon-label">
+                                <span class="badge-tag">Verification Workspace</span>
+                            </div>
+                            <h2>Scientific Research Question Verification</h2>
+                            <p class="subtitle">Enter a complex scientific inquiry to decompose into atomic hypotheses, retrieve hybrid peer-reviewed literature, and synthesize a research-grade evidence report.</p>
+                        </div>
+
+                        <form id="verificationForm" class="question-form">
+                            <div class="input-group">
+                                <label for="questionInput" class="input-label">Research Inquiry / Hypothesis</label>
+                                <textarea 
+                                    id="questionInput" 
+                                    rows="3" 
+                                    placeholder="Enter your scientific question (e.g., What is the relationship between sleep duration and cognitive performance?)"
+                                    required
+                                ></textarea>
+                            </div>
+
+                            <!-- Preset Benchmark Questions -->
+                            <div class="preset-questions-bar">
+                                <span class="preset-label">Benchmark Inquiries:</span>
+                                <div class="preset-chips-list">
+                                    <button type="button" class="btn-preset" data-q="What is the relationship between sleep duration and cognitive performance?">Sleep &amp; Cognition</button>
+                                    <button type="button" class="btn-preset" data-q="How does model size affect the accuracy and computational cost of large language models?">LLM Model Scaling</button>
+                                    <button type="button" class="btn-preset" data-q="Does miRNA expression play a role in cancer progression?">miRNA &amp; Cancer</button>
+                                    <button type="button" class="btn-preset" data-q="How does CRISPR-Cas9 enable targeted DNA cleavage?">CRISPR-Cas9 Cleavage</button>
+                                    <button type="button" class="btn-preset" data-q="What factors influence solar cell efficiency?">Solar Cell Efficiency</button>
+                                </div>
+                            </div>
+
+                            <!-- Form Controls Row -->
+                            <div class="form-controls-row">
+                                <div class="select-group">
+                                    <label for="modeSelect" class="control-label">Retrieval Mode:</label>
+                                    <select id="modeSelect" class="form-select">
+                                        <option value="openalex_hybrid" selected>OpenAlex + Local Hybrid (Recommended)</option>
+                                        <option value="openalex">OpenAlex API Only</option>
+                                        <option value="local_hybrid">Local Hybrid (BM25 + FAISS + RRF)</option>
+                                        <option value="sparse">Sparse BM25 Only</option>
+                                        <option value="dense">Dense FAISS Vector Only</option>
+                                    </select>
+                                </div>
+
+                                <div class="select-group">
+                                    <label for="topKSelect" class="control-label">Top-K Passages:</label>
+                                    <select id="topKSelect" class="form-select">
+                                        <option value="3">Top 3 Passages</option>
+                                        <option value="5" selected>Top 5 Passages</option>
+                                        <option value="10">Top 10 Passages</option>
+                                    </select>
+                                </div>
+
+                                <button type="submit" id="submitBtn" class="btn-primary">
+                                    <svg class="btn-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                        <path d="m9 12 2 2 4-4"/>
+                                    </svg>
+                                    <span>Verify Research Question</span>
+                                </button>
+                            </div>
+                        </form>
+                    </section>
+
+                    <!-- Error Alert Banner -->
+                    <div id="errorBanner" class="alert alert-danger hidden">
+                        <svg class="alert-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"/>
+                            <line x1="12" y1="8" x2="12" y2="12"/>
+                            <line x1="12" y1="16" x2="12.01" y2="16"/>
+                        </svg>
+                        <span id="errorMessage">An error occurred during verification processing.</span>
+                    </div>
+
+                    <!-- 8-Stage Research Verification Stepper -->
+                    <section id="stepperSection" class="card stepper-card hidden">
+                        <div class="stepper-header">
+                            <div>
+                                <h3>8-Stage Multi-Agent Verification Pipeline</h3>
+                                <p class="stepper-subtitle">Automated scientific hypothesis decomposition, retrieval, evidence alignment, and failure memory gate</p>
+                            </div>
+                            <span id="execTimer" class="timer-badge">0.0s</span>
+                        </div>
+                        <div class="stepper-grid">
+                            <div class="step-item" id="step1">
+                                <div class="step-circle">1</div>
+                                <div class="step-label">Question Intake</div>
+                            </div>
+                            <div class="step-item" id="step2">
+                                <div class="step-circle">2</div>
+                                <div class="step-label">Planner Decomposition</div>
+                            </div>
+                            <div class="step-item" id="step3">
+                                <div class="step-circle">3</div>
+                                <div class="step-label">Paper Retrieval</div>
+                            </div>
+                            <div class="step-item" id="step4">
+                                <div class="step-circle">4</div>
+                                <div class="step-label">Claim Extraction</div>
+                            </div>
+                            <div class="step-item" id="step5">
+                                <div class="step-circle">5</div>
+                                <div class="step-label">Evidence Alignment</div>
+                            </div>
+                            <div class="step-item" id="step6">
+                                <div class="step-circle">6</div>
+                                <div class="step-label">Skeptic Debate</div>
+                            </div>
+                            <div class="step-item" id="step7">
+                                <div class="step-circle">7</div>
+                                <div class="step-label">Failure Memory Gate</div>
+                            </div>
+                            <div class="step-item" id="step8">
+                                <div class="step-circle">8</div>
+                                <div class="step-label">Synthesis Report</div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Results Display Container -->
+                    <div id="resultsContainer" class="results-layout hidden">
+
+                        <!-- Executive Summary & Report Header Bar -->
+                        <section class="card summary-card">
+                            <div class="summary-header">
+                                <div>
+                                    <span class="meta-tag">RESEARCH QUESTION ID: <strong id="resQuestionId">-</strong></span>
+                                    <h2 id="resQuestionText">Research Question Title</h2>
+                                </div>
+                                <div class="export-actions">
+                                    <button id="downloadJsonBtn" class="btn-secondary">
+                                        <svg class="btn-svg-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                            <polyline points="14 2 14 8 20 8"/>
+                                        </svg>
+                                        <span>Download JSON Report</span>
+                                    </button>
+                                    <button id="downloadMdBtn" class="btn-secondary">
+                                        <svg class="btn-svg-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M4 4v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8.342a2 2 0 0 0-.602-1.43l-4.44-4.342A2 2 0 0 0 13.56 2H6a2 2 0 0 0-2 2z"/>
+                                            <polyline points="14 2 14 8 20 8"/>
+                                        </svg>
+                                        <span>Download Markdown Report</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="summary-stats-grid">
+                                <div class="stat-box">
+                                    <span class="stat-label">Generated Claims</span>
+                                    <span class="stat-value" id="statClaimsCount">0</span>
+                                </div>
+                                <div class="stat-box">
+                                    <span class="stat-label">Average Confidence</span>
+                                    <span class="stat-value" id="statAvgConfidence">0%</span>
+                                </div>
+                                <div class="stat-box">
+                                    <span class="stat-label">Retrieval Mode</span>
+                                    <span class="stat-value" id="statRetrievalMode">HYBRID</span>
+                                </div>
+                                <div class="stat-box">
+                                    <span class="stat-label">Papers Retrieved</span>
+                                    <span class="stat-value" id="statPapersCount">0</span>
+                                </div>
+                                <div class="stat-box">
+                                    <span class="stat-label">Execution Time</span>
+                                    <span class="stat-value" id="statExecTime">0.0s</span>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Section 0: Structured Research Plan (PlannerAgent) -->
+                        <section id="plannerSection" class="card section-card">
+                            <div class="section-title">
+                                <div>
+                                    <h3>0. Structured Research Plan (PlannerAgent)</h3>
+                                    <p class="section-desc">The research inquiry is decomposed into formal objectives, subquestions, targeted retrieval queries, and evidence criteria prior to retrieval.</p>
+                                </div>
+                                <span class="badge-status status-clean" id="plannerObjectiveBadge">Plan Formulated</span>
+                            </div>
+                            <div id="plannerPlanContainer" class="planner-plan-container">
+                                <!-- Populated via JS -->
+                            </div>
+                        </section>
+
+                        <!-- Section 1: Automatically Generated Atomic Scientific Claims -->
+                        <section class="card section-card">
+                            <div class="section-title">
+                                <div>
+                                    <h3>1. Automatically Generated Atomic Scientific Claims</h3>
+                                    <p class="section-desc">The research inquiry was decomposed into discrete, testable sub-claims using semantic hypothesis generation.</p>
+                                </div>
+                                <span class="badge-count" id="claimsBadgeCount">0 Claims</span>
+                            </div>
+                            <div id="claimsList" class="claims-grid">
+                                <!-- Claims injected via JS -->
+                            </div>
+                        </section>
+
+                        <!-- Section 2: Hybrid Paper Retrieval & Multi-Agent Verification -->
+                        <section class="card section-card">
+                            <div class="section-title">
+                                <div>
+                                    <h3>2. Hybrid Evidence Retrieval &amp; Multi-Agent Verification</h3>
+                                    <p class="section-desc">Each atomic claim is queried against peer-reviewed literature (OpenAlex + Local Corpus via BM25 + FAISS + RRF) and evaluated by the multi-agent consensus framework.</p>
+                                </div>
+                            </div>
+
+                            <!-- Paper Retrieval Summary Badge Box -->
+                            <div id="retrievalSummaryBox" class="retrieval-summary-box">
+                                <!-- Injected via JS -->
+                            </div>
+
+                            <div id="verificationDetailsList" class="verification-accordion">
+                                <!-- Per claim verification cards injected via JS -->
+                            </div>
+                        </section>
+
+                        <!-- Section 3: Dual-Ledger: Runtime Audit & Historical Benchmark Analysis -->
+                        <section class="card section-card">
+                            <div class="section-title">
+                                <div>
+                                    <h3>3. Failure Signature &amp; Hallucination Ledger System</h3>
+                                    <p class="section-desc">Automated contract verification auditing contradictory evidence, ungrounded confidence, and retrieval relevance mismatches across live queries and historical benchmarks.</p>
+                                </div>
+                                <span class="badge-status status-clean" id="ledgerStatusBadge">Audit Ledger Ready</span>
+                            </div>
+
+                            <!-- Dual Ledger Tabs Navigation -->
+                            <div class="ledger-tabs">
+                                <button type="button" id="tabRuntimeBtn" class="btn-tab active">
+                                    Current Query Runtime Audit (<span id="runtimeAuditCount">0</span> Claims)
+                                </button>
+                                <button type="button" id="tabBenchmarkBtn" class="btn-tab">
+                                    Historical Benchmark Analysis (<span id="benchmarkRecordCount">228</span> Records)
+                                </button>
+                                <button type="button" id="tabPatternsBtn" class="btn-tab">
+                                    Failure-Pattern Memory &amp; Prevention (<span id="patternsRecordCount">15</span> Patterns)
+                                </button>
+                                <button type="button" id="tabTrustedBtn" class="btn-tab">
+                                    Trusted Memory (<span id="trustedRecordCount">226</span> Verified Claims)
+                                </button>
+                            </div>
+
+                            <!-- Tab 1: Current Query Runtime Audit Table -->
+                            <div id="runtimeAuditView">
+                                <div class="table-responsive">
+                                    <table class="ledger-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Claim ID</th>
+                                                <th>Audit Category / Canonical Failure</th>
+                                                <th>Rule Explanation &amp; Grounding</th>
+                                                <th>Relevance Score</th>
+                                                <th>Matched Pattern</th>
+                                                <th>Prevention Action &amp; Re-Check</th>
+                                                <th>Severity</th>
+                                                <th>Ledger Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="ledgerTableBody">
+                                            <!-- Injected via JS -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!-- Tab 2: Historical Benchmark Failure Analysis Table -->
+                            <div id="benchmarkAnalysisView" class="hidden" style="display: none;">
+                                <div id="benchmarkStatsSummary" class="stats-summary-pill-row">
+                                    <!-- Summary stats pills injected via JS -->
+                                </div>
+                                <div class="table-responsive" style="max-height: 480px; overflow-y: auto;">
+                                    <table class="ledger-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Dataset</th>
+                                                <th>Claim ID &amp; Text</th>
+                                                <th>Predicted vs GT</th>
+                                                <th>Failure Taxonomy Type</th>
+                                                <th>Explanation</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="benchmarkTableBody">
+                                            <!-- Injected via JS -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!-- Tab 3: Learned Failure-Pattern Memory & Prevention Dashboard -->
+                            <div id="patternsAnalysisView" class="hidden" style="display: none;">
+                                <div class="patterns-dashboard-panel">
+
+                                    <!-- Summary Stat Cards -->
+                                    <div class="pattern-summary-grid">
+                                        <div class="pattern-stat-card highlight">
+                                            <span class="pattern-stat-label">Learned Patterns</span>
+                                            <span class="pattern-stat-num" id="patternTotalCount">15</span>
+                                            <span class="pattern-stat-sub">Mined from Historical Ledger</span>
+                                        </div>
+                                        <div class="pattern-stat-card">
+                                            <span class="pattern-stat-label">High / Critical Severity</span>
+                                            <span class="pattern-stat-num" id="patternHighCount" style="color: var(--contradicted-color);">6</span>
+                                            <span class="pattern-stat-sub">High-Risk Hallucinations</span>
+                                        </div>
+                                        <div class="pattern-stat-card success-card">
+                                            <span class="pattern-stat-label">Prevention Success Rate</span>
+                                            <span class="pattern-stat-num" id="patternPreventionRate">100.0%</span>
+                                            <span class="pattern-stat-sub">0.0% Recurrence Rate</span>
+                                        </div>
+                                        <div class="pattern-stat-card">
+                                            <span class="pattern-stat-label">Memory Feedback Gate</span>
+                                            <span class="pattern-stat-num" style="color: var(--supported-color); font-size: 20px; margin-top: 4px;">ACTIVE</span>
+                                            <span class="pattern-stat-sub">Strict Adaptive Re-Check</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Closed-Loop Flow Diagram -->
+                                    <div class="loop-flow-container">
+                                        <div class="loop-flow-header">
+                                            <h4>Closed-Loop Failure-Pattern Memory &amp; Self-Correction Architecture</h4>
+                                            <span class="loop-flow-status">
+                                                <span class="pulse-dot"></span> Online Feedback Loop Active
+                                            </span>
+                                        </div>
+                                        <div class="loop-flow-steps">
+                                            <div class="loop-step-node start">
+                                                <span class="loop-step-num">Step 1</span>
+                                                <span class="loop-step-title">Verify Claim</span>
+                                                <span class="loop-step-desc">OpenAlex + RRF Retrieval</span>
+                                            </div>
+                                            <div class="loop-step-arrow">→</div>
+                                            <div class="loop-step-node fail">
+                                                <span class="loop-step-num">Step 2</span>
+                                                <span class="loop-step-title">Failure Detected</span>
+                                                <span class="loop-step-desc">Classifier &amp; Taxonomy</span>
+                                            </div>
+                                            <div class="loop-step-arrow">→</div>
+                                            <div class="loop-step-node">
+                                                <span class="loop-step-num">Step 3</span>
+                                                <span class="loop-step-title">Pattern Miner</span>
+                                                <span class="loop-step-desc">Signature &amp; Conditions</span>
+                                            </div>
+                                            <div class="loop-step-arrow">→</div>
+                                            <div class="loop-step-node adapt">
+                                                <span class="loop-step-num">Step 4</span>
+                                                <span class="loop-step-title">Adaptive Match</span>
+                                                <span class="loop-step-desc">Historical Similarity</span>
+                                            </div>
+                                            <div class="loop-step-arrow">→</div>
+                                            <div class="loop-step-node adapt">
+                                                <span class="loop-step-num">Step 5</span>
+                                                <span class="loop-step-title">Claim Re-Check</span>
+                                                <span class="loop-step-desc">Accept / Revise / Reject</span>
+                                            </div>
+                                            <div class="loop-step-arrow">→</div>
+                                            <div class="loop-step-node prevent">
+                                                <span class="loop-step-num">Step 6</span>
+                                                <span class="loop-step-title">Prevention &amp; Gate</span>
+                                                <span class="loop-step-desc">Trusted Memory Admission</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Prevention Evaluation & Demonstrated Feedback Loop -->
+                                    <div class="eval-metrics-grid">
+                                        <div class="eval-card">
+                                            <h5>Quantitative Prevention Evaluation (Controlled Experiment)</h5>
+                                            <table class="comparison-table">
+                                                <thead>
+                                                    <tr style="background: var(--bg-subtle);">
+                                                        <th style="padding: 8px 12px; text-align: left; font-size: 11px; text-transform: uppercase;">Metric</th>
+                                                        <th style="padding: 8px 12px; text-align: center; font-size: 11px; text-transform: uppercase;">Without Memory</th>
+                                                        <th style="padding: 8px 12px; text-align: center; font-size: 11px; text-transform: uppercase;">With Memory Loop</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="evalComparisonTableBody">
+                                                    <tr>
+                                                        <td><strong>Hallucination Failures</strong></td>
+                                                        <td style="text-align: center;"><span class="metric-badge-bad" id="metricFailuresBefore">1</span></td>
+                                                        <td style="text-align: center;"><span class="metric-badge-good" id="metricFailuresAfter">0</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><strong>Prevention Success Rate</strong></td>
+                                                        <td style="text-align: center;"><span class="metric-badge-bad">0.0%</span></td>
+                                                        <td style="text-align: center;"><span class="metric-badge-good" id="metricPreventionRate">100.0%</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><strong>Failure Recurrence Rate</strong></td>
+                                                        <td style="text-align: center;"><span class="metric-badge-bad">100.0%</span></td>
+                                                        <td style="text-align: center;"><span class="metric-badge-good" id="metricRecurrenceRate">0.0%</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><strong>Domain Mismatch Acceptance</strong></td>
+                                                        <td style="text-align: center;"><span class="metric-badge-bad" id="metricMismatchBefore">100.0%</span></td>
+                                                        <td style="text-align: center;"><span class="metric-badge-good" id="metricMismatchAfter">0.0%</span></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+                                        <div class="eval-card">
+                                            <h5>Live Self-Correction Feedback Loop In Action</h5>
+                                            <div id="feedbackLoopDetails" class="feedback-loop-box">
+                                                <div class="feedback-loop-step">
+                                                    <span class="feedback-loop-tag tag-fail">RUN 1 FAIL</span>
+                                                    <span>Off-domain Smart Grid evidence was improperly accepted for a Quantum FL claim (<code>DOMAIN_MISMATCH</code>).</span>
+                                                </div>
+                                                <div class="feedback-loop-step">
+                                                    <span class="feedback-loop-tag tag-learn">LEARNED</span>
+                                                    <span>Pattern <code>FP_DOM_001</code> extracted with trigger: conflicting domain topics + low compatibility.</span>
+                                                </div>
+                                                <div class="feedback-loop-step">
+                                                    <span class="feedback-loop-tag tag-match">RUN 2 INPUT</span>
+                                                    <span>Subsequent query presents similar off-domain candidate passages. Pattern matched (Score: 0.92, Risk: VERY_HIGH).</span>
+                                                </div>
+                                                <div class="feedback-loop-step">
+                                                    <span class="feedback-loop-tag tag-adapt">ADAPTIVE</span>
+                                                    <span>Triggered <code>REQUIRE_STRICT_DOMAIN_VALIDATION</code> and <code>CLAIM_RECHECK_DOMAIN_SCOPE</code>.</span>
+                                                </div>
+                                                <div class="feedback-loop-step">
+                                                    <span class="feedback-loop-tag tag-success">PREVENTED</span>
+                                                    <span>Claim re-check executed <strong>REJECT</strong> on off-domain passages. Preliminary Support changed to <strong>INSUFFICIENT_EVIDENCE</strong> (Clean Contract).</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Recently Learned & Updated Patterns Banner -->
+                                    <div class="card banner-clean">
+                                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                                            <h5 style="font-size: 13px; font-weight: 700; color: var(--text-primary); margin: 0; display: flex; align-items: center; gap: 8px;">
+                                                <span>Recently Learned / Updated Patterns</span>
+                                                <span id="recentPatternsBadge" class="badge-status status-clean" style="font-size: 11px;">Up to Date</span>
+                                            </h5>
+                                            <span style="font-size: 12px; color: var(--text-muted);" id="recentMiningTimestamp">Checked from failure_patterns.json</span>
+                                        </div>
+                                        <div id="recentPatternsContainer" style="display: flex; flex-direction: column; gap: 6px; font-size: 13px;">
+                                            <div style="color: var(--text-muted); font-style: italic; padding: 4px 0;">No new pattern mutations in this session. Running queries with confirmed failures triggers runtime pattern synthesis.</div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Learned Failure Patterns Catalog Table -->
+                                    <div class="card card-clean-table">
+                                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                                            <h5 style="font-size: 14px; font-weight: 700; color: var(--text-primary); margin: 0;">
+                                                Learned Failure-Pattern Catalog (<span id="patternsCatalogCount">15</span> Active Patterns)
+                                            </h5>
+                                            <span class="retrieval-stat-tag">
+                                                Source: results/hallucination_ledger/failure_patterns.json
+                                            </span>
+                                        </div>
+                                        <div class="table-responsive" style="max-height: 520px; overflow-y: auto;">
+                                            <table class="ledger-table">
+                                                <thead>
+                                                    <tr>
+                                                        <th style="width: 130px;">Pattern ID</th>
+                                                        <th style="width: 220px;">Pattern Name &amp; Failure Type</th>
+                                                        <th>Trigger Conditions</th>
+                                                        <th>Prevention Rule &amp; Adaptive Action</th>
+                                                        <th style="width: 90px;">Severity</th>
+                                                        <th style="width: 80px;">Freq</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="patternsTableBody">
+                                                    <!-- Injected via JS -->
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- Tab 4: Trusted Memory Ledger View -->
+                            <div id="trustedMemoryView" class="hidden" style="display: none;">
+                                <div class="patterns-dashboard-panel">
+
+                                    <!-- Summary Stat Cards -->
+                                    <div class="pattern-summary-grid">
+                                        <div class="pattern-stat-card highlight">
+                                            <span class="pattern-stat-label">Trusted Claims</span>
+                                            <span class="pattern-stat-num" id="trustedTotalCount">226</span>
+                                            <span class="pattern-stat-sub">Cleanly Verified &amp; Grounded</span>
+                                        </div>
+                                        <div class="pattern-stat-card success-card">
+                                            <span class="pattern-stat-label">Integrity Contract</span>
+                                            <span class="pattern-stat-num" style="color: var(--supported-color);">100%</span>
+                                            <span class="pattern-stat-sub">0 Failure-Pattern Mismatches</span>
+                                        </div>
+                                        <div class="pattern-stat-card">
+                                            <span class="pattern-stat-label">Confidence Floor</span>
+                                            <span class="pattern-stat-num" style="color: var(--primary);">&ge; 70%</span>
+                                            <span class="pattern-stat-sub">Sufficient Evidence Coverage</span>
+                                        </div>
+                                        <div class="pattern-stat-card">
+                                            <span class="pattern-stat-label">Memory Gate Status</span>
+                                            <span class="pattern-stat-num" style="color: var(--supported-color); font-size: 20px; margin-top: 4px;">ACTIVE</span>
+                                            <span class="pattern-stat-sub">Grounded Admission Barrier</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Search & Filter Bar Card -->
+                                    <div class="card card-filter-bar">
+                                        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+                                            <div class="search-input-wrapper">
+                                                <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                    <circle cx="11" cy="11" r="8"/>
+                                                    <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                                                </svg>
+                                                <input 
+                                                    type="text" 
+                                                    id="trustedSearchInput" 
+                                                    class="table-search-input"
+                                                    placeholder="Filter trusted records by claim text, claim ID, or question..."
+                                                >
+                                                <button type="button" id="trustedSearchClearBtn" class="btn-clear-search" style="display: none;">Clear</button>
+                                            </div>
+                                            <div style="display: flex; align-items: center; gap: 8px;">
+                                                <span id="trustedFilterBadge" class="retrieval-stat-tag">
+                                                    Loading records...
+                                                </span>
+                                                <span class="retrieval-stat-tag" style="background: rgba(16, 185, 129, 0.1); color: #047857;">
+                                                    Source: results/hallucination_ledger/trusted_memory.json
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Trusted Claims Table Card -->
+                                    <div class="card card-clean-table">
+                                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                                            <h5 style="font-size: 14px; font-weight: 700; color: var(--text-primary); margin: 0;">
+                                                Verified Trusted Claims Catalog
+                                            </h5>
+                                            <span style="font-size: 12px; color: var(--text-muted);">
+                                                Only claims passing multi-agent verification contracts with zero anomalies enter Trusted Memory
+                                            </span>
+                                        </div>
+                                        <div class="table-responsive" style="max-height: 540px; overflow-y: auto;">
+                                            <table class="ledger-table">
+                                                <thead>
+                                                    <tr>
+                                                        <th style="width: 140px;">Claim ID</th>
+                                                        <th>Claim Text &amp; Research Question</th>
+                                                        <th style="width: 110px; text-align: center;">Verdict</th>
+                                                        <th style="width: 110px; text-align: center;">Confidence</th>
+                                                        <th style="width: 110px; text-align: center;">Evidence</th>
+                                                        <th style="width: 150px;">Timestamp</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="trustedTableBody">
+                                                    <!-- Injected via JS -->
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Section 4: Final Evidence-Grounded Research Synthesis & Academic Report -->
+                        <section class="card section-card synthesis-card" id="synthesisReportSection">
+                            <div class="section-title synthesis-header-row">
+                                <div>
+                                    <h3>4. Final Evidence-Grounded Research Synthesis &amp; Conclusion</h3>
+                                    <p class="section-subtitle">Academic-Grade Synthesis, Claim-by-Claim Evidence Breakdown &amp; Evidentiary Sufficiency Dashboard</p>
+                                </div>
+                                <div class="synthesis-header-actions">
+                                    <button id="btnCopySynthesis" class="btn-sm btn-outline" title="Copy executive conclusion to clipboard">
+                                        <svg class="btn-svg-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                                        </svg>
+                                        <span>Copy Conclusion</span>
+                                    </button>
+                                    <button id="btnPrintReport" class="btn-sm btn-outline" title="Print report or save to PDF">
+                                        <svg class="btn-svg-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="6 9 6 2 18 2 18 9"/>
+                                            <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
+                                            <rect x="6" y="14" width="12" height="8"/>
+                                        </svg>
+                                        <span>Print / PDF</span>
+                                    </button>
+                                    <button id="btnToggleAllClaims" class="btn-sm btn-outline" title="Toggle expand/collapse on all claims">
+                                        <svg class="btn-svg-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="7 13 12 18 17 13"/>
+                                            <polyline points="7 6 12 11 17 6"/>
+                                        </svg>
+                                        <span>Expand All Claims</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="synthesis-content">
+                                
+                                <!-- 4.1 Verdict & Evidence Citation Dashboard -->
+                                <div class="report-block">
+                                    <div class="report-block-header">
+                                        <span class="report-block-tag">Dashboard</span>
+                                        <h4>4.1 Verdict Distribution &amp; Literature Citation Dashboard</h4>
+                                    </div>
+                                    
+                                    <div class="synthesis-verdict-summary" id="synthesisVerdictSummary">
+                                        <!-- Injected via JS for backwards compatibility -->
+                                    </div>
+
+                                    <!-- Top Level Verdict Metrics Grid -->
+                                    <div class="dashboard-metrics-grid">
+                                        <div class="dash-metric-card" id="cardTotalClaims">
+                                            <span class="dash-metric-label">Evaluated Claims</span>
+                                            <span class="dash-metric-value" id="dashTotalClaims">0</span>
+                                            <span class="dash-metric-sub">100% of generated claims</span>
+                                        </div>
+                                        <div class="dash-metric-card border-supp" id="cardSupported">
+                                            <span class="dash-metric-label" style="color: var(--supported-color);">Supported</span>
+                                            <span class="dash-metric-value" id="dashSupported" style="color: var(--supported-color);">0</span>
+                                            <span class="dash-metric-sub" id="dashSupportedPct">0.0% of claims</span>
+                                        </div>
+                                        <div class="dash-metric-card border-partial" id="cardPartial">
+                                            <span class="dash-metric-label" style="color: var(--partial-color);">Partially Supported</span>
+                                            <span class="dash-metric-value" id="dashPartial" style="color: var(--partial-color);">0</span>
+                                            <span class="dash-metric-sub" id="dashPartialPct">0.0% of claims</span>
+                                        </div>
+                                        <div class="dash-metric-card border-nei" id="cardNEI">
+                                            <span class="dash-metric-label" style="color: var(--nei-color);">Insufficient Evidence</span>
+                                            <span class="dash-metric-value" id="dashNEI" style="color: var(--nei-color);">0</span>
+                                            <span class="dash-metric-sub" id="dashNEIPct">0.0% of claims</span>
+                                        </div>
+                                        <div class="dash-metric-card border-con" id="cardContradicted">
+                                            <span class="dash-metric-label" style="color: var(--contradicted-color);">Contradicted</span>
+                                            <span class="dash-metric-value" id="dashContradicted" style="color: var(--contradicted-color);">0</span>
+                                            <span class="dash-metric-sub" id="dashContradictedPct">0.0% of claims</span>
+                                        </div>
+                                        <div class="dash-metric-card" id="cardAvgConf">
+                                            <span class="dash-metric-label">Avg Confidence</span>
+                                            <span class="dash-metric-value" id="dashConfidence">0%</span>
+                                            <span class="dash-metric-sub">Floor: &ge; 70% threshold</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Proportional Verdict Distribution Bar -->
+                                    <div class="distribution-bar-wrapper">
+                                        <div class="distribution-bar-label-row">
+                                            <span>Verdict Distribution Composition</span>
+                                            <span id="distBarPercentages">0% Supp | 0% Partial | 0% NEI | 0% Con</span>
+                                        </div>
+                                        <div class="distribution-bar" id="dashDistributionBar">
+                                            <div class="dist-seg seg-supp" id="segSupp" style="width: 0%;" title="Supported"></div>
+                                            <div class="dist-seg seg-partial" id="segPartial" style="width: 0%;" title="Partially Supported"></div>
+                                            <div class="dist-seg seg-nei" id="segNEI" style="width: 0%;" title="Insufficient Evidence"></div>
+                                            <div class="dist-seg seg-con" id="segCon" style="width: 0%;" title="Contradicted"></div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Evidence Quality & Literature Coverage Sub-Dashboard -->
+                                    <div class="coverage-metrics-grid">
+                                        <div class="cov-metric-item">
+                                            <span class="cov-icon">
+                                                <svg class="cov-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                                            </span>
+                                            <div>
+                                                <span class="cov-label">Unique Sources Cited</span>
+                                                <strong class="cov-val" id="dashSourcesCited">0 papers</strong>
+                                            </div>
+                                        </div>
+                                        <div class="cov-metric-item">
+                                            <span class="cov-icon">
+                                                <svg class="cov-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                                            </span>
+                                            <div>
+                                                <span class="cov-label">Unique Sources Retrieved</span>
+                                                <strong class="cov-val" id="dashSourcesRetrieved">0 papers</strong>
+                                            </div>
+                                        </div>
+                                        <div class="cov-metric-item">
+                                            <span class="cov-icon">
+                                                <svg class="cov-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/></svg>
+                                            </span>
+                                            <div>
+                                                <span class="cov-label">Evidence Coverage Rate</span>
+                                                <strong class="cov-val" id="dashCoverageRate">0.0%</strong>
+                                            </div>
+                                        </div>
+                                        <div class="cov-metric-item">
+                                            <span class="cov-icon">
+                                                <svg class="cov-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                                            </span>
+                                            <div>
+                                                <span class="cov-label">Contradictory Sources</span>
+                                                <strong class="cov-val" id="dashContradictorySources">0 sources</strong>
+                                            </div>
+                                        </div>
+                                        <div class="cov-metric-item">
+                                            <span class="cov-icon">
+                                                <svg class="cov-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                                            </span>
+                                            <div>
+                                                <span class="cov-label">Missing-Evidence Claims</span>
+                                                <strong class="cov-val" id="dashMissingEvidence">0 claims</strong>
+                                            </div>
+                                        </div>
+                                        <div class="cov-metric-item">
+                                            <span class="cov-icon">
+                                                <svg class="cov-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                                            </span>
+                                            <div>
+                                                <span class="cov-label">Publication Year Span</span>
+                                                <strong class="cov-val" id="dashYearRange">Not available</strong>
+                                            </div>
+                                        </div>
+                                        <div class="cov-metric-item">
+                                            <span class="cov-icon">
+                                                <svg class="cov-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                                            </span>
+                                            <div>
+                                                <span class="cov-label">Retrieval Mode &amp; Corpus</span>
+                                                <strong class="cov-val" id="dashRetrievalMode">OpenAlex + Local Corpus</strong>
+                                            </div>
+                                        </div>
+                                        <div class="cov-metric-item">
+                                            <span class="cov-icon">
+                                                <svg class="cov-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+                                            </span>
+                                            <div>
+                                                <span class="cov-label">Direct vs. Indirect Tagging</span>
+                                                <strong class="cov-val" id="dashDirectVsIndirect">Not available</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 4.2 Overall Research Conclusion & Synthesis -->
+                                <div class="report-block">
+                                    <div class="report-block-header">
+                                        <span class="report-block-tag">Synthesis</span>
+                                        <h4>4.2 Overall Evidence-Grounded Research Conclusion</h4>
+                                    </div>
+                                    
+                                    <blockquote id="synthesisText" class="synthesis-quote">
+                                        Executive synthesis summary loading...
+                                    </blockquote>
+
+                                    <div class="synthesis-evaluation-box" id="synthesisSufficiencyBox">
+                                        <div class="eval-header">
+                                            <span class="eval-badge" id="evalSufficiencyBadge">SUFFICIENCY: EVALUATING</span>
+                                            <span class="eval-degree" id="evalDegreeOfSupport">Degree of Support: Evaluating</span>
+                                        </div>
+                                        <p class="eval-text" id="evalSufficiencyText">
+                                            Assessing whether retrieved scientific literature provides sufficient empirical grounding to answer the core research inquiry...
+                                        </p>
+                                    </div>
+
+                                    <div class="synthesis-callouts-grid">
+                                        <div class="callout-card callout-strong">
+                                            <h5>Strongest Supported Conclusions</h5>
+                                            <div id="synthesisStrongestConclusions" class="callout-content">
+                                                <p class="text-muted">Evaluating verified claims...</p>
+                                            </div>
+                                        </div>
+                                        <div class="callout-card callout-qual">
+                                            <h5>Qualifications &amp; Unresolved Issues</h5>
+                                            <div id="synthesisQualifications" class="callout-content">
+                                                <p class="text-muted">Analyzing evidentiary nuances...</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 4.3 Claim-by-Claim In-Depth Evidence Analysis -->
+                                <div class="report-block">
+                                    <div class="report-block-header">
+                                        <span class="report-block-tag">Claim Analysis</span>
+                                        <h4>4.3 Claim-by-Claim In-Depth Verification &amp; Evidence Analysis</h4>
+                                        <span class="claims-count-badge" id="synthesisClaimsCountBadge">0 Claims</span>
+                                    </div>
+                                    <p class="report-block-desc">
+                                        Examine every evaluated claim with its normalized verdict, exact extracted evidence passages, source publication metadata, system explanations, and contextual limitations.
+                                    </p>
+
+                                    <!-- Expandable Accordion Container -->
+                                    <div id="synthesisClaimsAccordion" class="claims-accordion-container">
+                                        <!-- Injected dynamically via JS -->
+                                    </div>
+                                </div>
+
+                                <!-- 4.4 Scientific Uncertainty, Knowledge Gaps & Limitations -->
+                                <div class="report-block">
+                                    <div class="report-block-header">
+                                        <span class="report-block-tag">Uncertainty</span>
+                                        <h4>4.4 Epistemic Uncertainty, Contradictions &amp; Literature Gaps</h4>
+                                    </div>
+
+                                    <div class="uncertainty-grid">
+                                        <div class="uncertainty-card">
+                                            <h5>Claims Requiring Further Verification</h5>
+                                            <div id="synthesisUnverifiedClaims" class="uncertainty-content">
+                                                <p class="text-muted">No unverified claims detected.</p>
+                                            </div>
+                                        </div>
+                                        <div class="uncertainty-card">
+                                            <h5>Contradictory or Inconclusive Findings</h5>
+                                            <div id="synthesisContradictions" class="uncertainty-content">
+                                                <p class="text-muted">Contradictions evaluated strictly against retrieved literature.</p>
+                                            </div>
+                                        </div>
+                                        <div class="uncertainty-card">
+                                            <h5>Literature Evidence Gaps</h5>
+                                            <div id="synthesisMissingEvidence" class="uncertainty-content">
+                                                <p class="text-muted">No missing evidence gaps logged.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="follow-up-box">
+                                        <h5>Suggested Follow-Up Research Questions</h5>
+                                        <ol id="synthesisFollowUpQuestions" class="follow-up-list">
+                                            <!-- Injected via JS -->
+                                        </ol>
+                                    </div>
+                                </div>
+
+                                <!-- 4.5 Evidence-Grounded Final Takeaways & Next Steps -->
+                                <div class="report-block">
+                                    <div class="report-block-header">
+                                        <span class="report-block-tag">Takeaways</span>
+                                        <h4>4.5 Evidence-Grounded Practical Implications &amp; Recommended Next Steps</h4>
+                                    </div>
+
+                                    <div class="takeaways-grid">
+                                        <div class="takeaway-card">
+                                            <h5>Practical Implications</h5>
+                                            <p id="synthesisPracticalImplications">
+                                                Awaiting pipeline synthesis...
+                                            </p>
+                                        </div>
+                                        <div class="takeaway-card">
+                                            <h5>Recommended Next Steps</h5>
+                                            <ul id="synthesisNextSteps" class="takeaway-list">
+                                                <!-- Injected via JS -->
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 4.6 Methodological Limitations -->
+                                <div class="report-block">
+                                    <div class="report-block-header">
+                                        <span class="report-block-tag">System Bounds</span>
+                                        <h4>4.6 System Bounded Methodological Limitations</h4>
+                                    </div>
+                                    <ul id="limitationsList" class="limitations-list">
+                                        <!-- Injected via JS -->
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </section>
+
+                    </div>
+
+                </div>
+
+            </main>
+
+            <!-- Application Footer -->
+            <footer class="footer">
+                <div class="footer-container">
+                    <p>CiteGuard Scientific Verification System — Evidence-Grounded Research Synthesis Engine</p>
+                    <p class="footer-meta">Phase 11 Production UI | Provider: <strong>OpenAlex + Local Corpus</strong> | Verifier Engine: Multi-Agent Rules + RRF</p>
+                </div>
+            </footer>
+
+        </div>
+    </div>
+
+    <!-- Bibliographic Source Inspection Modal -->
+    <div id="sourceDetailsModal" class="modal-overlay hidden" style="display: none;">
+        <div class="modal-card">
+            <div class="modal-header">
+                <div>
+                    <span class="modal-badge">Bibliographic Source Inspection</span>
+                    <h3 id="modalPaperTitle">Scientific Publication</h3>
+                </div>
+                <button id="closeSourceModalBtn" class="btn-modal-close" title="Close dialog">&times;</button>
+            </div>
+            <div class="modal-body" id="modalSourceBody">
+                <!-- Injected via JS -->
+            </div>
+            <div class="modal-footer">
+                <button id="closeSourceModalFooterBtn" class="btn-secondary">Close Inspector</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- System Architecture & Corpus Modal -->
+    <div id="systemInfoModal" class="modal-overlay hidden" style="display: none;">
+        <div class="modal-card" style="max-width: 760px;">
+            <div class="modal-header">
+                <div>
+                    <span class="modal-badge">System Specifications</span>
+                    <h3>CiteGuard Architecture &amp; Literature Corpora</h3>
+                </div>
+                <button id="closeSystemModalBtn" class="btn-modal-close" title="Close dialog">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="system-specs-grid">
+                    <div class="spec-card">
+                        <h6>OpenAlex Scientific Literature</h6>
+                        <p>Global open-access catalog connected via live REST API with title/abstract search and DOI provenance validation.</p>
+                    </div>
+                    <div class="spec-card">
+                        <h6>Local Benchmark Corpus</h6>
+                        <p>Embedded SciFact and SciClaimHunt scientific corpora indexed with BM25 sparse index and FAISS dense vector embeddings.</p>
+                    </div>
+                    <div class="spec-card">
+                        <h6>Multi-Agent Verifier Ensemble</h6>
+                        <p>PlannerAgent, VerifierAgent, and SkepticAgent conducting consensus validation and contradictory-evidence overrides.</p>
+                    </div>
+                    <div class="spec-card">
+                        <h6>Closed-Loop Failure Memory</h6>
+                        <p>Persistent failure-pattern catalog mined from hallucination audit records with strict admission barriers for Trusted Memory.</p>
+                    </div>
+                </div>
+                <div style="margin-top: 16px; padding: 12px 14px; background: #f8fafc; border-radius: 6px; font-size: 12px; color: var(--text-secondary);">
+                    <strong>Engine Status:</strong> Multi-Agent Ensemble Active | <strong>Confidence Gate:</strong> &ge; 70% Floor | <strong>Ledger Integrity:</strong> 100%
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="closeSystemModalFooterBtn" class="btn-secondary">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/app.js?v=2.0.0"></script>
+</body>
+</html>

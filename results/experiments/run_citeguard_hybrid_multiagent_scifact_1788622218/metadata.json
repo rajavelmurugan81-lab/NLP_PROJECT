@@ -1,0 +1,9 @@
+{
+  "run_id": "run_citeguard_hybrid_multiagent_scifact_1788622218",
+  "timestamp": "2026-09-05T15:30:18.422593+00:00",
+  "system_name": "citeguard_hybrid_multiagent",
+  "dataset": "scifact",
+  "split": "test",
+  "total_examples": 5,
+  "development_run": true
+}

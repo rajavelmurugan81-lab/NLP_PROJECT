@@ -1,0 +1,4 @@
+Configuration,Accuracy,Repeat_Failures,Repeat_Failure_Rate,False_Rejections,False_Rejection_Rate,FP_Match_Rate,Avg_Latency_ms
+Baseline,0.7692,3,0.375,0,0.0,0.0,1.33
+CiteGuard,0.9231,1,0.125,0,0.0,0.0,1.32
+Ablation_No_Recheck,0.7692,3,0.375,0,0.0,0.0,1.35
