@@ -402,28 +402,28 @@
       "claim_id": "c_001_p001_p04",
       "claim_text": "In this paper, we show an avenue for aligning language models with user intent on a wide range of tasks by fine-tuning with human feedback.",
       "verdict": "SUPPORT",
-      "confidence": 0.9105,
+      "confidence": 0.9285,
       "evidence_count": 5,
       "question": "How does model size affect the accuracy and computational cost of large language models?",
-      "timestamp": "2026-10-10T17:06:55.600257+00:00"
+      "timestamp": "2026-10-29T06:56:04.612190+00:00"
     },
     {
       "claim_id": "c_002_p002_p02",
       "claim_text": "We train our models on trillions of tokens, and show that it is possible to train state-of-the-art models using publicly available datasets exclusively, without resorting to proprietary and inaccessible datasets.",
       "verdict": "SUPPORT",
-      "confidence": 0.9034,
+      "confidence": 0.9118,
       "evidence_count": 5,
       "question": "How does model size affect the accuracy and computational cost of large language models?",
-      "timestamp": "2026-10-10T17:06:55.610204+00:00"
+      "timestamp": "2026-10-29T06:56:04.637629+00:00"
     },
     {
       "claim_id": "c_003_p001_p05",
       "claim_text": "Starting with a set of labeler-written prompts and prompts submitted through the OpenAI API, we collect a dataset of labeler demonstrations of the desired model behavior, which we use to fine-tune GPT-3 using supervised learning.",
       "verdict": "SUPPORT",
-      "confidence": 0.9062,
+      "confidence": 0.92,
       "evidence_count": 5,
       "question": "How does model size affect the accuracy and computational cost of large language models?",
-      "timestamp": "2026-10-10T17:06:55.620814+00:00"
+      "timestamp": "2026-10-29T06:56:04.665873+00:00"
     },
     {
       "claim_id": "c_002_p003_p01",
@@ -2232,7 +2232,7 @@
       "confidence": 0.9311,
       "evidence_count": 3,
       "question": "Does remdesivir improve recovery times in hospitalized COVID-19 patients?",
-      "timestamp": "2026-10-11T16:28:50.961514+00:00"
+      "timestamp": "2026-10-29T06:34:42.596674+00:00"
     },
     {
       "claim_id": "c_002_p002_p04",
@@ -2241,7 +2241,7 @@
       "confidence": 0.9316,
       "evidence_count": 3,
       "question": "Does remdesivir improve recovery times in hospitalized COVID-19 patients?",
-      "timestamp": "2026-10-11T16:28:50.994878+00:00"
+      "timestamp": "2026-10-29T06:34:42.628852+00:00"
     },
     {
       "claim_id": "c_003_p001_p01",
@@ -2250,7 +2250,7 @@
       "confidence": 0.9283,
       "evidence_count": 3,
       "question": "Does remdesivir improve recovery times in hospitalized COVID-19 patients?",
-      "timestamp": "2026-10-11T16:28:51.039238+00:00"
+      "timestamp": "2026-10-29T06:34:42.663591+00:00"
     },
     {
       "claim_id": "c_001_p002_p03",

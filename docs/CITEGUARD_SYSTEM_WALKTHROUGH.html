@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CiteGuard — End-to-End Query Verification Walkthrough</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-page: #f8fafc;
+            --bg-card: #ffffff;
+            --border: #e2e8f0;
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --text-muted: #64748b;
+            --accent: #2563eb;
+            --accent-light: #eff6ff;
+            --badge-bg: #f1f5f9;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-primary);
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 48px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid var(--border);
+        }
+        .badge-brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #0f172a;
+            color: #ffffff;
+            font-size: 13px;
+            font-weight: 600;
+            padding: 6px 14px;
+            border-radius: 9999px;
+            margin-bottom: 16px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+        h1 {
+            font-size: 32px;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            color: #0f172a;
+            margin-bottom: 12px;
+        }
+        .subtitle {
+            font-size: 16px;
+            color: var(--text-secondary);
+            max-width: 760px;
+            margin: 0 auto;
+        }
+        .step-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            margin-bottom: 40px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.03);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .step-card:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+        }
+        .step-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 24px;
+            background: #ffffff;
+            border-bottom: 1px solid var(--border);
+        }
+        .step-title-group {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .step-number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            background: #2563eb;
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 700;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .step-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #0f172a;
+        }
+        .step-tag {
+            font-size: 12px;
+            font-weight: 600;
+            color: #2563eb;
+            background: var(--accent-light);
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        .step-img-wrapper {
+            background: #090d16;
+            padding: 12px;
+            text-align: center;
+        }
+        .step-img {
+            width: 100%;
+            height: auto;
+            border-radius: 6px;
+            border: 1px solid #1e293b;
+            display: block;
+        }
+        .step-desc-box {
+            padding: 20px 24px;
+            background: #f8fafc;
+            border-top: 1px solid var(--border);
+        }
+        .desc-label {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: var(--text-muted);
+            margin-bottom: 6px;
+        }
+        .desc-text {
+            font-size: 14.5px;
+            line-height: 1.6;
+            color: #1e293b;
+        }
+        .table-section {
+            background: #ffffff;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            margin-top: 48px;
+        }
+        .table-section h2 {
+            font-size: 20px;
+            margin-bottom: 16px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13.5px;
+        }
+        th, td {
+            padding: 12px 14px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+        th {
+            background: #f1f5f9;
+            font-weight: 600;
+            color: #0f172a;
+        }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <header class="header">
+            <div class="badge-brand">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                CiteGuard Scientific System
+            </div>
+            <h1>End-to-End Query Verification Visual Walkthrough</h1>
+            <p class="subtitle">Complete visual record of live research claim verification, 8-stage multi-agent pipeline execution, granular evidence provenance, dual-memory ledgers, and academic reporting.</p>
+        </header>
+
+        <!-- Step 1 -->
+        <div class="step-card">
+            <div class="step-header">
+                <div class="step-title-group">
+                    <span class="step-number">01</span>
+                    <h3 class="step-title">Research Workspace Landing Interface</h3>
+                </div>
+                <span class="step-tag">User Ingestion</span>
+            </div>
+            <div class="step-img-wrapper">
+                <img class="step-img" src="./screenshots/01_research_workspace_initial.png" alt="Step 01">
+            </div>
+            <div class="step-desc-box">
+                <div class="desc-label">Technical Summary (2-Line Description)</div>
+                <p class="desc-text">
+                    The initial CiteGuard research workspace features a minimalist scientific interface with persistent sidebar navigation and quick-start preset queries.<br>
+                    It provides researchers with instant access to the query input console, retrieval mode selectors, and live status badges indicating active verifier availability.
+                </p>
+            </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step-card">
+            <div class="step-header">
+                <div class="step-title-group">
+                    <span class="step-number">02</span>
+                    <h3 class="step-title">Research Query Selection & Retrieval Configuration</h3>
+                </div>
+                <span class="step-tag">Configuration</span>
+            </div>
+            <div class="step-img-wrapper">
+                <img class="step-img" src="./screenshots/02_query_selection_and_parameters.png" alt="Step 02">
+            </div>
+            <div class="step-desc-box">
+                <div class="desc-label">Technical Summary (2-Line Description)</div>
+                <p class="desc-text">
+                    The user configures a complex hypothesis regarding LLM model scaling, selecting the hybrid OpenAlex plus local scientific corpus retrieval mode.<br>
+                    Top-K evidence retrieval depth is calibrated alongside reciprocal rank fusion settings prior to launching the multi-agent verification pipeline.
+                </p>
+            </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="step-card">
+            <div class="step-header">
+                <div class="step-title-group">
+                    <span class="step-number">03</span>
+                    <h3 class="step-title">Active 8-Stage Pipeline Execution Stepper</h3>
+                </div>
+                <span class="step-tag">Pipeline Execution</span>
+            </div>
+            <div class="step-img-wrapper">
+                <img class="step-img" src="./screenshots/03_stepper_pipeline_execution.png" alt="Step 03">
+            </div>
+            <div class="step-desc-box">
+                <div class="desc-label">Technical Summary (2-Line Description)</div>
+                <p class="desc-text">
+                    CiteGuard's real-time execution stepper visualizes live stage transitions from query decontextualization to reciprocal re-ranking and dual-agent verification.<br>
+                    A dedicated execution timer tracks millisecond-level latency while visual step pulses inform the user of ongoing background agent synthesis.
+                </p>
+            </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="step-card">
+            <div class="step-header">
+                <div class="step-title-group">
+                    <span class="step-number">04</span>
+                    <h3 class="step-title">Verification Results Overview & Metrics Dashboard</h3>
+                </div>
+                <span class="step-tag">Results Synthesis</span>
+            </div>
+            <div class="step-img-wrapper">
+                <img class="step-img" src="./screenshots/04_results_overview_and_metrics.png" alt="Step 04">
+            </div>
+            <div class="step-desc-box">
+                <div class="desc-label">Technical Summary (2-Line Description)</div>
+                <p class="desc-text">
+                    The executive summary banner displays total verification turnaround time, mean epistemic confidence scores, and aggregate verdict distribution badges.<br>
+                    It establishes high-level evidential consensus across all decomposed sub-claims before presenting detailed scientific citations.
+                </p>
+            </div>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="step-card">
+            <div class="step-header">
+                <div class="step-title-group">
+                    <span class="step-number">05</span>
+                    <h3 class="step-title">Multi-Agent Research Plan & Literature Strategy</h3>
+                </div>
+                <span class="step-tag">Planner Agent</span>
+            </div>
+            <div class="step-img-wrapper">
+                <img class="step-img" src="./screenshots/05_multi_agent_research_plan.png" alt="Step 05">
+            </div>
+            <div class="step-desc-box">
+                <div class="desc-label">Technical Summary (2-Line Description)</div>
+                <p class="desc-text">
+                    The planning agent outlines the semantic decomposition strategy used to break down compound research hypotheses into verifiable atomic propositions.<br>
+                    It exposes the targeted bibliographic query vectors and cross-corpus retrieval targets deployed to ensure comprehensive literature coverage.
+                </p>
+            </div>
+        </div>
+
+        <!-- Step 6 -->
+        <div class="step-card">
+            <div class="step-header">
+                <div class="step-title-group">
+                    <span class="step-number">06</span>
+                    <h3 class="step-title">Decomposed Atomic Claims & Scientific Verdicts</h3>
+                </div>
+                <span class="step-tag">Claim Verification</span>
+            </div>
+            <div class="step-img-wrapper">
+                <img class="step-img" src="./screenshots/06_verified_claims_verdict_list.png" alt="Step 06">
+            </div>
+            <div class="step-desc-box">
+                <div class="desc-label">Technical Summary (2-Line Description)</div>
+                <p class="desc-text">
+                    Each extracted atomic claim is rendered with an explicit categorical verdict badge (SUPPORTED, CONTRADICTED, or PARTIALLY SUPPORTED) and calibrated confidence meter.<br>
+                    The card layout enables researchers to immediately distinguish verified empirical findings from ungrounded or speculative assertions.
+                </p>
+            </div>
+        </div>
+
+        <!-- Step 7 -->
+        <div class="step-card">
+            <div class="step-header">
+                <div class="step-title-group">
+                    <span class="step-number">07</span>
+                    <h3 class="step-title">Granular Evidence Passages & Source Provenance</h3>
+                </div>
+                <span class="step-tag">Evidence Grounding</span>
+            </div>
+            <div class="step-img-wrapper">
+                <img class="step-img" src="./screenshots/07_evidence_passages_and_provenance.png" alt="Step 07">
+            </div>
+            <div class="step-desc-box">
+                <div class="desc-label">Technical Summary (2-Line Description)</div>
+                <p class="desc-text">
+                    Expanding a claim reveals verbatim supporting passages extracted directly from peer-reviewed literature alongside full bibliographic provenance metadata.<br>
+                    Exact publication years, author rosters, journal venues, and direct digital object identifier (DOI) links ensure complete evidentiary traceability.
+                </p>
+            </div>
+        </div>
+
+        <!-- Step 8 -->
+        <div class="step-card">
+            <div class="step-header">
+                <div class="step-title-group">
+                    <span class="step-number">08</span>
+                    <h3 class="step-title">Adaptive Failure Re-Check & Reasoning Isolation</h3>
+                </div>
+                <span class="step-tag">Auditor Agent</span>
+            </div>
+            <div class="step-img-wrapper">
+                <img class="step-img" src="./screenshots/08_failure_pattern_adaptive_recheck.png" alt="Step 08">
+            </div>
+            <div class="step-desc-box">
+                <div class="desc-label">Technical Summary (2-Line Description)</div>
+                <p class="desc-text">
+                    The verifier separates raw cited text from automated chain-of-thought rationale, flagging potential reasoning traps or semantic drift risks.<br>
+                    When an F1–F8 pattern triggers, the closed-loop system invokes targeted re-check rules to prevent false verifications from contaminating downstream reports.
+                </p>
+            </div>
+        </div>
+
+        <!-- Step 9 -->
+        <div class="step-card">
+            <div class="step-header">
+                <div class="step-title-group">
+                    <span class="step-number">09</span>
+                    <h3 class="step-title">Academic Final Report — Executive Synthesis & Dashboard</h3>
+                </div>
+                <span class="step-tag">Synthesis Reporting</span>
+            </div>
+            <div class="step-img-wrapper">
+                <img class="step-img" src="./screenshots/09_academic_report_synthesis.png" alt="Step 09">
+            </div>
+            <div class="step-desc-box">
+                <div class="desc-label">Technical Summary (2-Line Description)</div>
+                <p class="desc-text">
+                    Part 1 and Part 2 of the formal academic report summarize total literature consensus, evidential coverage density, and primary research conclusions.<br>
+                    The publication-ready layout adheres to academic review standards, synthesizing multi-paper consensus into a structured scientific brief.
+                </p>
+            </div>
+        </div>
+
+        <!-- Step 10 -->
+        <div class="step-card">
+            <div class="step-header">
+                <div class="step-title-group">
+                    <span class="step-number">10</span>
+                    <h3 class="step-title">Scientific Epistemic Gaps, Limitations & Export Suite</h3>
+                </div>
+                <span class="step-tag">Reporting & Export</span>
+            </div>
+            <div class="step-img-wrapper">
+                <img class="step-img" src="./screenshots/10_academic_report_gaps_and_export.png" alt="Step 10">
+            </div>
+            <div class="step-desc-box">
+                <div class="desc-label">Technical Summary (2-Line Description)</div>
+                <p class="desc-text">
+                    CiteGuard explicitly catalogs contradictory evidence, methodological limitations, and unresolved scientific questions identified across the corpus.<br>
+                    Researchers can directly download the fully reproducible verification artifact as structured JSON data or formatted Markdown manuscripts.
+                </p>
+            </div>
+        </div>
+
+        <!-- Step 11 -->
+        <div class="step-card">
+            <div class="step-header">
+                <div class="step-title-group">
+                    <span class="step-number">11</span>
+                    <h3 class="step-title">Trusted Memory Ledger & 7-Rule Gatekeeper View</h3>
+                </div>
+                <span class="step-tag">Trusted Memory</span>
+            </div>
+            <div class="step-img-wrapper">
+                <img class="step-img" src="./screenshots/11_trusted_memory_ledger.png" alt="Step 11">
+            </div>
+            <div class="step-desc-box">
+                <div class="desc-label">Technical Summary (2-Line Description)</div>
+                <p class="desc-text">
+                    The Trusted Memory interface displays all 261 verified scientific claims that successfully passed CiteGuard's hardened 7-rule admission policy.<br>
+                    Each persistent entry records verified evidence counts, high-confidence scores, and deduplication keys to accelerate future query verifications.
+                </p>
+            </div>
+        </div>
+
+        <!-- Step 12 -->
+        <div class="step-card">
+            <div class="step-header">
+                <div class="step-title-group">
+                    <span class="step-number">12</span>
+                    <h3 class="step-title">Failure-Pattern Memory & F1–F8 Taxonomy Catalog</h3>
+                </div>
+                <span class="step-tag">Failure Memory</span>
+            </div>
+            <div class="step-img-wrapper">
+                <img class="step-img" src="./screenshots/12_failure_pattern_memory.png" alt="Step 12">
+            </div>
+            <div class="step-desc-box">
+                <div class="desc-label">Technical Summary (2-Line Description)</div>
+                <p class="desc-text">
+                    This catalog details the 21 active hallucination failure patterns (FP_DOM_001 through FP_SQF_021) systematically mined across evaluation cycles.<br>
+                    Each record provides operational mitigation instructions, category mappings (F1–F8), and detection prompts designed to preempt recurring LLM verification errors.
+                </p>
+            </div>
+        </div>
+
+        <!-- Step 13 -->
+        <div class="step-card">
+            <div class="step-header">
+                <div class="step-title-group">
+                    <span class="step-number">13</span>
+                    <h3 class="step-title">Runtime Audit Ledger & Immutable Event Stream</h3>
+                </div>
+                <span class="step-tag">Runtime Audit</span>
+            </div>
+            <div class="step-img-wrapper">
+                <img class="step-img" src="./screenshots/13_runtime_audit_ledger.png" alt="Step 13">
+            </div>
+            <div class="step-desc-box">
+                <div class="desc-label">Technical Summary (2-Line Description)</div>
+                <p class="desc-text">
+                    The Runtime Audit ledger records an append-only JSONL event stream capturing every live query execution, classification step, and memory admission decision.<br>
+                    Complete system transparency is guaranteed through detailed timestamping, latency breakdowns, and explicit failure detection records.
+                </p>
+            </div>
+        </div>
+
+        <!-- Step 14 -->
+        <div class="step-card">
+            <div class="step-header">
+                <div class="step-title-group">
+                    <span class="step-number">14</span>
+                    <h3 class="step-title">Historical Benchmark Ledger & Ground-Truth Reference</h3>
+                </div>
+                <span class="step-tag">Benchmark Separation</span>
+            </div>
+            <div class="step-img-wrapper">
+                <img class="step-img" src="./screenshots/14_historical_benchmark_ledger.png" alt="Step 14">
+            </div>
+            <div class="step-desc-box">
+                <div class="desc-label">Technical Summary (2-Line Description)</div>
+                <p class="desc-text">
+                    The benchmark ledger isolates 228 historical gold-standard research claims sourced from curated scientific benchmarks like SciFact and SciClaimHunt.<br>
+                    Strict architectural separation guarantees that runtime learning artifacts never inadvertently mutate or bias frozen benchmark evaluation sets.
+                </p>
+            </div>
+        </div>
+
+        <!-- Step 15 -->
+        <div class="step-card">
+            <div class="step-header">
+                <div class="step-title-group">
+                    <span class="step-number">15</span>
+                    <h3 class="step-title">System Architecture & Verifier Health Modal</h3>
+                </div>
+                <span class="step-tag">System Health</span>
+            </div>
+            <div class="step-img-wrapper">
+                <img class="step-img" src="./screenshots/15_system_architecture_modal.png" alt="Step 15">
+            </div>
+            <div class="step-desc-box">
+                <div class="desc-label">Technical Summary (2-Line Description)</div>
+                <p class="desc-text">
+                    The architecture inspection modal details the operational parameters of the hybrid dense/sparse retriever, OpenAlex API link, and active LLM verifier engines.<br>
+                    It provides external examiners and patent reviewers with verified proof of dual-ledger isolation, indexing status, and runtime integrity controls.
+                </p>
+            </div>
+        </div>
+
+        <!-- Table Summary -->
+        <div class="table-section">
+            <h2>System Workflow Execution Stages</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Stage</th>
+                        <th>Step Name</th>
+                        <th>Primary Mechanism</th>
+                        <th>Output / Persisted State</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="mono">01</td><td>Interface Ingestion</td><td>REST API & Responsive Web Shell</td><td>Clean scientific query session initialized</td></tr>
+                    <tr><td class="mono">02</td><td>Query Configuration</td><td>Decontextualization & Hybrid Mode Selection</td><td>Structured payload targeted to OpenAlex + Local corpus</td></tr>
+                    <tr><td class="mono">03</td><td>8-Stage Execution</td><td>Multi-Agent Stepper with async execution timer</td><td>Dynamic stage indicators (1 to 8) actively updated</td></tr>
+                    <tr><td class="mono">04</td><td>Results Overview</td><td>Statistical Aggregation & Verdict Consensus</td><td>High-level metrics: latency, confidence, verdict counters</td></tr>
+                    <tr><td class="mono">05</td><td>Research Plan</td><td>Decomposing Planner Agent</td><td>Atomic sub-claim vectors and literature search strategy</td></tr>
+                    <tr><td class="mono">06</td><td>Claim Verification</td><td>Dual-Agent Cross-Examination (Verifier + Auditor)</td><td>Calibrated categorical verdicts (Supported, Contradicted, etc.)</td></tr>
+                    <tr><td class="mono">07</td><td>Evidence Grounding</td><td>Provenance Metadata & DOI Extraction</td><td>Verified citation passages with author, year, and venue</td></tr>
+                    <tr><td class="mono">08</td><td>Adaptive Re-Check</td><td>F1–F8 Pattern Classifier & Memory Matching</td><td>Reasoning isolation and heuristic bias mitigation</td></tr>
+                    <tr><td class="mono">09</td><td>Report Synthesis</td><td>6-Part Academic Research Report Generator</td><td>Executive consensus narrative and coverage dashboard</td></tr>
+                    <tr><td class="mono">10</td><td>Gaps & Export</td><td>Epistemic Uncertainty & Markdown/JSON Serializer</td><td>Downloadable research reports and audit trails</td></tr>
+                    <tr><td class="mono">11</td><td>Trusted Memory</td><td>7-Rule Admission Policy Filter</td><td>Admitted claims stored to persistent <span class="mono">trusted_memory.json</span></td></tr>
+                    <tr><td class="mono">12</td><td>Pattern Memory</td><td>Offline & Runtime Pattern Miner</td><td>21 reusable mitigation rules in <span class="mono">failure_patterns.json</span></td></tr>
+                    <tr><td class="mono">13</td><td>Runtime Audit</td><td>Live Event Logger</td><td>Append-only event tracking in <span class="mono">runtime_audit.jsonl</span></td></tr>
+                    <tr><td class="mono">14</td><td>Benchmark Ledger</td><td>Dual-Ledger Isolation Gate</td><td>Frozen gold-standard reference claims maintained</td></tr>
+                    <tr><td class="mono">15</td><td>System Health</td><td>Diagnostic Probe & Service Telemetry</td><td>Live index and provider verification inspection</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="footer">
+            CiteGuard Autonomous Scientific Verification Platform &bull; Academic Review &amp; Patent Documentation Package
+        </div>
+
+    </div>
+
+</body>
+</html>

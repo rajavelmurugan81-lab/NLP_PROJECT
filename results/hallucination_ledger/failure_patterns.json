@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-10-12T04:33:03.001218+00:00",
+  "generated_at": "2026-10-29T06:56:04.742360+00:00",
   "total_patterns": 21,
   "patterns": [
     {
@@ -184,7 +184,7 @@
       "failure_signature": "FS-CONTRADICTION",
       "pattern_name": "UNRESOLVED_CONTRADICTORY_EVIDENCE_OVERLOOKED",
       "severity": "CRITICAL",
-      "frequency": 21,
+      "frequency": 24,
       "trigger_conditions": {
         "contradiction_passages": "> 0",
         "predicted_label": "SUPPORT"
@@ -201,7 +201,7 @@
       "canonical_failure_code": "F7",
       "canonical_failure_name": "Contradictory Evidence",
       "first_seen": "2026-09-11T09:40:19.108982+00:00",
-      "last_seen": "2026-10-11T17:06:46.136180+00:00",
+      "last_seen": "2026-10-29T06:56:04.621567+00:00",
       "source_examples": [
         {
           "claim_id": "q_07144188_c001",
@@ -321,7 +321,7 @@
       "failure_signature": "FS-OUTDATED-EVIDENCE",
       "pattern_name": "DYNAMIC_PATTERN_SOURCE_QUALITY_FAILURE",
       "severity": "MEDIUM",
-      "frequency": 166,
+      "frequency": 171,
       "trigger_conditions": {
         "failure_type_match": "SOURCE_QUALITY_FAILURE"
       },
@@ -335,7 +335,7 @@
       "canonical_failure_code": "F5",
       "canonical_failure_name": "Outdated Evidence",
       "first_seen": "2026-10-05T18:21:53.570459+00:00",
-      "last_seen": "2026-10-12T04:33:02.936878+00:00",
+      "last_seen": "2026-10-29T06:46:38.635238+00:00",
       "source_examples": [
         {
           "claim_text": "Engaging in regular physical activity reduces the risk of developing CVD (cardiovascular disease), but it is not certain to what degree this may be due to the anti-inflammatory effects of exercise.",
